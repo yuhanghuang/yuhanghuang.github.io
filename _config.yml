@@ -22,8 +22,8 @@ blog_button:
 
 # Navigation buttons in the front page.
 nav:
-    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
-    # - {title: Another Button, description: A button, url: 'http://example.com'}
+        #    - {title: Projects, description: My Projects, url: 'http://project.onevcat.com'}
+    - {title: Another Button, description: A button, url: 'http://hyhzz.com'}
 
 # Pagination
 plugins: [jekyll-paginate]
@@ -41,7 +41,7 @@ social:
     github: onevcat
     twitter: onevcat
     gplus: 107108267983477358170
-    mail: onev@onevcat.com
+    mail: 411523hyh@gmail.com
 
 # Google Analytics
 ga:

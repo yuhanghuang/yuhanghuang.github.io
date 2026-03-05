@@ -37,6 +37,8 @@ mainSections = ["posts"]
   showTaxonomies = true
   showPagination = true
   showHeadingAnchors = true
+  showViews = true
+  showLikes = false
 
 [list]
   showBreadcrumbs = false
@@ -44,3 +46,27 @@ mainSections = ["posts"]
   showCards = true
   groupByYear = true
   cardView = true
+
+[comments]
+  provider = "giscus"
+
+[giscus]
+  repo = "yuhanghuang/yuhanghuang.github.io"
+  repoId = "R_kgDORe95LA"
+  category = "Announcements"
+  categoryId = "DIC_kwDORe95LM4C3u3y"
+  mapping = "pathname"
+  strict = "0"
+  reactionsEnabled = "1"
+  emitMetadata = "0"
+  inputPosition = "bottom"
+  theme = "preferred_color_scheme"
+  lang = "zh-CN"
+
+[firebase]
+  apiKey = "AIzaSyDSbV0ghT-KujZ-dHcQc51ySuXbIifkrVw"
+  authDomain = "yuhang-blog-5387b.firebaseapp.com"
+  projectId = "yuhang-blog-5387b"
+  storageBucket = "yuhang-blog-5387b.firebasestorage.app"
+  messagingSenderId = "737893965012"
+  appId = "1:737893965012:web:f15f23ddad98264b636f41"

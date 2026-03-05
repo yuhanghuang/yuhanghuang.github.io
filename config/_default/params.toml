@@ -39,6 +39,7 @@ mainSections = ["posts"]
   showHeadingAnchors = true
   showViews = true
   showLikes = false
+  showComments = true
 
 [list]
   showBreadcrumbs = false

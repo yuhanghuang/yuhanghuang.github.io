@@ -16,4 +16,5 @@ title = "Yuhang's Blog"
   bio = "欢迎来到我的博客"
   links = [
     { github = "https://github.com/yuhanghuang" },
+    { email = "mailto:411523hyh@gmail.com" },
   ]

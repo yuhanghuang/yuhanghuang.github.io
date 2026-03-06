@@ -1,0 +1,7 @@
+/* Make code blocks wrap instead of horizontal scrolling */
+.prose pre,
+.prose pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}

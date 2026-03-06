@@ -1,7 +1,7 @@
 ---
 title: "Mcp授权分析"
 date: 2026-03-06
-draft: false
+draft: true
 tags: ["mcp", "oauth", "AI security"]
 description: "Mcp oauth security analysis"
 ---
@@ -13,10 +13,6 @@ Oauth是一种授权协议，它允许第三方应用在用户授权的情况下
 ### 什么是Mcp
 
 mcp是在llm基础上发展出来的一种协议，它允许llm调用外部工具来完成任务。通过mcp，llm可以访问外部工具的api，从而完成任务。在mcp中，llm和外部工具之间通过json格式的请求和响应进行通信。llm可以调用外部工具的api，从而完成任务。例如，llm可以调用外部工具来获取用户的个人信息，或者调用外部工具来完成支付。现在mcp的生态也做的越来越多了，其安全性也收到了学术界和工业界极大的关注。也有越来越多复杂的应用来使用mcp，这些应用为了提供多样化的功能是一定需要引入用户的身份鉴别的。所以mcp和oauth的结合也成为了必然，对于简单的mcp应用可以使用api_key等方式来进行鉴权，但是对于复杂的mcp应用，使用oauth来进行鉴权就显得十分有意义。
-
-## mcp oauth和传统oauth的区别
-
-但是mcp oauth和传统的移动端应用oauth场景还是有区别的，因为传统的oauth场景只有四个对象：用户(user)，移动端应用(client)，授权服务器(Authorization server)，资源服务器(Resource server)。既然提到这个就需要支持oauth登录，app一键登录（已经安装的app）,app一键登录（未安装的app）的区别，运营商的手机号一键登录的区别。
 
 ### app一键登录（已经安装的app）
 
@@ -55,6 +51,22 @@ Scope:流利说申请的权限
 
 在这个场景下，和上面的一个例子，也是以微博为例，但是和上面的一个例子不同的是，这个例子中，受害者没有安装微博app，所以当用户调起微博登录的时候，微博的登录sdk发现用户没有安装微博app就会在流利说这个app上拉起一个webview，然后在webview中打开微博的登录页面，用户同意授权后，微博app会将用户重定向到流利说app的回调地址。在这个场景下就没有了包名和签名的伪造风险，因为都是通过webview登录拉起的，但是拉起这个授权页面，是知道是哪个app来发起的授权。所以就存子啊安全风险，比如恶意应用实现了类似的功能，仅仅是替换了一个appid就可以拿到用户的accesstoken.
 
+```
+流利说开发团队 → 微博开放平台手动注册
+微博分配固定的 AppKey + AppSecret
+写入流利说服务器配置，不再变动
+
+运行时：用户点击"微博登录"
+1. 流利说 App 带着 AppKey 跳转微博授权页
+2. 用户在微博页面输入账号密码、确认授权
+3. 微博 AS 验证 AppKey 合法 → 生成 Authorization Code 回传给流利说
+4. 流利说后台用 code + AppSecret 向微博 AS 换取 Access Token
+5. 流利说后台拿 token 请求微博 Resource Server（微博用户 API）
+6. 微博 API 返回用户昵称、头像、openid 等信息
+7. 流利说用这些信息完成自己系统的登录/注册逻辑
+
+```
+
 ### 手机号一键登录（运营商）
 
 对于国内还有一个很流行的登录方式就是手机号一键登录，需要打开手机的流量，app会植入运营商的sdk，然后通过这个sdk来获取用户的手机号。当用户通过流量上网的过程中，手机会通过sim卡和运营商通信，那么运营商就有权限知道你的手机号是什么。
@@ -72,9 +84,40 @@ Scope:流利说申请的权限
 
 ### mcp oauth
 
-接下来回归到了我们的重点那就是mcp oauth的流程。
+接下来回归到了我们的重点那就是mcp oauth的流程。在mcp应用的场景下，其oauth流程和传统的oauth流程差不多，但是mcp oauth和传统的移动端应用oauth场景还是有区别的，因为传统的oauth场景只有四个对象：用户(user)，移动端应用(client)，授权服务器(Authorization server)，资源服务器(Resource server)。而对于mcp的场景下，就会变得复杂些，涉及到的对象多了一个，包括用户，mcp客户端，mcp服务端，授权服务器以及资源服务器。针对mcp场景下的oauth协议也是经过了更新迭代。最新版本是修复了一些安全问题，为了更好的知道mcp场景下oauth协议的安全问题，需要对旧的协议做一下梳理和安全性分析。
+以下内容参考了截至 2025 年 6 月 18 日的 MCP 规范x
+![mcp_oauth1](/images/mcp_auth/mcp_oauth1.png)
+根据这个协议可以知道，其涉及到了三个对象，MCP Client，MCP Server和Authorization Server (AS)。需要注意的同时这个mcp server同时是作为资源服务器的。因为传统的应用的资源访问是在远程服务器上进行的，但是针对mcp场景下，其mcp server实现的一系列tool就是为了完成一系列的任务，知识这个过程中可能需要用到第三方的凭据信息，但是任务还是通过mcp server完成的，第三方服务器知识作为授权使用的。
 
-## reference
+当mcp客户端在没有进行任何认证的时候，尝试调用一些tool来完成任务，mcp server会返回一个4错误401 Unauthorized。然后，MCP 客户端会执行以下操作：
+
+```
+使用 OAuth 2.0 受保护资源元数据 (RFC 9728) 和授权服务器元数据 (RFC 8414) 发现 AS
+如果尚未注册，则使用动态客户端注册（RFC 7591）向 AS 注册自身。
+将用户重定向到授权服务器进行授权
+获取访问令牌并访问资源
+```
+
+在上述过程中的一个核心的步骤就是动态客户端注册。因为不像传统的应用，其资源服务器就是一个，即app的业务服务器，但是mcp场景下是不一样的，很多都是部署在本地（有权限调用本地的系统资源来协助用户完成一系列的任务），所以可以理解为一个用户对应一个mcp clinet，但是对应多个mcp server。不像上面内容写到，流利说在微博开放平台注册会写死一个appid和相应的secret。因为 MCP Client 需要与多个不同的 MCP Server 交互，每个 Server 背后的 AS 都不同，所以无法预先静态注册，需要在运行时向各自的 AS 动态注册 client_id
+
+上面的内容有一点是需要再次说明的，对于注册的过程是客户端和授权服务器之间的行为，而不是客户端和资源服务器的行为，无论是在mcp场景下还是传统的移动端应用场景下，这是oauth协议本来就定好的。
+
+| 角色                 | 职责                          |
+| :------------------- | :---------------------------- |
+| Client               | 请求资源                      |
+| Authorization Server | 认证客户端 + 给客户端发 token |
+| Resource Server      | 验证 token + 提供资源         |
+
+核心的凭据就是token，是授权服务器下发给client。在授权服务器中维护客户端的信息包含了：
+
+```
+client_id
+client_secret
+redirect_uri
+scope
+```
+
+在oauth协议的设计中，资源服务器其实根本不关注客户端是谁，他只认客户端传入的token，后面就是拿这个token和授权服务器进行校验，从而给client返回相应的信息。
 
 - https://github.com/modelcontextprotocol/protocol
 - https://www.obsidiansecurity.com/blog/when-mcp-meets-oauth-common-pitfalls-leading-to-one-click-account-takeover

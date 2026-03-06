@@ -1,3 +1,16 @@
+/* Search keyword highlight */
+mark.search-highlight {
+  background-color: #fef08a;
+  color: #713f12;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+.dark mark.search-highlight {
+  background-color: #713f12;
+  color: #fef08a;
+}
+
 /* Make code blocks wrap instead of horizontal scrolling */
 .prose pre,
 .prose pre code {

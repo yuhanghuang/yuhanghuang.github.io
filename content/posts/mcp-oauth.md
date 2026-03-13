@@ -1,12 +1,12 @@
 ---
 title: "Mcp授权分析"
 date: 2026-03-06
-draft: false
+draft: true
 tags: ["mcp", "oauth", "AI security"]
 description: "Mcp oauth security analysis"
 ---
 
-## 什么是oauth
+### 什么是oauth
 
 Oauth是一种授权协议，它允许第三方应用在用户授权的情况下访问用户的资源。使用这个方式避免了传统的用户名密码授权方式，对于一键登录的场景十分实用。在移动端的授权健全场景十分受欢迎，这个方式不仅十分便捷二十安全性很高，避免了用户输入用户名密码。传统的授权方式需要用户将自己的用户名密码授权给第三方应用，这样第三方应用就可以访问用户的资源。但是使用oauth，第三方应用不需要知道用户的用户名密码，只需要知道用户的授权码即可。
 
@@ -117,7 +117,45 @@ redirect_uri
 scope
 ```
 
-在oauth协议的设计中，资源服务器其实根本不关注客户端是谁，他只认客户端传入的token，后面就是拿这个token和授权服务器进行校验，从而给client返回相应的信息。
+在oauth协议的设计中，资源服务器其实根本不关注客户端是谁，他只认客户端传入的token，后面就是拿这个token和授权服务器进行校验，从而给client返回相应的信息。MCP场景下需要动态客户端注册（DCR），原因是MCP Client无法提前知道要对接哪些AS，所以需要运行时自动注册。但问题在于：大多数 SaaS 提供商将 MCP 服务器部署为自身 API 的代理，并使用自己的授权服务器 (AS)——这些服务器通常不支持 DCR。DCR 会扩大攻击面。如果没有强有力的控制措施，它就会成为滥用的途径——垃圾邮件、网络钓鱼、拒绝服务攻击。DCR的本质是：任何人都可以来注册一个client身份。会引入下列的风险
+
+1. 垃圾注册/DoS
+
+```
+攻击者无限循环调用注册接口
+→ 每次都生成新的client_id
+→ AS的数据库被撑爆
+→ 合法用户无法使用
+```
+
+2. 网络钓鱼
+
+```
+攻击者注册一个恶意client
+→ client_name填"Google Drive官方"
+→ 诱导用户授权
+→ 骗取用户token
+```
+
+对MCP的实际影响
+这就造成了一个两难：
+
+```
+如果AS不支持DCR
+→ MCP无法动态注册
+→ MCP无法安全地使用OAuth
+
+如果AS支持DCR
+→ MCP可以动态注册
+→ MCP可以安全地使用OAuth
+→ 但是会引入上述风险
+```
+
+为了解决上述问题，许多 MCP 服务器同时充当授权服务器 (AS) 和 OAuth 客户端。它们实现了自身的 AS 功能（包括 DCR）来服务 MCP 客户端，同时还作为预先注册到 SaaS AS 的 OAuth 客户端。这就创建了两个不同的 OAuth 层：MCP 客户端将 MCP 服务器视为其 AS，而 SaaS AS 则将其视为另一个 OAuth 客户端。
+
+此架构中的完整 OAuth 认证流程如下：
+
+### reference
 
 - https://github.com/modelcontextprotocol/protocol
 - https://www.obsidiansecurity.com/blog/when-mcp-meets-oauth-common-pitfalls-leading-to-one-click-account-takeover

@@ -1,0 +1,54 @@
+<!-- Google Translate Widget (hidden) -->
+<div id="google_translate_element" style="display:none;"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'zh-CN',
+      includedLanguages: 'en,zh-CN',
+      autoDisplay: false,
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+    return match ? match[2] : null;
+  }
+
+  function isTranslated() {
+    var cookie = getCookie('googtrans');
+    return cookie && cookie.includes('/en');
+  }
+
+  // Force code blocks to be translatable
+  function enableCodeBlockTranslation() {
+    document.querySelectorAll('pre, code').forEach(function(el) {
+      el.setAttribute('translate', 'yes');
+    });
+  }
+
+  function toggleTranslate() {
+    if (isTranslated()) {
+      document.cookie = 'googtrans=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      document.cookie = 'googtrans=; path=/; domain=' + window.location.hostname + '; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+      window.location.reload();
+    } else {
+      enableCodeBlockTranslation();
+      document.cookie = 'googtrans=/zh-CN/en; path=/';
+      window.location.reload();
+    }
+  }
+
+  // On load: update button label and re-enable code block translation if already translated
+  document.addEventListener('DOMContentLoaded', function () {
+    var label = document.getElementById('translate-label');
+    if (label) {
+      label.textContent = isTranslated() ? '中文' : 'EN';
+    }
+    if (isTranslated()) {
+      enableCodeBlockTranslation();
+    }
+  });
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>

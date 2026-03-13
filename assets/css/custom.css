@@ -11,6 +11,26 @@ mark.search-highlight {
   color: #fef08a;
 }
 
+/* Google Translate nav button */
+.translate-nav-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Hide Google Translate toolbar banner */
+.goog-te-banner-frame,
+#goog-gt-tt,
+.goog-te-balloon-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
 /* Make code blocks wrap instead of horizontal scrolling */
 .prose pre,
 .prose pre code {

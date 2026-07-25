@@ -1,37 +1,55 @@
 ---
-title: "Mobile-MCP 安全研究：未鉴权 MCP 端点与 Android Shell 注入"
+title: "Mobile-MCP Security Research: Unauthenticated MCP Access and Android Shell Injection"
 date: 2026-07-25
 draft: false
-tags: ["安全研究", "MCP", "Android", "ADB", "协调披露"]
-description: "关于 mobile-next/mobile-mcp 未鉴权 SSE 端点及 Android 设备命令注入问题的协调披露记录。"
+tags: ["Security Research", "MCP", "Android", "ADB", "Coordinated Disclosure"]
+description: "Two security issues in mobile-next/mobile-mcp: unauthenticated SSE access and Android device-side shell injection."
 ---
 
-## 披露状态
+## Disclosure status
 
-我向 `mobile-next/mobile-mcp` 报告了两项安全问题。由于该开源项目采用 GitHub Security Advisories（GHSA）流程，CVE 编号需要由项目维护者通过 GHSA 申请；截至本公告发布时，这两项问题尚未获得 CVE 编号。
+I reported two issues in `mobile-next/mobile-mcp`. The project uses GitHub Security Advisories (GHSA); GitHub’s CNA process requires the repository owner to request CVE IDs through a GHSA. At publication time, neither issue has a CVE ID.
 
-## 问题一：未鉴权的 MCP SSE 端点
+## Tested environment
 
-`GET /mcp` 和 `POST /mcp` 路由未实施认证、授权或访问来源限制。处于可达网络位置的攻击者可能建立 MCP 会话，并调用已注册的设备控制工具，包括设备枚举、截图、应用操作与输入模拟。
+- Project: [`mobile-next/mobile-mcp`](https://github.com/mobile-next/mobile-mcp)
+- Package: `@mobilenext/mobile-mcp`
+- Tested version: 0.0.43
+- Environment: Windows with an Android 11 / API 32 emulator
 
-受影响组件：`src/index.ts`。已测试版本：0.0.43。
+## Issue 1: Unauthenticated MCP SSE endpoint
 
-## 问题二：Android 设备端 Shell 注入
+`src/index.ts` exposes `GET /mcp` and `POST /mcp` without authentication, authorization, an API key, or an IP allowlist. A reachable client can connect to the SSE transport and invoke the registered device-control tools.
 
-`mobile_open_url` 将不可信 URL 传递给 `adb shell`。虽然 Node.js 一侧使用参数数组调用 `execFileSync`，但 `adb shell` 会将后续参数交由 Android 设备端 shell 解析；因此，未验证的 shell 元字符可能导致命令在连接的 Android 设备上以 `uid=2000(shell)` 权限执行。
+### Reproduction
 
-该问题还影响使用未转义 `packageName` 的应用启动与终止路径。问题一会降低攻击者获得设备标识并调用这些工具的难度。
+1. Start the server in a network-reachable configuration.
+2. Connect an MCP client or MCP Inspector to the server’s `/mcp` SSE endpoint without providing credentials.
+3. Observe that a session is established and that the available tools can be enumerated.
+4. Call a non-destructive tool such as `mobile_list_available_devices`; the connected Android device identifiers are returned without authentication.
 
-受影响组件：`src/android.ts` 的 `openUrl()`、`launchApp()` 和 `terminateApp()`。已测试版本：0.0.43。
+## Issue 2: Android device-side shell injection
 
-## 修复建议
+`openUrl()` passes an untrusted `url` into `adb shell am start ... -d <url>`. Although Node.js uses `execFileSync()` with an argument array, `adb shell` forwards command text for parsing by the Android device shell. Shell metacharacters in the URL are therefore interpreted on the device.
 
-服务应默认只监听回环地址，并要求 MCP 端点使用认证令牌；同时对每一项设备操作执行授权检查。所有进入 `adb shell` 的不可信值都应避免经 shell 解释，或在语义允许时采用一致、经过测试的参数转义与输入白名单。
+The same pattern was observed where unescaped `packageName` values are passed through `launchApp()` and `terminateApp()`.
 
-本页面省略可直接复现命令执行的载荷，以支持协调修复。
+### Reproduction
 
-## 参考
+1. Use Issue 1 to enumerate a connected device identifier.
+2. Verify that a harmless marker file does not exist on the test device.
+3. Invoke `mobile_open_url` for that device with this test URL: `http://x$(id>/sdcard/mobile_mcp_poc.txt)`.
+4. The resulting call is passed through `adb shell`; Android’s `/system/bin/sh` evaluates the command substitution.
+5. Verify `/sdcard/mobile_mcp_poc.txt`. In the tested environment, `id` ran as `uid=2000(shell)`.
 
-- 项目仓库：[`mobile-next/mobile-mcp`](https://github.com/mobile-next/mobile-mcp)
-- [GitHub Security 页面](https://github.com/mobile-next/mobile-mcp/security)
-- 发现者：[yuhanghuang](https://github.com/yuhanghuang)
+This confirms command execution on the connected Android device, not on the host operating system.
+
+## Remediation
+
+Require authentication for both MCP routes and bind to loopback by default. Avoid passing untrusted values through `adb shell`; use device-side APIs or strictly validated, consistently escaped arguments. Apply the existing shell-escaping strategy to every shell-facing argument and add tests for shell metacharacters.
+
+## References
+
+- [mobile-next/mobile-mcp repository](https://github.com/mobile-next/mobile-mcp)
+- [Project security page](https://github.com/mobile-next/mobile-mcp/security)
+- [yuhanghuang](https://github.com/yuhanghuang), reporter

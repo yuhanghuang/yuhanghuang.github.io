@@ -1,0 +1,335 @@
+{
+  "updatedAt": "2026-09-22T11:55:00+08:00",
+  "items": [
+    {
+      "id": 1,
+      "title": "Beyond Predictable Paths: Redefining AI Security Incident Reporting for Agents",
+      "url": "https://arxiv.org/abs/2609.24515",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "针对 AI Agent 日益增多的安全事件，作者访谈 23 位学术界与工业界专家，重新定义了 Agent 安全事件报告应包含的要素（如记忆访问、自治级别、工具使用记录），并指出报告基础设施本身也可能成为攻击目标。为 Agent 安全的合规与问责提供了首个系统性报告框架。",
+      "tags": [
+        "LLM Agent 安全",
+        "事件响应",
+        "AI 治理"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "ActGov: Governing LLM Agent Actions via Policy-Constrained Validation",
+      "url": "https://arxiv.org/abs/2609.24446",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "提出运行时强制执行框架 ActGov，在每次 LLM 发起的工具调用产生外部副作用前进行策略校验，策略集由工具规格与失败轨迹迭代构建并通过 SMT 反例验证，可在动态分支的长程工作流中持续限制 Agent 权限边界，防御提示注入导致的越权操作。",
+      "tags": [
+        "LLM Agent 安全",
+        "运行时防护",
+        "提示注入防御"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "LeaseGuard: Incumbent-Preserving Admission Control for Privileged LLM Agents",
+      "url": "https://arxiv.org/abs/2609.24077",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "发现特权 LLM Agent 可能抢占健康进程持有的文件、锁等资源。LeaseGuard 以资源租约机制实现确定性准入控制，在 60 个冲突场景中将未授权抢占从 73.3% 降至 0.0%，且能拒绝伪造的任务身份，揭示了 Agent 资源调度层的新攻击面。",
+      "tags": [
+        "LLM Agent 安全",
+        "权限管控",
+        "资源隔离"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "MobileCybench: Evaluating Agent Vulnerability Discovery via Executable Probes",
+      "url": "https://arxiv.org/abs/2609.23980",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "构建基于可执行探针的 Agent 漏洞发现评估框架，以 13 个 Android 应用、495 个探针评测 GPT-5.5、Claude Opus 5 等 5 个编码 Agent 在恶意应用或远程攻击者场景下的漏洞挖掘能力，解决 Agent 漏洞报告泛滥且难以人工核验的问题。",
+      "tags": [
+        "LLM Agent 安全",
+        "漏洞挖掘",
+        "基准测试"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Connecting the Dots in Agentic AI Security: A Cross-Dimensional Threat Taxonomy, Evaluation Maturity, and Open Challenges",
+      "url": "https://arxiv.org/abs/2609.23894",
+      "source": "arXiv",
+      "date": "2026-09-20",
+      "summary": "系统回顾 2022–2026 年 66 篇 Agentic AI 安全研究，提出跨维度威胁表示 T={S,B,P,A}，链接受影响系统面、信任边界、被违反的安全属性与实证检验架构；分析 22 个红队研究和 11 个安全基准后发现，持久化、多智能体、长程威胁的实证覆盖严重不足。",
+      "tags": [
+        "Agentic AI 安全",
+        "威胁分类",
+        "综述"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "When the Agent Becomes the Kernel: A Systematization of Security on the Path to AI-Native Operating Systems",
+      "url": "https://arxiv.org/abs/2609.23700",
+      "source": "arXiv",
+      "date": "2026-09-20",
+      "summary": "指出 LLM Agent 已拥有内核级的操作权限但缺乏经典安全中的可信中介，围绕「数据与指令的语义判断」这一核心中介缺口系统化分析了 AI 原生操作系统的安全架构，论证当输入与动作未被预先枚举约束时必然存在不可消除的残余攻击面。",
+      "tags": [
+        "LLM Agent 安全",
+        "系统安全",
+        "AI 原生 OS"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Runtime Authorization Consistency Checking for MCP-based Agentic Workflows",
+      "url": "https://arxiv.org/abs/2609.23498",
+      "source": "arXiv",
+      "date": "2026-09-20",
+      "summary": "识别 MCP 多步工具工作流中的「授权漂移」问题：单次调用均合法但序列整体越权。提出控制器侧轻量防线 RAC，将授权作为运行时状态沿已接受步骤传递，在 1248 条工作流的 TraceBench 上实现了零漏拦，显著优于静态+历史基线。",
+      "tags": [
+        "MCP 安全",
+        "授权漂移",
+        "LLM Agent 安全"
+      ]
+    },
+    {
+      "title": "POEF: Unpacking the Intent–Behavior Gap in Jailbreaking LLM-based Robots（NDSS 2027 录用）",
+      "url": "https://zjushine.github.io/poef.github.io/",
+      "source": "NDSS 2027",
+      "date": "2026-09",
+      "summary": "浙大 ZJUshine 团队工作：提出意图-行为鸿沟（Intent Jailbreak 与 Behavior Jailbreak 平均相差约 45%），用隐藏层引导优化 + 多智能体评价闭环，在 Franka Panda 与 Unitree G1 真机上实现约 80% 行为越狱成功率。POEX 的直接后继。",
+      "tags": [
+        "机器人越狱",
+        "具身安全",
+        "红队框架"
+      ],
+      "id": 8
+    },
+    {
+      "title": "GhostTac: Manipulating Tactile Sensors without Physical Contact（CCS 2026 录用）",
+      "url": "https://www.zjushine.top/",
+      "source": "CCS 2026",
+      "date": "2026-09",
+      "summary": "首个非接触式触觉传感器操纵攻击：利用电磁干扰（EMI）在传感器输出中注入持续直流偏移，绕过板载滤波，可精细控制抓取力等输出，在 15 种触觉传感器、10 个模块上验证。",
+      "tags": [
+        "物理传感器攻击",
+        "EMI",
+        "触觉"
+      ],
+      "id": 9
+    },
+    {
+      "title": "UniBLEed: 蓝牙范围内对任意 Unitree G1 人形机器人的未认证 Root RCE（可蠕虫化）",
+      "url": "https://boschko.ca/g1-ble-rce/",
+      "source": "boschko.ca",
+      "date": "2026-08-27",
+      "summary": "Olivier Laflamme 的 86 分钟长文：无需配对写入 GATT 特征 → 宇树云 API 可为任意免费账号解密任意 G1 的 AES-128 密钥（不校验归属）→ heredoc 注入劫持 WiFi → 1050 字节 BSS 溢出把事件循环篡改成以 root 执行 system()。两条完整 RCE 链（CVE-2026-76639 / 76640），可在 G1 之间蠕虫传播；宇树 9 月 1 日发布 1.5.5.0 固件修复。含固件 TEA 解密、DDS 总线测绘、百度加固脱壳等完整逆向过程。",
+      "tags": [
+        "Unitree",
+        "人形机器人",
+        "BLE",
+        "蠕虫攻击",
+        "逆向"
+      ],
+      "id": 10
+    },
+    {
+      "title": "Black Hat USA 2026：Agentic AI 成为绝对核心议题",
+      "url": "https://blackhat.com/us-26/briefings.html",
+      "source": "Black Hat",
+      "date": "2026-08",
+      "summary": "116 个 Briefings 中 AI/Agent 安全占比最高：攻破 AI 浏览器、AI 购物助手劫持、Remote Prompt Execution、MCP 接管等；Keynote 主题为 AI 时代的漏洞研究与网络权力。录播经 Streamly 于 8 月 14 日上线。",
+      "tags": [
+        "会议",
+        "AI Agent 安全",
+        "Black Hat"
+      ],
+      "id": 11
+    },
+    {
+      "title": "CVE-2026-76640：Unitree G1 BLE 五 bug 链 root RCE（可蠕虫，CVSS Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76640",
+      "source": "NVD",
+      "date": "2026-08",
+      "summary": "GATT 0xFFE2 特征仅 WRITE 权限无需配对即可写入；明文引导指令 0xF2 返回经 RSA 包裹的 G1 AES-128 密钥；宇树 /device/bindExtData 云端接口不校验机器人归属即为任意账号解密密钥；121 字节 PSK 触发 wpa_supplicant heredoc 注入；最终 1050 字节溢出 500 字节 wifi_ssid 缓冲区篡改 BSS 函数指针，事件循环以 root 调用 system()。UniBLEed 研究产出。",
+      "tags": [
+        "CVE",
+        "Unitree",
+        "BLE",
+        "人形机器人"
+      ],
+      "id": 12
+    },
+    {
+      "title": "CVE-2026-76639：Unitree G1 chat_go 路径遍历 + bashrunner 任意文件写入 RCE",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76639",
+      "source": "NVD",
+      "date": "2026-08",
+      "summary": "G1 的 AI 聊天服务 chat_go 的「知识库上传」接口（api_id=1006）未校验 uid，路径遍历可写任意文件至 bashrunner 白名单目录，随后借 bashrunner 以 root 执行任意脚本。经 WebRTC→DDS 桥或内网 DDS 总线即可触发，无需物理接触。UniBLEed 研究产出。",
+      "tags": [
+        "CVE",
+        "Unitree",
+        "路径遍历",
+        "人形机器人"
+      ],
+      "id": 13
+    },
+    {
+      "title": "Cybersecurity of Teleoperated Quadruped Robots: A Systematic Survey（2023–2025 机器人安全演进综述）",
+      "url": "https://arxiv.org/abs/2602.23404",
+      "source": "arXiv",
+      "date": "2026-02",
+      "summary": "系统综述遥操作四足机器人的漏洞、威胁与防御缺口：从 SROS2 三大设计漏洞（CCS 2022）、RoboPAIR 对 Go2 的 100% 越狱，到 Ghost V60 的 3 个 CVE；并对比 Spot / Unitree / ANYmal 等主流平台安全成熟度。",
+      "tags": [
+        "综述",
+        "四足机器人",
+        "ROS2 安全"
+      ],
+      "id": 14
+    },
+    {
+      "title": "Phantom Menace: VLA 模型物理传感器攻击鲁棒性研究（AAAI 2026）",
+      "url": "https://www.zjushine.top/",
+      "source": "AAAI 2026",
+      "date": "2026-01",
+      "summary": "首个针对 VLA（视觉-语言-动作）模型的物理传感器攻击系统性研究：'Real-Sim-Real' 框架自动模拟 6 种摄像头攻击与 2 种麦克风攻击并在真机验证，附带对抗训练防御方案。",
+      "tags": [
+        "VLA",
+        "物理传感器攻击",
+        "防御"
+      ],
+      "id": 15
+    },
+    {
+      "title": "CVE-2026-27509 / CVE-2026-27510：Unitree Go2 两个 RCE（DDS 未认证 + 配套安卓应用）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-27509",
+      "source": "NVD",
+      "date": "2026",
+      "summary": "Go2 固件（V1.1.7–V1.1.11）的 Eclipse CycloneDDS 未实现认证与授权，局域网内任意主机可向机器人内部服务总线发布请求实现 RCE；配套安卓应用 com.unitree.doggo2 存在同源问题。来自 'From DDS Packets to Robot Shells' 研究（boschko.ca 前作），亦是 UniPwn 蠕虫问题的后续。",
+      "tags": [
+        "CVE",
+        "Unitree",
+        "Go2",
+        "ROS2 安全"
+      ],
+      "id": 16
+    },
+    {
+      "title": "CVE-2026-1442：Unitree 固件更新包 TEA 加密可被推导（UniTEABag）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-1442",
+      "source": "NVD",
+      "date": "2026",
+      "summary": "Unitree OTA 固件包（.upk）使用 TEA-ECB 加密，但密钥派生所用的 4 字节种子以明文存放在包头，任何人可推导解密密钥并解包/重打包固件。Bin4ry 的 UniTEABag 研究公开。后续 G1 的 chat_go 等逆向分析均建立在此之上。",
+      "tags": [
+        "CVE",
+        "Unitree",
+        "固件安全"
+      ],
+      "id": 17
+    },
+    {
+      "title": "CVE-2025-41108：Ghost Robotics Vision 60 控制通道无加密认证（CVSS 9.2）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-41108",
+      "source": "NVD",
+      "date": "2025-10",
+      "summary": "INCIBE-CERT 披露：军用四足机器人 Vision 60 的 MAVLink 控制通道缺乏加密与认证，同一网络（可经 4G/LTE）上的攻击者可冒充操作平板下发任意指令；同批还有未认证物理接口（CVE-2025-41109）与 APK 硬编码凭据（CVE-2025-41110）。",
+      "tags": [
+        "CVE",
+        "四足机器人",
+        "关键基础设施"
+      ],
+      "id": 18
+    },
+    {
+      "title": "The Cybersecurity of a Humanoid Robot: An Early Study via the Unitree G1",
+      "url": "https://arxiv.org/abs/2509.14096",
+      "source": "arXiv",
+      "date": "2025-09",
+      "summary": "对 Unitree G1 人形机器人的早期安全研究：分析其通信协议、云服务依赖与攻击面，是消费级人形机器人安全研究的先驱之一。",
+      "tags": [
+        "人形机器人",
+        "Unitree",
+        "攻击面分析"
+      ],
+      "id": 19
+    },
+    {
+      "title": "CVE-2025-35027：Unitree Go2/G1/H1/B2 固件 BLE 命令注入",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-35027",
+      "source": "NVD",
+      "date": "2025-09",
+      "summary": "宇树多个机型共用固件存在命令注入漏洞；同系列还有 CVE-2025-2894（Go1 后门，2025-04）与 CVE-2025-60251（握手密钥仅校验 'unitree' 子串，任意客户端可连）。2026 年又出现 Go2 DDS 无认证（CVE-2026-27509）等续报。",
+      "tags": [
+        "CVE",
+        "Unitree",
+        "固件安全"
+      ],
+      "id": 20
+    },
+    {
+      "title": "ROBOPAIR: Jailbreaking LLM-Controlled Robots（USENIX Security 2025）",
+      "url": "https://arxiv.org/abs/2410.13691",
+      "source": "USENIX Security",
+      "date": "2025-08",
+      "summary": "首个专门针对 LLM 机器人的自动化越狱算法：攻击者 LLM + Judge 迭代循环 + 语法检查器，白/灰/黑盒三档，在移动底盘与机械臂上拿下商用机器人 Dolphin LLM 的首个越狱。",
+      "tags": [
+        "机器人越狱",
+        "USENIX",
+        "里程碑"
+      ],
+      "id": 21
+    },
+    {
+      "title": "BadRobot: Jailbreaking Embodied LLMs in the Physical World（ICLR 2025）",
+      "url": "https://arxiv.org/abs/2407.20242",
+      "source": "ICLR 2025",
+      "date": "2025-04",
+      "summary": "在真实机械臂（MyCobot 280 / UR3e）上实现越狱攻击：上下文越狱、安全错位（嘴上拒绝、代码照跑）、概念欺骗三策略；277+ 条物理恶意请求基准，并证明纯语音通道即可诱发危险行为。",
+      "tags": [
+        "机器人越狱",
+        "ICLR",
+        "语音攻击"
+      ],
+      "id": 22
+    },
+    {
+      "title": "PhantomLiDAR: 针对 LiDAR 的跨模态信号注入攻击（NDSS 2025）",
+      "url": "https://www.zjushine.top/",
+      "source": "NDSS 2025",
+      "date": "2025-03",
+      "summary": "通过电磁干扰向 LiDAR 电路注入信号，无需物理接触即可伪造点云中的障碍物/鬼影目标，影响自动驾驶与机器人的感知决策。POEF 作者所在团队（USSLAB）代表作之一。",
+      "tags": [
+        "LiDAR",
+        "信号注入",
+        "感知攻击"
+      ],
+      "id": 23
+    },
+    {
+      "title": "ASIMOV Benchmark: Generating Robot Constitutions for Semantic Safety（CoRL 2025）",
+      "url": "https://arxiv.org/abs/2503.08663",
+      "source": "CoRL 2025",
+      "date": "2025-03",
+      "summary": "DeepMind 团队：从真实场景图像 + 医院真实受伤报告生成'不良情境'数据集（ASIMOV），并自动生成自然语言'机器人宪法'作为 Prompt 前言，对人类安全偏好对齐率达 84.3%，带自动修正机制。",
+      "tags": [
+        "语义安全",
+        "基准",
+        "防御"
+      ],
+      "id": 24
+    },
+    {
+      "title": "POEX: Policy Executable Embodied AI Jailbreak Attacks",
+      "url": "https://arxiv.org/abs/2412.16633",
+      "source": "arXiv",
+      "date": "2025-02",
+      "summary": "POEF 的直接前作：发现传统越狱生成的有害文本不一定构成有害 Policy、有害 Policy 也不一定可执行，提出带可执行性约束的对抗后缀优化与 Harmful-RLbench 基准，并提出 Prompt/模型双层防御（85% 缓解率）。",
+      "tags": [
+        "机器人越狱",
+        "具身安全",
+        "里程碑"
+      ],
+      "id": 25
+    }
+  ]
+}

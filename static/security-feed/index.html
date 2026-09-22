@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>安全动态 · 具身智能安全 | Yuhang Huang</title>
+<meta name="description" content="具身智能/机器人安全每日动态：arXiv 论文、CVE 漏洞、安全博客与会议动态，每日自动更新。">
+<style>
+  :root {
+    --bg: #f7f7f8;
+    --card: #ffffff;
+    --border: #e4e4e7;
+    --text: #18181b;
+    --text2: #52525b;
+    --text3: #a1a1aa;
+    --accent: #e9353f;
+    --cve: #dc2626;
+    --paper: #059669;
+    --conf: #d97706;
+    --chip: #f4f4f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101012;
+      --card: #18181b;
+      --border: #2c2c31;
+      --text: #f4f4f5;
+      --text2: #b0b0b8;
+      --text3: #71717a;
+      --chip: #232327;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 40px 20px 64px; }
+  header { margin-bottom: 24px; }
+  h1 { font-size: 26px; font-weight: 700; letter-spacing: 0; }
+  h1 .dot { color: var(--accent); }
+  .sub { color: var(--text2); font-size: 14px; margin-top: 6px; }
+  .meta { color: var(--text3); font-size: 12px; margin-top: 10px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 20px 0 14px; }
+  .search {
+    flex: 1; min-width: 220px;
+    display: flex; align-items: center; gap: 8px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 8px 12px;
+  }
+  .search svg { flex: none; color: var(--text3); }
+  .search input {
+    border: 0; outline: 0; background: transparent; color: var(--text);
+    font-size: 14px; width: 100%; font-family: inherit;
+  }
+  .cats { display: flex; gap: 6px; flex-wrap: wrap; }
+  .cat {
+    border: 1px solid var(--border); background: var(--card); color: var(--text2);
+    font-size: 13px; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+    font-family: inherit; transition: all .15s;
+  }
+  .cat:hover { border-color: var(--text3); color: var(--text); }
+  .cat.on { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 600; }
+  .cat .n { opacity: .55; margin-left: 4px; font-size: 12px; }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; align-items: center; }
+  .tags .lbl { font-size: 12px; color: var(--text3); }
+  .tag {
+    font-size: 12px; padding: 3px 10px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--border); background: transparent; color: var(--text2); font-family: inherit;
+  }
+  .tag.on { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .item {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 16px 18px; margin-bottom: 12px;
+  }
+  .item .head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+  .pill { font-size: 11px; font-weight: 600; padding: 2px 9px; border-radius: 999px; letter-spacing: .02em; }
+  .pill.cve { color: var(--cve); background: color-mix(in srgb, var(--cve) 10%, transparent); }
+  .pill.paper { color: var(--paper); background: color-mix(in srgb, var(--paper) 10%, transparent); }
+  .pill.conf { color: var(--conf); background: color-mix(in srgb, var(--conf) 12%, transparent); }
+  .src { font-size: 12px; color: var(--text3); }
+  .date { font-size: 12px; color: var(--text3); margin-left: auto; }
+  .item a.title {
+    color: var(--text); font-weight: 600; font-size: 15px; text-decoration: none;
+    display: inline; background-image: linear-gradient(var(--accent), var(--accent));
+    background-size: 0% 1.5px; background-repeat: no-repeat; background-position: 0 100%;
+    transition: background-size .2s;
+  }
+  .item a.title:hover { color: var(--accent); background-size: 100% 1.5px; }
+  .item .sum { color: var(--text2); font-size: 14px; margin-top: 6px; }
+  .item .item-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .item .item-tags span {
+    font-size: 11px; color: var(--text3); border: 1px solid var(--border);
+    padding: 1px 8px; border-radius: 999px;
+  }
+  .empty { text-align: center; color: var(--text3); padding: 48px 0; font-size: 14px; }
+  footer { margin-top: 32px; font-size: 12px; color: var(--text3); text-align: center; }
+  footer a { color: var(--text3); }
+  .loading { text-align: center; color: var(--text3); padding: 48px 0; }
+  .err { text-align: center; color: var(--text3); padding: 48px 0; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>安全动态<span class="dot"> · </span>具身智能安全</h1>
+    <p class="sub">机器人 / 具身智能 / LLM Agent 安全的每日情报：arXiv 论文、CVE 漏洞、安全博客与会议动态。由定时任务每日 08:00 自动更新，按相关性与价值保留最多 50 条。</p>
+    <p class="meta">更新于 <span id="updated">…</span> · 共 <span id="total">0</span> 条 · 显示 <span id="shown">0</span> 条</p>
+  </header>
+
+  <div class="toolbar">
+    <div class="search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="text" placeholder="搜索标题 / 摘要 / 来源 / 标签…">
+    </div>
+    <div class="cats" id="cats"></div>
+  </div>
+  <div class="tags" id="tags"></div>
+
+  <div id="list"><div class="loading">加载中…</div></div>
+
+  <footer>
+    数据源由本地 Kimi Work 定时任务维护 · <a href="/">返回首页</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var feed = null;
+  var cat = "全部";
+  var activeTags = [];
+  var q = "";
+
+  function categoryOf(item) {
+    if (item.tags.indexOf("CVE") >= 0) return "CVE";
+    if (item.tags.indexOf("会议") >= 0) return "会议";
+    return "论文";
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  }
+
+  function renderCats() {
+    var cats = ["全部", "CVE", "论文", "会议"];
+    var el = document.getElementById("cats");
+    el.innerHTML = cats.map(function (c) {
+      var n = c === "全部" ? feed.items.length : feed.items.filter(function (i) { return categoryOf(i) === c; }).length;
+      return '<button class="cat' + (cat === c ? " on" : "") + '" data-cat="' + c + '">' + c + '<span class="n">' + n + "</span></button>";
+    }).join("");
+    el.querySelectorAll(".cat").forEach(function (b) {
+      b.addEventListener("click", function () { cat = b.getAttribute("data-cat"); render(); });
+    });
+  }
+
+  function renderTags(allTags) {
+    var el = document.getElementById("tags");
+    el.innerHTML = '<span class="lbl">标签：</span>' + allTags.map(function (t) {
+      return '<button class="tag' + (activeTags.indexOf(t) >= 0 ? " on" : "") + '" data-tag="' + esc(t) + '">' + esc(t) + "</button>";
+    }).join("");
+    el.querySelectorAll(".tag").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var t = b.getAttribute("data-tag");
+        var i = activeTags.indexOf(t);
+        if (i >= 0) activeTags.splice(i, 1); else activeTags.push(t);
+        render();
+      });
+    });
+  }
+
+  function filtered() {
+    var needle = q.trim().toLowerCase();
+    return feed.items.filter(function (item) {
+      if (cat !== "全部" && categoryOf(item) !== cat) return false;
+      for (var i = 0; i < activeTags.length; i++) {
+        if (item.tags.indexOf(activeTags[i]) < 0) return false;
+      }
+      if (needle) {
+        var hay = (item.title + " " + item.summary + " " + item.source + " " + item.tags.join(" ")).toLowerCase();
+        if (hay.indexOf(needle) < 0) return false;
+      }
+      return true;
+    });
+  }
+
+  function render() {
+    renderCats();
+    var allTags = [];
+    var seen = {};
+    feed.items.forEach(function (i) {
+      i.tags.forEach(function (t) { if (!seen[t]) { seen[t] = 1; allTags.push(t); } });
+    });
+    renderTags(allTags.sort());
+
+    var items = filtered();
+    document.getElementById("shown").textContent = items.length;
+    var list = document.getElementById("list");
+    if (!items.length) {
+      list.innerHTML = '<div class="empty">没有符合筛选条件的条目，试试放宽条件。</div>';
+      return;
+    }
+    list.innerHTML = items.map(function (item) {
+      var c = categoryOf(item);
+      var tags = item.tags.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("");
+      return '<article class="item">' +
+        '<div class="head"><span class="pill ' + c + '">' + c + "</span>" +
+        '<span class="src">' + esc(item.source) + '</span>' +
+        '<span class="date">' + esc(item.date) + "</span></div>" +
+        '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' + esc(item.title) + "</a>" +
+        '<p class="sum">' + esc(item.summary) + "</p>" +
+        '<div class="item-tags">' + tags + "</div></article>";
+    }).join("");
+  }
+
+  document.getElementById("q").addEventListener("input", function (e) {
+    q = e.target.value;
+    var items = filtered();
+    document.getElementById("shown").textContent = items.length;
+    var list = document.getElementById("list");
+    if (!items.length) { list.innerHTML = '<div class="empty">没有符合筛选条件的条目，试试放宽条件。</div>'; return; }
+    list.innerHTML = items.map(function (item) {
+      var c = categoryOf(item);
+      var tags = item.tags.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("");
+      return '<article class="item">' +
+        '<div class="head"><span class="pill ' + c + '">' + c + "</span>" +
+        '<span class="src">' + esc(item.source) + '</span>' +
+        '<span class="date">' + esc(item.date) + "</span></div>" +
+        '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' + esc(item.title) + "</a>" +
+        '<p class="sum">' + esc(item.summary) + "</p>" +
+        '<div class="item-tags">' + tags + "</div></article>";
+    }).join("");
+  });
+
+  fetch("./feed.json", { cache: "no-store" })
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(function (d) {
+      feed = d;
+      document.getElementById("updated").textContent = new Date(d.updatedAt).toLocaleString("zh-CN", { hour12: false });
+      document.getElementById("total").textContent = d.items.length;
+      render();
+    })
+    .catch(function () {
+      document.getElementById("list").innerHTML = '<div class="err">数据加载失败，请稍后刷新重试。</div>';
+    });
+})();
+</script>
+</body>
+</html>

@@ -9,6 +9,11 @@
   weight = 15
 
 [[main]]
+  name = "BH 议题库"
+  url = "/bh-talks/"
+  weight = 18
+
+[[main]]
   name = "标签"
   pageRef = "tags"
   weight = 20

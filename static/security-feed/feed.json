@@ -1,6 +1,110 @@
 {
-  "updatedAt": "2026-09-22T11:55:00+08:00",
+  "updatedAt": "2026-09-23T08:20:00+08:00",
   "items": [
+    {
+      "title": "TC260 发布《人工智能安全治理框架 3.0》",
+      "url": "https://www.tc260.org.cn/tc260/xwdt1/202609/d513a007d04347f58e483fabaefb34b8/files/%E3%80%8A%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%89%E5%85%A8%E6%B2%BB%E7%90%86%E6%9E%B6%E6%9E%B63.0%E3%80%8B.pdf.pdf",
+      "source": "TC260",
+      "date": "2026-09-22",
+      "summary": "全国网安标委 TC260 发布人工智能安全治理框架 3.0，新增智能体（Agent）全生命周期安全要求，涵盖服务关停、数据备份、部署环境清理、三方授权回收等下线与处置环节，为 Agent 应用开发者、提供者和使用者提供安全治理参考。",
+      "tags": [
+        "AI 治理",
+        "Agent 安全",
+        "AI 安全对齐"
+      ],
+      "id": 26
+    },
+    {
+      "title": "Decoding Guardrails: XAI-Guided Perturbation Analysis of Prompt Injection Detection",
+      "url": "https://arxiv.org/abs/2609.24801",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "用可解释 AI 技术剖析 Meta Prompt Guard 2 的分类决策机制，发现其依赖多 token 累积贡献而非少数关键特征；基于显著性图的同义词替换和句子改写可在只改动少量文本的情况下翻转判定，部分样本可直接对底层 LLM 形成越狱。对工业界 Guardrail 的鲁棒性提出实证警告。",
+      "tags": [
+        "提示注入",
+        "Guardrail",
+        "越狱"
+      ],
+      "id": 27
+    },
+    {
+      "title": "OPBackdoor: Opportunistic Backdoors via Alibi-Aligned Reasoning",
+      "url": "https://arxiv.org/abs/2609.24826",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "提出「机会主义后门」：后门目标仅在提示上下文出现可利用机会时被触发，模型的推理过程以看似合逻辑的借口逐步导向目标行为（如报复性过度帮助、倾向性翻译）。在 26B–119B 稠密与 MoE 模型上验证可骗过 LLM 审查器，对比监控可暴露其后门目标，对模型供应链审计意义重大。",
+      "tags": [
+        "后门攻击",
+        "AI 安全对齐",
+        "模型审计"
+      ],
+      "id": 28
+    },
+    {
+      "title": "Feedback Coding Enables Inference-Time Covert Agentic Communication",
+      "url": "https://arxiv.org/abs/2609.24994",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "将黑盒 LLM 隐写术建模为带因果反馈的序贯通信问题，提出 BAM 反馈编码方案：接收方从已生成 token 获得反馈并引导后续嵌入，大幅降低变长文本下的解码错误率。意味着恶意双方可经 Agent 生成的日常文本建立高带宽隐蔽信道，是数据外泄防御的新威胁模型。",
+      "tags": [
+        "隐蔽信道",
+        "LLM Agent 安全",
+        "数据外泄"
+      ],
+      "id": 29
+    },
+    {
+      "title": "Plugin4Shell：四大 AI 编程 Agent 插件 SHA-pinning 绕过零点击 RCE",
+      "url": "https://thehackernews.com/2026/09/weekly-recap-cisco-0-day-ai-agent-rce.html",
+      "source": "AIR Security / The Hacker News",
+      "date": "2026-09-18",
+      "summary": "AIR Security 披露首个 AI 供应链形态漏洞：Claude Code、Codex、Copilot、Gemini CLI 检出插件 pin 的 commit 后未验证实际检出位置，攻击者以同名哈希分支即可绕过 SHA pinning，配合默认后台自动更新实现零点击 RCE。Claude Code 2.1.179 与 Codex 0.146.0 已修复，Microsoft 未出补丁，Google 弃用 Gemini CLI。尚无 CVE 编号。",
+      "tags": [
+        "LLM Agent 安全",
+        "供应链攻击",
+        "零点击 RCE"
+      ],
+      "id": 30
+    },
+    {
+      "title": "Beyond Single-Model Injection: A Threat Model and Defense Architecture for Prompt Injection in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2609.22949",
+      "source": "arXiv",
+      "date": "2026-09-19",
+      "summary": "针对多智能体系统构建提示注入威胁模型，枚举跨 Agent 消息传递、共享工具越权、信任级联等 14 种攻击向量；在 6 个 Agent 的生产级系统实测发现即使有系统提示级护栏，67% 的 Agent 仍至少遭受一种作用域违规，工具输出间接注入成功率达 43%。",
+      "tags": [
+        "提示注入",
+        "多智能体安全",
+        "威胁模型"
+      ],
+      "id": 31
+    },
+    {
+      "title": "The Price of Safety: Benign-Case Utility and Token Overhead of Memory-Poisoning Defenses in LLM Agents",
+      "url": "https://arxiv.org/abs/2609.22818",
+      "source": "arXiv",
+      "date": "2026-09-19",
+      "summary": "首个系统性测量 Agent 记忆投毒防御在良性流量下代价的工作：在统一记忆后端与检索流程下对比写入时防御（输入清洗、来源检查、LLM 异常检测）与读取时重排序，发现写入时防御几乎无可用性成本，而重排序器会降低核心任务准确率约 4.4 分，为防御选型提供实证依据。",
+      "tags": [
+        "记忆投毒",
+        "LLM Agent 安全",
+        "防御评估"
+      ],
+      "id": 32
+    },
+    {
+      "title": "MATE: Policy-Aware Security Auditing for Mobile Agents via Synthesis-Driven Trajectory Learning",
+      "url": "https://arxiv.org/abs/2609.22724",
+      "source": "arXiv",
+      "date": "2026-09-19",
+      "summary": "面向手机 GUI Agent 的策略感知安全审计器：将 Agent 轨迹与自然语言安全策略联合编码，判断轨迹是否违规并给出解释；策略以可编辑文本形式维护无需重训。基于数百款应用构建了 14 万+合成策略条件轨迹并发布 MATEBench 基准。",
+      "tags": [
+        "移动 Agent 安全",
+        "轨迹审计",
+        "基准测试"
+      ],
+      "id": 33
+    },
     {
       "id": 1,
       "title": "Beyond Predictable Paths: Redefining AI Security Incident Reporting for Agents",

@@ -1,6 +1,84 @@
 {
-  "updatedAt": "2026-09-24T08:30:00+08:00",
+  "updatedAt": "2026-09-25T08:30:00+08:00",
   "items": [
+    {
+      "title": "Control-Token Injection Suppresses Chain-of-Thought and Defeats Reasoning-Based Oversight in Tool-Using Agents",
+      "url": "https://arxiv.org/abs/2609.27542",
+      "source": "arXiv",
+      "date": "2026-09-23",
+      "summary": "证明工具型 Agent 的安全性是模型与解码 harness 的联合属性且两半都可被不可信输入攻击：在 gpt-oss-20b 官方工具沙箱上，向用户消息追加一串模型自身的通道控制 token 即可让分词器渲染出「推理已完成」，推理通道从平均 52.5 token 归零而 http.post 照常发出；规则监视器和跨家族 LLM 监视器在普通样本上全检出、注入后全失效。绕开思维链监督的新攻击面。",
+      "tags": [
+        "LLM Agent 安全",
+        "思维链监督",
+        "解码 harness"
+      ],
+      "id": 41
+    },
+    {
+      "title": "Agent Name Collision Attacks in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2609.27624",
+      "source": "arXiv",
+      "date": "2026-09-23",
+      "summary": "A2A 协议将 Agent Card 的名称定义为人可读元数据而非稳定身份，也未规定冲突语义；在 7 个固定版本的开源多智能体主机上实测，6 个客户端式集成会把发给可信对等体名称的请求路由到攻击者控制的对等体，broker 实现更是将两个对等体折叠到同一条名称派生路由，导致错误对等体调度——拦截或拒绝服务。首个针对 A2A 身份层的系统性攻击研究。",
+      "tags": [
+        "多智能体安全",
+        "A2A 协议",
+        "身份混淆"
+      ],
+      "id": 42
+    },
+    {
+      "title": "Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams",
+      "url": "https://arxiv.org/abs/2609.27996",
+      "source": "arXiv",
+      "date": "2026-09-23",
+      "summary": "残差流隐蔽信道：被攻陷的运行时组件经 hook 将消息按码字注入中间层残差流（按局部残差范数缩放注入强度），离线观察者用简单线性解码器即可恢复——无需重训模型、无需受控外发通道。跨 7 个架构家族 11 个模型中 9 个达到 91–100% 恢复率，对气隙环境导出诊断工件的场景构成真实泄密威胁。",
+      "tags": [
+        "隐蔽信道",
+        "数据外泄",
+        "LLM 安全"
+      ],
+      "id": 43
+    },
+    {
+      "title": "ForgetMimic: Motion Unlearning for Reinforcement Learning Humanoid Control",
+      "url": "https://arxiv.org/abs/2609.28378",
+      "source": "arXiv",
+      "date": "2026-09-23",
+      "summary": "首个面向物理世界人形控制的运动级遗忘方法：给定在 N 个动作上训练的策略，可定向降解其中 K 个目标动作的性能而保留其余动作。针对恶意、投毒或次优动作移除及 GDPR 被遗忘权的动作版权移除等安全与隐私需求，为具身策略提供「撤销」能力。",
+      "tags": [
+        "具身安全",
+        "人形机器人",
+        "机器遗忘"
+      ],
+      "id": 44
+    },
+    {
+      "title": "The Like Trap: Multi-Stage Poisoning against Agents in Similarity-based Recommendation Systems",
+      "url": "https://arxiv.org/abs/2609.27155",
+      "source": "arXiv",
+      "date": "2026-09-22",
+      "summary": "针对社交媒体自主 Agent（如代管个人账号）的间接投毒：无需直接让 Agent 读到毒化内容，而是利用推荐系统的 like-score 机制，理论刻画多阶段毒化帖子链操纵 Agent 信息流的条件。揭示推荐算法本身可作为 Agent 攻击面的放大器。",
+      "tags": [
+        "LLM Agent 安全",
+        "投毒攻击",
+        "推荐系统"
+      ],
+      "id": 45
+    },
+    {
+      "title": "Ajar: Measuring Open Privilege in Agent Defenses",
+      "url": "https://arxiv.org/abs/2609.26900",
+      "source": "arXiv",
+      "date": "2026-09-22",
+      "summary": "指出现有 Agent 防御评测只看执行层攻击成功率与可用性，防御可在两项都拿高分的同时保留着任务不需要的传输、删除或宽泛读取权限。Ajar 直接度量这种「开放特权」：附着到既有 Agent 安全基准上复用其任务、工具 schema 与目标状态，评估 Agent 在执行之外实际敞开了多少能力边界。",
+      "tags": [
+        "LLM Agent 安全",
+        "防御评估",
+        "最小权限"
+      ],
+      "id": 46
+    },
     {
       "title": "A2M: Trace-Optimized Agent Hijacking in the MCP Ecosystem",
       "url": "https://arxiv.org/abs/2609.26761",

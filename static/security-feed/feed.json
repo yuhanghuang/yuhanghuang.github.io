@@ -1,6 +1,104 @@
 {
-  "updatedAt": "2026-09-26T08:30:00+08:00",
+  "updatedAt": "2026-09-28T10:09:12+08:00",
   "items": [
+    {
+      "id": 53,
+      "title": "AuthGuard-R: Safety-Compliant Mission Hijacking and Dual-Gate Defense for LLM-Controlled Robots",
+      "url": "https://arxiv.org/abs/2609.31110",
+      "source": "arXiv",
+      "date": "2026-09-25",
+      "summary": "提出针对 LLM 控制机器人的「任务劫持」威胁模型：攻击者无需制造物理危险，只需让动作偏离用户授权任务（改投递点、换物品、扩区域）。配套双门防御同时核对动作物理安全性与任务合规性。",
+      "tags": [
+        "机器人安全",
+        "任务劫持",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 54,
+      "title": "Containing Behavioral Cascades from Manipulated Claims in LLM-Powered Multi-Robot Systems",
+      "url": "https://arxiv.org/abs/2609.30523",
+      "source": "arXiv",
+      "date": "2026-09-24",
+      "summary": "LLM 多机器人系统中一个被接受的虚假世界声明可引发全队行为级联（重复重规划、拥堵、任务假不可行）。提出 Verify-Adapt-Hold 主动验证框架，在操纵传播前遏制其下游影响。",
+      "tags": [
+        "多机器人系统",
+        "语义操纵",
+        "具身智能",
+        "运行时防御"
+      ]
+    },
+    {
+      "id": 55,
+      "title": "Prompt Injection Detection for Email Agents Through Attack Chain Modeling",
+      "url": "https://arxiv.org/abs/2609.30657",
+      "source": "arXiv",
+      "date": "2026-09-25",
+      "summary": "把邮件 Agent 的间接提示注入检测从二分类文本判别升级为攻击链建模：文本检测器+分阶段验证器+规则风险信号+用户意图一致性分析，捕捉单步看似无害的多步组合危害。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "攻击检测",
+        "间接注入"
+      ]
+    },
+    {
+      "id": 56,
+      "title": "AGATE: Provenance-Based Runtime Defense Against Compositional Attacks on LLM Agents",
+      "url": "https://arxiv.org/abs/2609.30830",
+      "source": "arXiv",
+      "date": "2026-09-25",
+      "summary": "在 Agent 运行边界部署授权与数据溯源门：权限绑定精确参数、限时限次，来源登记追踪数据流转，决策路径完全确定性、不依赖 LLM 判断，防御多步组合式攻击。",
+      "tags": [
+        "LLM Agent",
+        "运行时防御",
+        "数据溯源",
+        "授权"
+      ]
+    },
+    {
+      "id": 57,
+      "title": "AgentXploit: Autonomous Repository-to-Runtime Red-Teaming for AI Agents",
+      "url": "https://arxiv.org/abs/2609.31318",
+      "source": "arXiv",
+      "date": "2026-09-25",
+      "summary": "双角色自动化红队系统：仓库级攻击路径发现与运行时利用分离，对 AI Agent 的工具滥用、路径穿越、命令注入等做部署前白盒审计，攻击须经外部验证器确认。",
+      "tags": [
+        "LLM Agent",
+        "红队审计",
+        "工具滥用",
+        "供应链"
+      ]
+    },
+    {
+      "id": 58,
+      "title": "MetaPermit: Scalable and Auditable Access Control for AI Agents via LLM-Inferred Meta-Attributes",
+      "url": "https://arxiv.org/abs/2609.31039",
+      "source": "arXiv",
+      "date": "2026-09-25",
+      "summary": "用 LLM 推断的元属性为 Agent 工具调用做可审计的细粒度访问控制，弥补静态权限规则难以覆盖开放任务、LLM 动态授权不一致且易被间接提示注入篡改的缺陷。",
+      "tags": [
+        "LLM Agent",
+        "访问控制",
+        "Prompt Injection",
+        "运行时防护"
+      ]
+    },
+    {
+      "id": 59,
+      "title": "Configuration, Not Conscience: A Large-Scale Empirical Study of LLM System Prompts",
+      "url": "https://arxiv.org/abs/2609.31575",
+      "source": "arXiv",
+      "date": "2026-09-25",
+      "summary": "对 62 家厂商 407 份泄露/官方系统提示词的大样本实证：内容以工具/协议配置为主（约 58%），安全策略仅占约 5%，最严规则守护工具使用而非有害内容（11:1）——系统提示词更像配置而非价值观窗口。",
+      "tags": [
+        "系统提示词",
+        "对齐",
+        "实证研究",
+        "越狱"
+      ]
+    },
     {
       "title": "LLM Agents Can Easily Tamper With Their Own Traces",
       "url": "https://arxiv.org/abs/2609.30266",
@@ -93,32 +191,6 @@
       "id": 41
     },
     {
-      "title": "Agent Name Collision Attacks in Multi-Agent Systems",
-      "url": "https://arxiv.org/abs/2609.27624",
-      "source": "arXiv",
-      "date": "2026-09-23",
-      "summary": "A2A 协议将 Agent Card 的名称定义为人可读元数据而非稳定身份，也未规定冲突语义；在 7 个固定版本的开源多智能体主机上实测，6 个客户端式集成会把发给可信对等体名称的请求路由到攻击者控制的对等体，broker 实现更是将两个对等体折叠到同一条名称派生路由，导致错误对等体调度——拦截或拒绝服务。首个针对 A2A 身份层的系统性攻击研究。",
-      "tags": [
-        "多智能体安全",
-        "A2A 协议",
-        "身份混淆"
-      ],
-      "id": 42
-    },
-    {
-      "title": "Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams",
-      "url": "https://arxiv.org/abs/2609.27996",
-      "source": "arXiv",
-      "date": "2026-09-23",
-      "summary": "残差流隐蔽信道：被攻陷的运行时组件经 hook 将消息按码字注入中间层残差流（按局部残差范数缩放注入强度），离线观察者用简单线性解码器即可恢复——无需重训模型、无需受控外发通道。跨 7 个架构家族 11 个模型中 9 个达到 91–100% 恢复率，对气隙环境导出诊断工件的场景构成真实泄密威胁。",
-      "tags": [
-        "隐蔽信道",
-        "数据外泄",
-        "LLM 安全"
-      ],
-      "id": 43
-    },
-    {
       "title": "ForgetMimic: Motion Unlearning for Reinforcement Learning Humanoid Control",
       "url": "https://arxiv.org/abs/2609.28378",
       "source": "arXiv",
@@ -130,19 +202,6 @@
         "机器遗忘"
       ],
       "id": 44
-    },
-    {
-      "title": "The Like Trap: Multi-Stage Poisoning against Agents in Similarity-based Recommendation Systems",
-      "url": "https://arxiv.org/abs/2609.27155",
-      "source": "arXiv",
-      "date": "2026-09-22",
-      "summary": "针对社交媒体自主 Agent（如代管个人账号）的间接投毒：无需直接让 Agent 读到毒化内容，而是利用推荐系统的 like-score 机制，理论刻画多阶段毒化帖子链操纵 Agent 信息流的条件。揭示推荐算法本身可作为 Agent 攻击面的放大器。",
-      "tags": [
-        "LLM Agent 安全",
-        "投毒攻击",
-        "推荐系统"
-      ],
-      "id": 45
     },
     {
       "title": "Ajar: Measuring Open Privilege in Agent Defenses",
@@ -182,19 +241,6 @@
         "内核漏洞"
       ],
       "id": 35
-    },
-    {
-      "title": "Attack Success Rate Is Not a Number: On Measurement Validity in Agentic AI Security Evaluation",
-      "url": "https://arxiv.org/abs/2609.25173",
-      "source": "arXiv",
-      "date": "2026-09-21",
-      "summary": "对 259 篇 Agentic AI 安全论文的全文元分析发现：65% 的论文对 headline 攻击成功率不给方差估计或重复实验，仅 30.9% 披露足以判断评测是否随机的解码细节，使用 LLM 评审的论文中 69.7% 未做人机标注一致性检验。论证 ASR 是依赖六个设计选择的度量族而非单一数值，为 Agent 安全评测方法学敲响警钟。",
-      "tags": [
-        "Agentic AI 安全",
-        "评测方法学",
-        "元分析"
-      ],
-      "id": 36
     },
     {
       "title": "ZeroGate: Trust-Preserving Fast Paths for Governed AI Agent Runtimes",
@@ -262,32 +308,6 @@
       "id": 27
     },
     {
-      "title": "OPBackdoor: Opportunistic Backdoors via Alibi-Aligned Reasoning",
-      "url": "https://arxiv.org/abs/2609.24826",
-      "source": "arXiv",
-      "date": "2026-09-21",
-      "summary": "提出「机会主义后门」：后门目标仅在提示上下文出现可利用机会时被触发，模型的推理过程以看似合逻辑的借口逐步导向目标行为（如报复性过度帮助、倾向性翻译）。在 26B–119B 稠密与 MoE 模型上验证可骗过 LLM 审查器，对比监控可暴露其后门目标，对模型供应链审计意义重大。",
-      "tags": [
-        "后门攻击",
-        "AI 安全对齐",
-        "模型审计"
-      ],
-      "id": 28
-    },
-    {
-      "title": "Feedback Coding Enables Inference-Time Covert Agentic Communication",
-      "url": "https://arxiv.org/abs/2609.24994",
-      "source": "arXiv",
-      "date": "2026-09-21",
-      "summary": "将黑盒 LLM 隐写术建模为带因果反馈的序贯通信问题，提出 BAM 反馈编码方案：接收方从已生成 token 获得反馈并引导后续嵌入，大幅降低变长文本下的解码错误率。意味着恶意双方可经 Agent 生成的日常文本建立高带宽隐蔽信道，是数据外泄防御的新威胁模型。",
-      "tags": [
-        "隐蔽信道",
-        "LLM Agent 安全",
-        "数据外泄"
-      ],
-      "id": 29
-    },
-    {
       "title": "Plugin4Shell：四大 AI 编程 Agent 插件 SHA-pinning 绕过零点击 RCE",
       "url": "https://thehackernews.com/2026/09/weekly-recap-cisco-0-day-ai-agent-rce.html",
       "source": "AIR Security / The Hacker News",
@@ -312,19 +332,6 @@
         "威胁模型"
       ],
       "id": 31
-    },
-    {
-      "title": "The Price of Safety: Benign-Case Utility and Token Overhead of Memory-Poisoning Defenses in LLM Agents",
-      "url": "https://arxiv.org/abs/2609.22818",
-      "source": "arXiv",
-      "date": "2026-09-19",
-      "summary": "首个系统性测量 Agent 记忆投毒防御在良性流量下代价的工作：在统一记忆后端与检索流程下对比写入时防御（输入清洗、来源检查、LLM 异常检测）与读取时重排序，发现写入时防御几乎无可用性成本，而重排序器会降低核心任务准确率约 4.4 分，为防御选型提供实证依据。",
-      "tags": [
-        "记忆投毒",
-        "LLM Agent 安全",
-        "防御评估"
-      ],
-      "id": 32
     },
     {
       "title": "MATE: Policy-Aware Security Auditing for Mobile Agents via Synthesis-Driven Trajectory Learning",

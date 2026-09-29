@@ -98,6 +98,12 @@
   .empty { text-align: center; color: var(--text3); padding: 48px 0; font-size: 14px; }
   footer { margin-top: 32px; font-size: 12px; color: var(--text3); text-align: center; }
   footer a { color: var(--text3); }
+  .pager { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: center; margin-top: 20px; }
+  .pager .info { width: 100%; text-align: center; color: var(--text3); font-size: 12px; margin-bottom: 4px; }
+  .pg { border: 1px solid var(--border); background: var(--card); color: var(--text2); border-radius: 8px; padding: 5px 10px; font-size: 13px; cursor: pointer; font-family: inherit; }
+  .pg:hover:not(:disabled):not(.on) { border-color: var(--text3); color: var(--text); }
+  .pg.on { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 600; }
+  .pg:disabled { opacity: .4; cursor: default; }
   .loading { text-align: center; color: var(--text3); padding: 48px 0; }
   .err { text-align: center; color: var(--text3); padding: 48px 0; font-size: 14px; }
 </style>
@@ -106,7 +112,7 @@
 <div class="wrap">
   <header>
     <h1>安全动态<span class="dot"> · </span>具身智能安全</h1>
-    <p class="sub">机器人 / 具身智能 / LLM Agent 安全的每日情报：arXiv 论文、CVE 漏洞、安全博客与会议动态。由定时任务每日 08:00 自动更新，按相关性与价值保留最多 50 条。</p>
+    <p class="sub">机器人 / 具身智能 / LLM Agent 安全的每日情报：arXiv 论文、CVE 漏洞、安全博客与会议动态。由定时任务每日 08:00 自动更新，历史条目全量保留，每页展示 15 条。</p>
     <p class="meta">更新于 <span id="updated">…</span> · 共 <span id="total">0</span> 条 · 显示 <span id="shown">0</span> 条</p>
   </header>
 
@@ -120,6 +126,7 @@
   <div class="tags" id="tags"></div>
 
   <div id="list"><div class="loading">加载中…</div></div>
+  <div class="pager" id="pager"></div>
 
   <footer>
     数据源由本地 Kimi Work 定时任务维护 · <a href="/">返回首页</a>
@@ -132,6 +139,8 @@
   var cat = "全部";
   var activeTags = [];
   var q = "";
+  var page = 1;
+  var PAGE_SIZE = 15;
 
   function categoryOf(item) {
     if (item.tags.indexOf("CVE") >= 0) return "CVE";
@@ -153,7 +162,7 @@
       return '<button class="cat' + (cat === c ? " on" : "") + '" data-cat="' + c + '">' + c + '<span class="n">' + n + "</span></button>";
     }).join("");
     el.querySelectorAll(".cat").forEach(function (b) {
-      b.addEventListener("click", function () { cat = b.getAttribute("data-cat"); render(); });
+      b.addEventListener("click", function () { cat = b.getAttribute("data-cat"); page = 1; render(); });
     });
   }
 
@@ -167,6 +176,7 @@
         var t = b.getAttribute("data-tag");
         var i = activeTags.indexOf(t);
         if (i >= 0) activeTags.splice(i, 1); else activeTags.push(t);
+        page = 1;
         render();
       });
     });
@@ -187,6 +197,40 @@
     });
   }
 
+  function itemHTML(item) {
+    var c = categoryOf(item);
+    var tags = item.tags.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("");
+    return '<article class="item">' +
+      '<div class="head"><span class="pill ' + c + '">' + c + "</span>" +
+      '<span class="src">' + esc(item.source) + '</span>' +
+      '<span class="date">' + esc(item.date) + "</span></div>" +
+      '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' + esc(item.title) + "</a>" +
+      '<p class="sum">' + esc(item.summary) + "</p>" +
+      '<div class="item-tags">' + tags + "</div></article>";
+  }
+
+  function renderPager(total) {
+    var pager = document.getElementById("pager");
+    var pageCount = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    if (page > pageCount) page = pageCount;
+    if (total <= PAGE_SIZE) { pager.innerHTML = ""; return; }
+    var html = '<div class="info">第 ' + page + " / " + pageCount + " 页 · 共 " + total + " 条</div>";
+    html += '<button class="pg" data-pg="' + (page - 1) + '"' + (page <= 1 ? " disabled" : "") + ">上一页</button>";
+    for (var p = 1; p <= pageCount; p++) {
+      html += '<button class="pg' + (p === page ? " on" : "") + '" data-pg="' + p + '">' + p + "</button>";
+    }
+    html += '<button class="pg" data-pg="' + (page + 1) + '"' + (page >= pageCount ? " disabled" : "") + ">下一页</button>";
+    pager.innerHTML = html;
+    pager.querySelectorAll(".pg").forEach(function (b) {
+      b.addEventListener("click", function () {
+        if (b.disabled) return;
+        page = parseInt(b.getAttribute("data-pg"), 10);
+        render();
+        document.getElementById("list").scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
   function render() {
     renderCats();
     var allTags = [];
@@ -201,38 +245,18 @@
     var list = document.getElementById("list");
     if (!items.length) {
       list.innerHTML = '<div class="empty">没有符合筛选条件的条目，试试放宽条件。</div>';
+      renderPager(0);
       return;
     }
-    list.innerHTML = items.map(function (item) {
-      var c = categoryOf(item);
-      var tags = item.tags.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("");
-      return '<article class="item">' +
-        '<div class="head"><span class="pill ' + c + '">' + c + "</span>" +
-        '<span class="src">' + esc(item.source) + '</span>' +
-        '<span class="date">' + esc(item.date) + "</span></div>" +
-        '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' + esc(item.title) + "</a>" +
-        '<p class="sum">' + esc(item.summary) + "</p>" +
-        '<div class="item-tags">' + tags + "</div></article>";
-    }).join("");
+    var start = (page - 1) * PAGE_SIZE;
+    list.innerHTML = items.slice(start, start + PAGE_SIZE).map(itemHTML).join("");
+    renderPager(items.length);
   }
 
   document.getElementById("q").addEventListener("input", function (e) {
     q = e.target.value;
-    var items = filtered();
-    document.getElementById("shown").textContent = items.length;
-    var list = document.getElementById("list");
-    if (!items.length) { list.innerHTML = '<div class="empty">没有符合筛选条件的条目，试试放宽条件。</div>'; return; }
-    list.innerHTML = items.map(function (item) {
-      var c = categoryOf(item);
-      var tags = item.tags.map(function (t) { return "<span>" + esc(t) + "</span>"; }).join("");
-      return '<article class="item">' +
-        '<div class="head"><span class="pill ' + c + '">' + c + "</span>" +
-        '<span class="src">' + esc(item.source) + '</span>' +
-        '<span class="date">' + esc(item.date) + "</span></div>" +
-        '<a class="title" href="' + esc(item.url) + '" target="_blank" rel="noopener noreferrer">' + esc(item.title) + "</a>" +
-        '<p class="sum">' + esc(item.summary) + "</p>" +
-        '<div class="item-tags">' + tags + "</div></article>";
-    }).join("");
+    page = 1;
+    render();
   });
 
   fetch("./feed.json", { cache: "no-store" })

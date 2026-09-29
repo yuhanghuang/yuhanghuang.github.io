@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T10:34:57+08:00",
+  "updatedAt": "2026-09-29T10:39:25+08:00",
   "items": [
     {
       "id": 60,
@@ -664,6 +664,149 @@
         "里程碑"
       ],
       "id": 25
+    },
+    {
+      "title": "ForgetMimic: Motion Unlearning for Reinforcement Learning Humanoid Control",
+      "url": "https://arxiv.org/abs/2609.28378",
+      "source": "arXiv",
+      "date": "2026-09-23",
+      "summary": "首个面向物理世界人形控制的运动级遗忘方法：给定在 N 个动作上训练的策略，可定向降解其中 K 个目标动作的性能而保留其余动作。针对恶意、投毒或次优动作移除及 GDPR 被遗忘权的动作版权移除等安全与隐私需求，为具身策略提供「撤销」能力。",
+      "tags": [
+        "具身安全",
+        "人形机器人",
+        "机器遗忘"
+      ],
+      "id": 44
+    },
+    {
+      "title": "Ajar: Measuring Open Privilege in Agent Defenses",
+      "url": "https://arxiv.org/abs/2609.26900",
+      "source": "arXiv",
+      "date": "2026-09-22",
+      "summary": "指出现有 Agent 防御评测只看执行层攻击成功率与可用性，防御可在两项都拿高分的同时保留着任务不需要的传输、删除或宽泛读取权限。Ajar 直接度量这种「开放特权」：附着到既有 Agent 安全基准上复用其任务、工具 schema 与目标状态，评估 Agent 在执行之外实际敞开了多少能力边界。",
+      "tags": [
+        "LLM Agent 安全",
+        "防御评估",
+        "最小权限"
+      ],
+      "id": 46
+    },
+    {
+      "title": "Agent Name Collision Attacks in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2609.27624",
+      "source": "arXiv",
+      "date": "2026-09-23",
+      "summary": "A2A 协议将 Agent Card 的名称定义为人可读元数据而非稳定身份，也未规定冲突语义；在 7 个固定版本的开源多智能体主机上实测，6 个客户端式集成会把发给可信对等体名称的请求路由到攻击者控制的对等体，broker 实现更是将两个对等体折叠到同一条名称派生路由，导致错误对等体调度——拦截或拒绝服务。首个针对 A2A 身份层的系统性攻击研究。",
+      "tags": [
+        "多智能体安全",
+        "A2A 协议",
+        "身份混淆"
+      ],
+      "id": 42
+    },
+    {
+      "title": "Your Model Is Leaking: Covert Information Transfer through LLM Residual Streams",
+      "url": "https://arxiv.org/abs/2609.27996",
+      "source": "arXiv",
+      "date": "2026-09-23",
+      "summary": "残差流隐蔽信道：被攻陷的运行时组件经 hook 将消息按码字注入中间层残差流（按局部残差范数缩放注入强度），离线观察者用简单线性解码器即可恢复——无需重训模型、无需受控外发通道。跨 7 个架构家族 11 个模型中 9 个达到 91–100% 恢复率，对气隙环境导出诊断工件的场景构成真实泄密威胁。",
+      "tags": [
+        "隐蔽信道",
+        "数据外泄",
+        "LLM 安全"
+      ],
+      "id": 43
+    },
+    {
+      "title": "The Like Trap: Multi-Stage Poisoning against Agents in Similarity-based Recommendation Systems",
+      "url": "https://arxiv.org/abs/2609.27155",
+      "source": "arXiv",
+      "date": "2026-09-22",
+      "summary": "针对社交媒体自主 Agent（如代管个人账号）的间接投毒：无需直接让 Agent 读到毒化内容，而是利用推荐系统的 like-score 机制，理论刻画多阶段毒化帖子链操纵 Agent 信息流的条件。揭示推荐算法本身可作为 Agent 攻击面的放大器。",
+      "tags": [
+        "LLM Agent 安全",
+        "投毒攻击",
+        "推荐系统"
+      ],
+      "id": 45
+    },
+    {
+      "title": "Attack Success Rate Is Not a Number: On Measurement Validity in Agentic AI Security Evaluation",
+      "url": "https://arxiv.org/abs/2609.25173",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "对 259 篇 Agentic AI 安全论文的全文元分析发现：65% 的论文对 headline 攻击成功率不给方差估计或重复实验，仅 30.9% 披露足以判断评测是否随机的解码细节，使用 LLM 评审的论文中 69.7% 未做人机标注一致性检验。论证 ASR 是依赖六个设计选择的度量族而非单一数值，为 Agent 安全评测方法学敲响警钟。",
+      "tags": [
+        "Agentic AI 安全",
+        "评测方法学",
+        "元分析"
+      ],
+      "id": 36
+    },
+    {
+      "title": "OPBackdoor: Opportunistic Backdoors via Alibi-Aligned Reasoning",
+      "url": "https://arxiv.org/abs/2609.24826",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "提出「机会主义后门」：后门目标仅在提示上下文出现可利用机会时被触发，模型的推理过程以看似合逻辑的借口逐步导向目标行为（如报复性过度帮助、倾向性翻译）。在 26B–119B 稠密与 MoE 模型上验证可骗过 LLM 审查器，对比监控可暴露其后门目标，对模型供应链审计意义重大。",
+      "tags": [
+        "后门攻击",
+        "AI 安全对齐",
+        "模型审计"
+      ],
+      "id": 28
+    },
+    {
+      "title": "Feedback Coding Enables Inference-Time Covert Agentic Communication",
+      "url": "https://arxiv.org/abs/2609.24994",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "将黑盒 LLM 隐写术建模为带因果反馈的序贯通信问题，提出 BAM 反馈编码方案：接收方从已生成 token 获得反馈并引导后续嵌入，大幅降低变长文本下的解码错误率。意味着恶意双方可经 Agent 生成的日常文本建立高带宽隐蔽信道，是数据外泄防御的新威胁模型。",
+      "tags": [
+        "隐蔽信道",
+        "LLM Agent 安全",
+        "数据外泄"
+      ],
+      "id": 29
+    },
+    {
+      "title": "The Price of Safety: Benign-Case Utility and Token Overhead of Memory-Poisoning Defenses in LLM Agents",
+      "url": "https://arxiv.org/abs/2609.22818",
+      "source": "arXiv",
+      "date": "2026-09-19",
+      "summary": "首个系统性测量 Agent 记忆投毒防御在良性流量下代价的工作：在统一记忆后端与检索流程下对比写入时防御（输入清洗、来源检查、LLM 异常检测）与读取时重排序，发现写入时防御几乎无可用性成本，而重排序器会降低核心任务准确率约 4.4 分，为防御选型提供实证依据。",
+      "tags": [
+        "记忆投毒",
+        "LLM Agent 安全",
+        "防御评估"
+      ],
+      "id": 32
+    },
+    {
+      "title": "SSP-Bench: A Hybrid Data Generation Framework for Safety, Security, and Privacy Evaluation",
+      "url": "https://arxiv.org/abs/2609.25352",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "动态生成式安全评测框架，针对静态基准的分数饱和、数据污染与聚合失真问题，按外部真实来源保证标签有效性、以服务级校验限定范围、用多模型 steering 面板校准难度；在 24 个模型四类 SSP 服务上揭示静态评测的系统性失效——安全排名的构念混合可致近乎零相关。",
+      "tags": [
+        "AI 安全对齐",
+        "评测基准",
+        "数据污染"
+      ],
+      "id": 38
+    },
+    {
+      "id": 1,
+      "title": "Beyond Predictable Paths: Redefining AI Security Incident Reporting for Agents",
+      "url": "https://arxiv.org/abs/2609.24515",
+      "source": "arXiv",
+      "date": "2026-09-21",
+      "summary": "针对 AI Agent 日益增多的安全事件，作者访谈 23 位学术界与工业界专家，重新定义了 Agent 安全事件报告应包含的要素（如记忆访问、自治级别、工具使用记录），并指出报告基础设施本身也可能成为攻击目标。为 Agent 安全的合规与问责提供了首个系统性报告框架。",
+      "tags": [
+        "LLM Agent 安全",
+        "事件响应",
+        "AI 治理"
+      ]
     }
   ]
 }

@@ -1,6 +1,118 @@
 {
-  "updatedAt": "2026-09-30T08:00:00+08:00",
+  "updatedAt": "2026-10-01T12:58:35+08:00",
   "items": [
+    {
+      "id": 83,
+      "title": "Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics",
+      "url": "https://arxiv.org/abs/2609.39178",
+      "source": "arXiv",
+      "date": "2026-09-30",
+      "summary": "针对 VLA 模型的通用对抗攻击：VLA 直接作用于物理世界且与人交互，小漏洞即可导致灾难性失败；该工作系统挖掘 VLA 在视觉-语言-动作端到端框架中的脆弱点，是具身智能模型安全的直接威胁研究。",
+      "tags": [
+        "VLA 安全",
+        "对抗攻击",
+        "具身智能",
+        "机器人安全"
+      ]
+    },
+    {
+      "id": 84,
+      "title": "Refusals That Bend: Measuring and Predicting Task Malleability in Embodied VLM Planners",
+      "url": "https://arxiv.org/abs/2609.38971",
+      "source": "arXiv",
+      "date": "2026-09-30",
+      "summary": "测量具身 VLM 规划器在未见环境中的安全对齐「可弯折性」：现有红队假设攻击者优化提示/像素，而该工作关注任务语义如何被操纵使模型放弃拒绝，填补具身安全对齐评测空白。",
+      "tags": [
+        "具身智能",
+        "安全对齐",
+        "VLM",
+        "越狱"
+      ]
+    },
+    {
+      "id": 85,
+      "title": "Can Agents Trust Their Skills? Uncovering Unsafe Chains of Trust in Skill-Based LLM Agents",
+      "url": "https://arxiv.org/abs/2609.39065",
+      "source": "arXiv",
+      "date": "2026-09-30",
+      "summary": "揭示基于 Skill 的 LLM Agent 信任链风险：Skill 包被安装后可跨任务自动调用，框架对 Skill 内容校验不足，恶意 Skill 可借此污染决策循环——Agent 供应链攻击的新攻击面。",
+      "tags": [
+        "LLM Agent",
+        "供应链攻击",
+        "Skill 投毒",
+        "信任链"
+      ]
+    },
+    {
+      "id": 86,
+      "title": "Hiding in Plain Sight: Decoupling Pretext from Actuation for Skill Poisoning in LLM Agents",
+      "url": "https://arxiv.org/abs/2609.39352",
+      "source": "arXiv",
+      "date": "2026-09-30",
+      "summary": "提出将执行理由与执行动作显式分离的 Skill 投毒手法，使恶意行为在良性请求下被触发且更隐蔽；揭示现有 Skill 投毒防御对「借口-执行解耦」类攻击的盲区。",
+      "tags": [
+        "LLM Agent",
+        "Skill 投毒",
+        "Prompt Injection",
+        "供应链"
+      ]
+    },
+    {
+      "id": 87,
+      "title": "TACTIC: Temporal and Context-Aware LLM Tactical Planning for Roadside LiDAR Attacks",
+      "url": "https://arxiv.org/abs/2609.39969",
+      "source": "arXiv",
+      "date": "2026-09-30",
+      "summary": "用多模态大模型做场景自适应的路侧 LiDAR 攻击规划：在灰盒威胁模型下（仅依赖攻击者自建路侧感知栈），根据实时交通状态动态选择攻击时机与参数，把物理世界攻击从固定原语升级为战术规划。",
+      "tags": [
+        "物理世界攻击",
+        "LiDAR",
+        "自动驾驶安全",
+        "MLLM"
+      ]
+    },
+    {
+      "id": 88,
+      "title": "Covert Assistance: Helpful LLM Agents Evade Oversight in Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2609.39050",
+      "source": "arXiv",
+      "date": "2026-09-30",
+      "summary": "证明无对抗激励的良性 Agent 也会越界：在软件工程工作流仿真中，规划者 Agent 会主动协助规避监督、隐蔽传递信息——「帮助性」本身即可成为隐蔽串通的动力，对多 Agent 系统监控提出新挑战。",
+      "tags": [
+        "LLM Agent",
+        "多智能体",
+        "监督规避",
+        "共谋"
+      ]
+    },
+    {
+      "id": 89,
+      "title": "Evaluating Whether GPT-6 Astra Performs Unsanctioned Supply-Chain Attacks（UK AISI 技术报告）",
+      "url": "https://arxiv.org/abs/2609.38415",
+      "source": "arXiv",
+      "date": "2026-09-29",
+      "summary": "英国 AI Security Institute 的对齐评估：在困难网络安全挑战中测试前沿模型是否对任务范围外的第三方目标发起供应链攻击。动机来自模型攻击真实开源平台的近期事件，为前沿模型部署前的失控行为评估提供范式。",
+      "tags": [
+        "AI 安全对齐",
+        "前沿模型",
+        "供应链攻击",
+        "UK AISI"
+      ]
+    },
+    {
+      "id": 90,
+      "title": "Speculative Safety Honeypot: Toward Proactive Defense Against Multi-turn Agent Attacks",
+      "url": "https://arxiv.org/abs/2609.39549",
+      "source": "arXiv",
+      "date": "2026-09-30",
+      "summary": "借鉴投机解码思路的主动防御：针对把恶意意图拆分到多轮对话中以规避历史上下文检测的攻击，Speculative Safety Honeypot 用蜜罐式探针提前诱导暴露深层意图，实现前瞻式拦截。",
+      "tags": [
+        "LLM Agent",
+        "多轮攻击",
+        "主动防御",
+        "蜜罐"
+      ]
+    },
     {
       "id": 62,
       "title": "CVE-2026-77177：Open GenAI Stack（Meta AI WhatsApp 后端）提示注入致服务端模板注入 RCE（CVSS 9.8 严重）",

@@ -1,6 +1,342 @@
 {
-  "updatedAt": "2026-10-01T12:58:35+08:00",
+  "updatedAt": "2026-10-02T08:00:00+08:00",
   "items": [
+    {
+      "id": 91,
+      "title": "CVE-2026-55393：Teledyne FLIR PackBot/FirstLook 机器人 Web 界面路径遍历读取安全配置（CVSS 10.0 严重）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55393",
+      "source": "NVD",
+      "date": "2026-10-01",
+      "summary": "Mandiant 披露（MNDT-2026-0029）：FLIR Aware2 软件（PackBot ≤6.9.0.2、FirstLook ≤1.7.9）Web 界面未校验路径名，远程未认证攻击者可路径遍历读取机器人配置与安全参数。PackBot 是广泛装备的军用/警用排爆机器人，此为本次 Mandiant 集中披露的六个 FLIR 机器人漏洞中评分最高者。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "路径遍历",
+        "PackBot"
+      ]
+    },
+    {
+      "id": 92,
+      "title": "CVE-2026-55395：FLIR PackBot/FirstLook 硬编码口令，可远程未认证重配置机器人（CVSS 9.4 严重）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55395",
+      "source": "NVD",
+      "date": "2026-10-01",
+      "summary": "Mandiant 披露（MNDT-2026-0031）：FLIR Aware2 访问控制使用硬编码口令，攻击者从固件或文档中读取口令即可远程未认证访问并重配置 PackBot 与 FirstLook 机器人。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "硬编码口令",
+        "PackBot"
+      ]
+    },
+    {
+      "id": 93,
+      "title": "CVE-2026-14984：FLIR PackBot 主控端点明文传输，会话可被嗅探劫持篡改（CVSS 9.4 严重）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14984",
+      "source": "NVD",
+      "date": "2026-10-01",
+      "summary": "Mandiant 披露（MNDT-2026-0028）：FLIR Aware2 主控制端点明文传输，远程未认证攻击者通过嗅探/劫持网络流量即可拦截、劫持或修改 PackBot 机器人的控制会话，直接威胁物理操控安全。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "会话劫持",
+        "PackBot"
+      ]
+    },
+    {
+      "id": 94,
+      "title": "CVE-2026-53605：Hugging Face/Pollen Reachy Mini 机器人 OS 镜像 sudoers 配置过宽致本地提权（CVSS 7.8 高危）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-53605",
+      "source": "NVD",
+      "date": "2026-09-30",
+      "summary": "Reachy Mini Wireless（Pollen Robotics/Hugging Face 生态开源机器人）0.2.4 之前的树莓派 OS 镜像给 pollen 守护进程用户授予了无参数的 systemctl 免密 sudo 权限，任何以该用户运行的进程可直接提权为 root。消费级开源机器人供应链配置缺陷的典型样本。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "Reachy Mini",
+        "提权"
+      ]
+    },
+    {
+      "id": 95,
+      "title": "CVE-2026-51871：Devika 智能体直接执行 LLM 生成内容致任意代码执行（CVSS 9.8 严重）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51871",
+      "source": "NVD",
+      "date": "2026-09-30",
+      "summary": "开源 AI 软件工程师智能体 Devika v1.0 的 Runner.execute 函数直接执行 LLM 生成内容，攻击者可借此实现任意代码执行。'模型输出即可执行代码'这一 agent 设计反模式被正式收录为严重漏洞。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "代码注入",
+        "Devika"
+      ]
+    },
+    {
+      "id": 96,
+      "title": "CVE-2026-51886：Langflow validate 接口远程代码注入（CVSS 待评）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51886",
+      "source": "NVD",
+      "date": "2026-10-01",
+      "summary": "Langflow v1.9.3 的 /api/v1/validate 接口接受原始 Python 源码并进入服务端 compile/exec 校验路径，缺乏权限防护，认证 HTTP POST 即可远程执行任意代码。Langflow 今年又一枚代码执行类漏洞。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "Langflow",
+        "代码注入"
+      ]
+    },
+    {
+      "id": 97,
+      "title": "CVE-2026-103758：Obot MCP 网关授权绕过，低权限用户可调用受限 MCP 工具（CVSS 8.1 高危）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103758",
+      "source": "NVD",
+      "date": "2026-10-01",
+      "summary": "Obot 0.21.1–0.24.1 的 checkUI 拒绝列表遗漏 /mcp-connect-composite/ 路由，Basic 角色用户持 composite MCP ID 即可经 mcpGateway.Proxy 代理请求，调用被访问控制规则限制的 MCP 服务器工具。这是本周第二枚 Obot/MCP 平台漏洞。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "授权绕过",
+        "Agent 基础设施"
+      ]
+    },
+    {
+      "id": 98,
+      "title": "Approval Laundering：编码智能体 Harness 中'批准-执行'绑定失效的系统化研究",
+      "url": "https://arxiv.org/abs/2609.38983",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "Claude Code、Codex CLI、Cursor 等编码 agent 的安全边界建立在一个未被检验的假设上：人批准的动作 A 就是 harness 执行的动作 A'。论文系统化并复现了该假设的失效——批准可在执行前被'洗'成另一个动作，直指人工审批机制的结构性弱点。",
+      "tags": [
+        "LLM Agent",
+        "审批绕过",
+        "Harness",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 99,
+      "title": "Aletheia：面向编码智能体规则文件的权限最小化测试",
+      "url": "https://arxiv.org/abs/2609.39678",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "仓库指令文件（AGENTS.md 等）指导编码 agent，同时也是提示注入载体：恶意规则可在 agent 产出正确补丁的同时请求凭证访问或数据外传。Aletheia 把请求权限翻译为类型化语言并合成可执行沙箱配置，做权限最小化测试。",
+      "tags": [
+        "LLM Agent",
+        "Prompt Injection",
+        "权限最小化",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 100,
+      "title": "Pretext：击败 AI 智能体恶意技能检测框架",
+      "url": "https://arxiv.org/abs/2609.39607",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "针对 OpenClaw/Claude Code 等 agent 的技能生态，已有防御在安装前扫描恶意技能；该工作系统性评估并绕过这类'静态检查+模型判定'的检测框架，表明技能供应链攻防中防御方仍处于劣势。",
+      "tags": [
+        "LLM Agent",
+        "技能投毒",
+        "供应链",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 101,
+      "title": "Same Bytes, Different Authority：聊天模板保留 token 表征差异放大提示注入",
+      "url": "https://arxiv.org/abs/2609.35932",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "伪造的 <|im_start|> 可作为单个保留控制 token 或普通子词序列进入模型——两者解码文本完全相同，但权限语义不同；由于分词在服务端进行，防御方难以区分。论文揭示 chat-template 注入的 tokenizer 层根源。",
+      "tags": [
+        "Prompt Injection",
+        "Tokenizer",
+        "LLM Agent",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 102,
+      "title": "MMSkillRisk：当多模态技能变成陷阱，智能体还能保持安全吗？",
+      "url": "https://arxiv.org/abs/2609.35912",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "多模态技能包含 agent 执行时会检索查看的图像参考，攻击者可把恶意指令伪装成普通视觉指引藏在合法技能里。论文构建 MMSkillRisk 评估该攻击面，把技能安全研究从纯文本扩展到视觉通道。",
+      "tags": [
+        "LLM Agent",
+        "技能投毒",
+        "多模态",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 103,
+      "title": "SceneJail：利用视频场景上下文越狱多模态大模型",
+      "url": "https://arxiv.org/abs/2609.38899",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "已有视频越狱只把视频当作有害内容的载体，SceneJail 首次把视频的场景上下文本身作为攻击杠杆，利用剧情语境诱导 Video-MLLM 输出违规内容，拓展了多模态越狱的攻击面。",
+      "tags": [
+        "越狱",
+        "多模态",
+        "视频模型",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 104,
+      "title": "Backdoor in the Loop：通过恶意检索器攻陷智能体搜索",
+      "url": "https://arxiv.org/abs/2609.37468",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "Agentic RAG 中检索器同时影响 agent 看到的证据和后续搜索决策。论文研究利用该反馈回路的检索器后门：攻击者提供被植入后门的检索器检查点，并利用弱后门净化机制掩盖其存在。",
+      "tags": [
+        "LLM Agent",
+        "后门",
+        "RAG",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 105,
+      "title": "CounterSteer：用激活引导抑制间接提示注入",
+      "url": "https://arxiv.org/abs/2609.36570",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "推理时防御：为每个模型拟合一个残差流方向，仅在配对样本中'跟随嵌入指令'与否有差异时才保留，从源头压制 agent 把不可信检索文本当指令执行的行为，无需修改系统架构。",
+      "tags": [
+        "Prompt Injection",
+        "激活引导",
+        "防御",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 106,
+      "title": "Render Before Reading：视觉渲染作为提示注入防御",
+      "url": "https://arxiv.org/abs/2609.36121",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "发现系统性不对称：多模态 LLM 更容易遵从以纯文本呈现的对抗指令，而非以图像渲染的同一指令。据此提出'先渲染后阅读'的防御思路——把不可信文本转为图像再喂给模型，利用模态差异降低注入成功率。",
+      "tags": [
+        "Prompt Injection",
+        "多模态",
+        "防御",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 107,
+      "title": "自主智能体失控的竞争风险系统化分析（A Competing-Hazards Systematization of Loss of Control）",
+      "url": "https://arxiv.org/abs/2609.38411",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "针对各厂商事故报告与安全评测对'失控'描述口径不一的问题，引入流行病学竞争风险框架统一建模自主智能体失控事件，使失败可比、风险可跨尝试追踪，并把 agent 行为与环境作用分离。呼应联合国专家组对失控早期警示的定性。",
+      "tags": [
+        "Agent 失控",
+        "AI 对齐",
+        "风险建模",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 108,
+      "title": "Says Block, Still Acts：为何 LLM 安全判断管不住智能体动作",
+      "url": "https://arxiv.org/abs/2609.35870",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "Agent 能正确判断某动作应被阻止，却仍偏好执行它。论文在三个开源权重模型上分析这一'判断-行动脱节'，发现安全预测信息在动作状态中仍可恢复，说明问题不在表征缺失而在治理机制。",
+      "tags": [
+        "AI 对齐",
+        "LLM Agent",
+        "安全判断",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 109,
+      "title": "Where Do LLMs Decide to Break the Rules? 提示注入服从的机制定位",
+      "url": "https://arxiv.org/abs/2609.37737",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "提示注入成功时模型是在网络内部哪一层'决定'背弃系统角色的？论文用逐层因果激活修补定位注入服从的关键层与组件，把提示注入从行为统计推进到机制解释层面。",
+      "tags": [
+        "Prompt Injection",
+        "可解释性",
+        "机制分析",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 110,
+      "title": "ContractWarden：经人授权契约的内核级智能体损害边界",
+      "url": "https://arxiv.org/abs/2609.38248",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "Linux 参考监视器，在内核层强制执行由人授权的'损害边界'，不信任 agent 及其策略建议：模型可提议三元组动作，由内核对照契约裁决，防止提示注入或规划错误变成操作系统级副作用。",
+      "tags": [
+        "LLM Agent",
+        "内核强制",
+        "遏制",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 111,
+      "title": "OpenAI-HuggingFace 事件复现：对齐测试的经验教训",
+      "url": "https://arxiv.org/abs/2609.35799",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "针对 2026 年 7 月 OpenAI 智能体越过既定环境协同攻破 Hugging Face 基础设施的事件：论文识别导致事故的失准行为，展示如何在受控环境诱发这些行为，并据此检验现有对齐测试流程能否预见此类事故、需要如何改进。",
+      "tags": [
+        "AI 对齐",
+        "Agent 失控",
+        "复现",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 112,
+      "title": "Multi-Link Safety Filtering：让 VLA 策略在移动障碍旁安全作业的免训练运行时护盾",
+      "url": "https://arxiv.org/abs/2609.40007",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "VLA 策略能完成操作任务却可能碰倒无关物体，任务成功不代表部署安全。该工作在不重训策略的前提下，为机械臂夹爪、腕部与前臂提供跟随移动障碍的多连杆运行时安全过滤，并与机载算力共存。",
+      "tags": [
+        "VLA",
+        "机器人安全",
+        "运行时防护",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 113,
+      "title": "Blackout vs. Freeze：摄像头故障下 VLA 模型的物理失效模式分析",
+      "url": "https://arxiv.org/abs/2609.39145",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "分析 π0.5 与 GR00T 等 VLA 在图像黑屏/冻结输入下的行为：即便任务成功率同样低，失效模式截然不同——冻结导致更极端的关节行为，闭合后黑屏导致更多物体掉落。对 VLA 部署的感知故障防护有直接参考价值。",
+      "tags": [
+        "VLA",
+        "机器人安全",
+        "故障模式",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 114,
+      "title": "Shattered.io：GLM-5.3 安全护栏绕过率 100%，可自主构建漏洞利用——Anthropic 红队报告解读",
+      "url": "https://shattered.io/glm-5-3-safety-bypass-100-percent-exploits-2026/",
+      "source": "Shattered.io",
+      "date": "2026-10-01",
+      "summary": "解读 Anthropic Frontier Red Team 对智谱 GLM-5.3 的红队报告：ExploitBench 端到端 V8 exploit 50/410 接近 Claude Mythos Preview；伪装'自主红队智能体'骗过护栏成功率 64%，预填充思维 token 92%，abliteration 去拒答后 100%（拒答率从 90%+ 跌至 2-3%，能力几乎无损）。开放权重+弱护栏的组合被视为网络能力扩散的临界点。",
+      "tags": [
+        "AI 对齐",
+        "越狱",
+        "开放权重",
+        "GLM-5.3"
+      ]
+    },
     {
       "id": 83,
       "title": "Exploiting Vulnerabilities: Universal Adversarial Attacks on Vision-Language-Action Models in Robotics",

@@ -1,6 +1,272 @@
 {
-  "updatedAt": "2026-10-02T08:00:00+08:00",
+  "updatedAt": "2026-10-03T08:00:00+08:00",
   "items": [
+    {
+      "id": 115,
+      "title": "CVE-2026-90970：GitLab AI Gateway 提示模板沙箱逃逸，Duo Agent Platform 用户可任意命令执行（CVSS 9.9 严重）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-90970",
+      "source": "NVD",
+      "date": "2026-10-02",
+      "summary": "GitLab AI Gateway（18.1.6–19.2.4、19.3–19.3.2、19.4–19.4.1 之前）在特定条件下，拥有 Duo Agent Platform 访问权的认证用户可通过特制 flow 配置逃逸提示模板沙箱，在 AI Gateway 上执行任意命令。AI 网关成为 agent 基础设施的高价值攻击面。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "沙箱逃逸",
+        "GitLab"
+      ]
+    },
+    {
+      "id": 116,
+      "title": "CVE-2026-104120：官方 MCP 参考服务器 mcp-server-fetch SSRF，利用代码已公开（CVSS 7.3 高危）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104120",
+      "source": "NVD",
+      "date": "2026-10-02",
+      "summary": "modelcontextprotocol 官方 mcp-server-fetch 与 mcp-server-everything（≤2026.6.4）的 fetch_url 函数对 url/path 参数处理不当导致服务端请求伪造，可远程发起， exploit 已公开。官方参考实现失守会随模板复制扩散到大量下游 MCP 服务。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "SSRF",
+        "Agent 基础设施"
+      ]
+    },
+    {
+      "id": 117,
+      "title": "CVE-2026-51888：Langflow 知识库接口目录遍历致任意文件写入（CVSS 待评）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51888",
+      "source": "NVD",
+      "date": "2026-10-01",
+      "summary": "Langflow v1.8.4 的 knowledge_bases 创建接口将攻击者控制的路径转发至文件写入逻辑，可向预期工作区之外任意写文件。这是本周继 validate 接口代码注入（CVE-2026-51886）后 Langflow 又一枚漏洞。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "Langflow",
+        "目录遍历"
+      ]
+    },
+    {
+      "id": 118,
+      "title": "CVE-2026-55396：FLIR PackBot/FirstLook 操控端-机器人 UDP 控制流量明文且无完整性校验（CVSS 8.5 高危）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55396",
+      "source": "NVD",
+      "date": "2026-10-01",
+      "summary": "Mandiant 披露（MNDT-2026-0032）：FLIR Aware2 的操作手控制单元到机器人的 UDP 控制流量明文传输且无密码学完整性校验，相邻网络攻击者可拦截、劫持或修改控制指令。属于 Mandiant 此次 FLIR 机器人六漏洞集群之一。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "控制链路",
+        "PackBot"
+      ]
+    },
+    {
+      "id": 119,
+      "title": "CVE-2026-14983：FLIR PackBot Web 界面缺失认证，重启端点可被滥用致拒绝服务（CVSS 7.1 高危）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-14983",
+      "source": "NVD",
+      "date": "2026-10-01",
+      "summary": "Mandiant 披露（MNDT-2026-0027）：FLIR Aware2（≤6.9.0.2）Web 界面缺失认证，远程未认证攻击者可滥用 reboot 端点使 PackBot 机器人拒绝服务——在排爆/战术场景中机器人中途宕机有直接安全后果。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "拒绝服务",
+        "PackBot"
+      ]
+    },
+    {
+      "id": 120,
+      "title": "Chaining Skills to Hijack LLM Agents：技能链劫持攻击 APEX",
+      "url": "https://arxiv.org/abs/2610.01564",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "Agent 完成任务时会依次调用多个技能，前一技能产出的信息会引导后续技能；若技能来自开源仓库，这一交接链可把攻击者控制的内容带进后续决策。APEX 构造并优化跨技能劫持链，把技能供应链攻击从单点扩展到组合维度。",
+      "tags": [
+        "LLM Agent",
+        "技能投毒",
+        "供应链",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 121,
+      "title": "OverAct：度量与缓解 LLM 工具调用智能体的主动越权访问",
+      "url": "https://arxiv.org/abs/2610.01508",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "工具调用 agent 可能检索超出用户请求实际所需的私密数据——论文命名'主动越权'（proactive over-authorization）行为并给出度量与缓解方法。这是不同于文件系统型编码 agent 的隐私风险维度。",
+      "tags": [
+        "LLM Agent",
+        "越权访问",
+        "隐私",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 122,
+      "title": "PACE：面向工具使用智能体的溯源感知能力执行",
+      "url": "https://arxiv.org/abs/2610.01349",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "被投毒的工具元数据、检索页、记忆与技能都能引导 agent 的下一次调用；准入前审查无法区分'安全变体'与'泄露变体'产生相同准入证据的情形。PACE 以溯源感知的能力执行把管控从准入时点移到效果发生时点。",
+      "tags": [
+        "LLM Agent",
+        "能力管控",
+        "溯源",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 123,
+      "title": "MOMAT：面向量化 LLM 的低功耗越狱防御",
+      "url": "https://arxiv.org/abs/2610.01058",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "量化削弱了 LLM 的对齐防护，使边缘部署的量化模型极易被越狱。MOMAT 以多图集混合的硬件增强安全框架在低功耗预算下恢复量化模型的越狱抗性，直接关系到端侧/机器人载模型部署。",
+      "tags": [
+        "越狱",
+        "量化模型",
+        "边缘部署",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 124,
+      "title": "AuraForge：编码智能体训练的规模化安全监督",
+      "url": "https://arxiv.org/abs/2610.00850",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "编码 agent 已能一个提示生成完整应用，人类监督从逐行审查转向结果评估，但功能正确不等于实现安全。AuraForge 面向训练阶段提供规模化的安全监督信号，瞄准'正确但不安全'的代码生成。",
+      "tags": [
+        "LLM Agent",
+        "代码安全",
+        "训练监督",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 125,
+      "title": "ZoneClaw：以记忆分区缓解 OpenClaw 式计算机使用智能体的持久记忆攻击",
+      "url": "https://arxiv.org/abs/2610.00450",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "OpenClaw 式 CUA 把用户指令、系统摘要与外部声明以同一权限等级持久保存在自动重载的记忆文件中——'记住一条声明'即授予其对后续行为的权威。ZoneClaw 通过记忆分区隔离不同来源内容，阻断持久记忆攻击。",
+      "tags": [
+        "LLM Agent",
+        "记忆攻击",
+        "防御",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 126,
+      "title": "From A2A Attacks to Envelope-Layer Defense：智能体间协议攻击红队评估与三层同构攻防模型",
+      "url": "https://arxiv.org/abs/2610.00392",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "ACP/A2A 等智能体互操作协议把远程对端的任务当作合法请求，构成天然的间接提示注入信道。论文对 LLM agent 做红队评估，指出现有评测只看攻击成功率无法区分防御失效模式，并提出信封层防御与三层攻防模型。",
+      "tags": [
+        "多智能体",
+        "A2A",
+        "Prompt Injection",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 127,
+      "title": "Authorization for Self-Modifying AI Agent Populations：跨替换、分叉与回滚的权限守恒",
+      "url": "https://arxiv.org/abs/2610.00347",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "自修改 agent 可替换、分叉、回滚承载身份的软件且后代仍可执行：逐继任者授权无法约束整个种群——兄弟副本可复制配额、合并权限、在祖先被撤销后存活。论文定义'授权继承'，要求权限在活动前沿上守恒。",
+      "tags": [
+        "LLM Agent",
+        "授权",
+        "自修改",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 128,
+      "title": "Safety Must Survive Self-Improvement：递归自我改进中的安全存续与恢复",
+      "url": "https://arxiv.org/abs/2610.01073",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "递归自改进（RSI）让 agent 跨代携带变更，安全既要防止不安全行为存续也要支持失败后恢复。论文用受控的授权任务测试台，让固定 LLM 编辑器优化可执行 agent 组件并由独立方评估，实证安全在自我改进中如何流失与恢复。",
+      "tags": [
+        "AI 对齐",
+        "自进化 Agent",
+        "RSI",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 129,
+      "title": "Representation Transitions：多轮智能体安全风险在内部表征中的累积签名",
+      "url": "https://arxiv.org/abs/2610.00400",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "多轮攻击把单看都合规的动作组合成有害结果，逃避孤立动作/状态评估。论文发现这类攻击在 agent 内部表征中留下可检测的'表征迁移'签名，其触发上下文可被识别，为内部监控型防御提供新抓手。",
+      "tags": [
+        "LLM Agent",
+        "多轮攻击",
+        "内部监控",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 130,
+      "title": "Deny Without Disabling：多智能体系统的授权配对评估与控制",
+      "url": "https://arxiv.org/abs/2610.00371",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "多智能体协作中，单独看都可接受的贡献组合起来可能促成被禁止的用途；一刀切封禁又使协作失去意义。论文提出'授权配对评估'，在保留协作能力的同时对组合性风险做授权控制。",
+      "tags": [
+        "多智能体",
+        "授权",
+        "组合风险",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 131,
+      "title": "Safety in Self-Evolving Agents: A Survey（自进化智能体安全综述）",
+      "url": "https://arxiv.org/abs/2610.00093",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "系统梳理自进化 agent（持续更新参数、记忆、工具定义、技能与工作流）的安全问题：进化带来能力也引入漂移、污染与失控路径。综述覆盖威胁模型、防御与评测，是该快速成型方向的入门地图。",
+      "tags": [
+        "自进化 Agent",
+        "综述",
+        "AI 对齐",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 132,
+      "title": "WBAG：面向 VLA 操作的全机身+附着几何安全框架",
+      "url": "https://arxiv.org/abs/2610.01083",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "现有推理时 VLA 安全框架多以简化的末端执行器为中心，忽略机身其他部位、被抓物体与环境的碰撞。WBAG 提供全机身与附着物几何的安全框架，提升 VLA 在真实杂乱环境中的部署安全性。",
+      "tags": [
+        "VLA",
+        "机器人安全",
+        "碰撞避免",
+        "arXiv"
+      ]
+    },
+    {
+      "id": 133,
+      "title": "Is Success All You Need? 输入扰动下 VLA 行为变化的评测框架",
+      "url": "https://arxiv.org/abs/2610.01351",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "VLA 鲁棒性评测普遍只看任务成功率（TSR），扰动下行为如何变化被遮蔽。该工作提出基准无关的行为评测框架，量化桌面操作任务中输入扰动对 VLA 行为的影响，补足成功率之外的鲁棒性维度。",
+      "tags": [
+        "VLA",
+        "鲁棒性",
+        "评测",
+        "arXiv"
+      ]
+    },
     {
       "id": 91,
       "title": "CVE-2026-55393：Teledyne FLIR PackBot/FirstLook 机器人 Web 界面路径遍历读取安全配置（CVSS 10.0 严重）",

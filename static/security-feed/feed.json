@@ -1,6 +1,62 @@
 {
-  "updatedAt": "2026-10-03T08:00:00+08:00",
+  "updatedAt": "2026-10-04T08:00:00+08:00",
   "items": [
+    {
+      "id": 134,
+      "title": "CVE-2026-103956：AWS Loom 智能体控制平面缺失认证，远程获取超管权限（CVSS 10.0 严重）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103956",
+      "source": "NVD",
+      "date": "2026-10-02",
+      "summary": "AWS 官方智能体框架 Loom for AWS（awslabs/loom）1.6.1 之前，在未配置 IdP 的部署中，任何人经应用 API 即可获取 agent 控制平面超管权限：注册恶意工具服务器、读取已存集成凭证、改写托管 agent 角色的 IAM 策略。Agent 控制平面的'失陷即全控'样本。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "控制平面",
+        "AWS"
+      ]
+    },
+    {
+      "id": 135,
+      "title": "CVE-2026-103958：AWS Loom 工具服务器/远程 agent 连接处理 SSRF，可窃取容器角色凭证（CVSS 7.6 高危）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103958",
+      "source": "NVD",
+      "date": "2026-10-02",
+      "summary": "Loom for AWS 1.7.0 之前，注册、更新或测试工具服务器/远程 agent 时提供的连接地址未做校验，认证用户可借 SSRF 读取应用自身容器角色凭证并访问内网任意位置。与 CVE-2026-103956 同属 AWS 本周安全公告（2026-124）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "SSRF",
+        "AWS"
+      ]
+    },
+    {
+      "id": 136,
+      "title": "CVE-2026-51922：AgentScope 多智能体框架 execute_shell_command 代码注入（CVSS 待评）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-51922",
+      "source": "NVD",
+      "date": "2026-10-02",
+      "summary": "阿里系开源多智能体框架 AgentScope v1.0.20 的 execute_shell_command（src/agentscope/tool/_coding/_shell.py）存在代码注入，视暴露入口可被触发攻击者控制的代码/命令执行。Agent 框架的编码工具类持续成为注入高发区。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AgentScope",
+        "代码注入"
+      ]
+    },
+    {
+      "id": 137,
+      "title": "K&L Gates：FCC 将外国产先进机器人列入 Covered List，援引 Unitree 漏洞与'人形机器人僵尸网络'等实测事件",
+      "url": "https://www.klgates.com/thought-leadership/FCC-Adds-Foreign-Produced-Advanced-Robotic-Devices-to-the-Covered-List-Five-Things-to-Know-8-3-2026",
+      "source": "K&L Gates",
+      "date": "2026-10-02",
+      "summary": "美国 FCC 依国家安全认定把外国产先进机器人列入 Covered List。与以往前瞻性风险评估不同，该认定直接引用已公开的安全事件为证据：2026 年初数千台消费机器人被远程访问（含摄像头与家庭地图）、2025 年 9 月 Unitree 舰队级 exploit 展示自我传播'人形僵尸网络'可能、2025 年 4 月四足机器人预装后门报告。机器人安全研究正在直接进入监管决策。",
+      "tags": [
+        "机器人安全",
+        "政策",
+        "Unitree",
+        "FCC"
+      ]
+    },
     {
       "id": 115,
       "title": "CVE-2026-90970：GitLab AI Gateway 提示模板沙箱逃逸，Duo Agent Platform 用户可任意命令执行（CVSS 9.9 严重）",

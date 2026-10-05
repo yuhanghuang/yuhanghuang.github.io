@@ -1,6 +1,117 @@
 {
-  "updatedAt": "2026-10-04T08:00:00+08:00",
+  "updatedAt": "2026-10-05T13:01:50+08:00",
   "items": [
+    {
+      "id": 138,
+      "title": "Intent-Hiding Jailbreaks: An Information-Theoretic Framework for Compositional Attacks",
+      "url": "https://arxiv.org/abs/2610.02302",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "用信息论框架刻画组合式意图隐藏越狱：单独提交会被拒绝的有害请求，嵌入更大的良性任务组合后可能放行。为理解「有害意图如何被上下文稀释」提供理论刻画，对 Agent 多步任务安全有直接意义。",
+      "tags": [
+        "越狱",
+        "组合攻击",
+        "安全对齐",
+        "信息论"
+      ]
+    },
+    {
+      "id": 139,
+      "title": "AgentTrap: Stateful Feedback Deception against Autonomous Penetration Testing Agents",
+      "url": "https://arxiv.org/abs/2610.02869",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "针对自主渗透测试 Agent 的有状态反馈欺骗防御：传统蜜罐靠静态工件与预定义响应，难以欺骗会自适应规划的 Agent；AgentTrap 以有状态反馈诱导其偏离真实资产，支持攻击追踪与反制。",
+      "tags": [
+        "LLM Agent",
+        "蜜罐",
+        "欺骗防御",
+        "自主渗透"
+      ]
+    },
+    {
+      "id": 140,
+      "title": "Securing Computer-Use Agents Against Branch Steering Attacks",
+      "url": "https://arxiv.org/abs/2610.03089",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "分析被寄予厚望的 Dual-LLM 安全架构在分支操纵攻击下的失效模式，并给出加固方案：计算机操作 Agent（CUA）的执行路径可被间接提示注入劫持，形式化保证需要额外约束。",
+      "tags": [
+        "计算机操作 Agent",
+        "间接提示注入",
+        "GUI Agent",
+        "防御"
+      ]
+    },
+    {
+      "id": 141,
+      "title": "Defense-in-Depth at the Perception-Reasoning Interface of LLM-Centric Agentic UAV Swarms",
+      "url": "https://arxiv.org/abs/2610.03319",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "揭示 LLM 驱动无人机蜂群的新攻击面：攻击者篡改结构化传感器报告即可在不改模型权重、不接触无人机的情况下重定向蜂群任务；提出感知-推理接口的多层纵深防御参考架构。",
+      "tags": [
+        "无人机蜂群",
+        "LLM Agent",
+        "感知操纵",
+        "纵深防御"
+      ]
+    },
+    {
+      "id": 142,
+      "title": "Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models",
+      "url": "https://arxiv.org/abs/2610.03498",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "机制层面的 VLA 对抗防御：用稀疏自编码器解析 VLA 内部表征，定位对抗补丁引发的干扰特征并做定向干预抑制，从「为什么失效」出发修复视觉观测被操纵导致的机器人控制失败。",
+      "tags": [
+        "VLA 安全",
+        "对抗补丁",
+        "机制可解释性",
+        "机器人安全"
+      ]
+    },
+    {
+      "id": 143,
+      "title": "MIRROR: Multipath Quorum Integrity for LLM Multi-Agent Communication",
+      "url": "https://arxiv.org/abs/2610.02349",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "针对多 Agent 系统 Agent-in-the-Middle 攻击（结构化任务上 ASR 近 100%）的防御：MIRROR 用多路径通信+法定人数完整性校验检测消息篡改，不依赖开销大的逐消息语义验证。",
+      "tags": [
+        "多智能体",
+        "Agent-in-the-Middle",
+        "通信完整性",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 144,
+      "title": "EvoRiskBench: An Evolving Benchmark for Runtime Security Risks in Workspace Agents",
+      "url": "https://arxiv.org/abs/2610.03153",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "面向工作区 Agent（有状态、多步、可操作外部资源的执行体）的运行时安全基准：以可执行场景覆盖现有基准的盲区，并随模型、工具链与威胁演化持续更新版本。",
+      "tags": [
+        "LLM Agent",
+        "安全基准",
+        "运行时风险"
+      ]
+    },
+    {
+      "id": 145,
+      "title": "Pincer: Resource Authorization for Agents using a Digital Twin",
+      "url": "https://arxiv.org/abs/2610.02569",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "用数字孪生为长周期自主编码 Agent 做资源授权：在真实执行前于孪生环境回放验证操作影响，弥补类型化工具、信息流控制等既有架构在长 horizon 自主任务中的防御缺口。",
+      "tags": [
+        "LLM Agent",
+        "访问控制",
+        "数字孪生",
+        "沙箱"
+      ]
+    },
     {
       "id": 134,
       "title": "CVE-2026-103956：AWS Loom 智能体控制平面缺失认证，远程获取超管权限（CVSS 10.0 严重）",

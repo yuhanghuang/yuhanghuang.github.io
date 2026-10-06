@@ -1,6 +1,266 @@
 {
-  "updatedAt": "2026-10-05T13:01:50+08:00",
+  "updatedAt": "2026-10-06T09:05:00+08:00",
   "items": [
+    {
+      "id": 146,
+      "title": "Passing the Test You Trained On: Re-evaluating Prompt-Injection Detectors for LLM Agents",
+      "url": "https://arxiv.org/abs/2610.03448",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "系统重放 AgentDojo 与 tau-bench 的工具输出，揭示公榜分数无法预测 prompt-injection 检测器在真实 Agent 流水线中的表现，对检测器选型方法提出质疑。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "检测评估"
+      ]
+    },
+    {
+      "id": 147,
+      "title": "Threat-Preserving Representation Sensitivity in Agent-Security Benchmarks",
+      "url": "https://arxiv.org/abs/2610.03585",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "提出“威胁保持的表示敏感性”概念，证明 Agent 安全基准中攻击成功率的测量本身受基准表示方式影响，提醒谨慎解读 ASR 横向对比。",
+      "tags": [
+        "LLM Agent",
+        "安全基准",
+        "测量方法"
+      ]
+    },
+    {
+      "id": 148,
+      "title": "Persona Guardrail: A Production-Grade Defense Framework for Agentic Systems",
+      "url": "https://arxiv.org/abs/2610.03434",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "面向生产环境 Agentic 系统的运行时防御框架，超越针对具体攻击的黑盒护栏，转为约束 Agent 不偏离其预期功能边界。",
+      "tags": [
+        "LLM Agent",
+        "运行时护栏",
+        "防御框架"
+      ]
+    },
+    {
+      "id": 149,
+      "title": "Beyond Predefined Sinks: Security-Aware Dependency Analysis for LLM Agents",
+      "url": "https://arxiv.org/abs/2610.03014",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "AgentSecGraph：面向 LLM Agent 的安全感知静态依赖分析，不再以预定义敏感操作为锚点，而是根据上下文判断操作的安全影响。",
+      "tags": [
+        "LLM Agent",
+        "静态分析",
+        "工具调用"
+      ]
+    },
+    {
+      "id": 150,
+      "title": "Containing the Autonomous Operator: A Defense-in-Depth Framework and Reference Architecture for Securing AI Agents on Kubernetes",
+      "url": "https://arxiv.org/abs/2610.02861",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "针对运维 Kubernetes 集群的 AI Agent 提出纵深防御参考架构，应对“读取的内容可重定向 Agent 行为”这一数据-控制边界坍塌问题。",
+      "tags": [
+        "LLM Agent",
+        "Kubernetes",
+        "纵深防御"
+      ]
+    },
+    {
+      "id": 151,
+      "title": "SideKernel: A Usable microVM Sandbox for AI Coding Agents on macOS",
+      "url": "https://arxiv.org/abs/2610.02456",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "为 macOS 上的 AI 编码 Agent 提供易用的 microVM 沙箱；用户调查显示不足四成的 Agent 用户使用隔离环境，凸显本地 Agent 信任矛盾。",
+      "tags": [
+        "AI 编码 Agent",
+        "沙箱",
+        "隔离"
+      ]
+    },
+    {
+      "id": 152,
+      "title": "HASTE: Evolving Agent Harnesses Against Emerging Attacks Using Sparse Evidence",
+      "url": "https://arxiv.org/abs/2610.02920",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "HASTE：利用威胁报告中的稀疏证据自动演化 Agent harness 防护规则的多智能体框架，解决人工更新防护跟不上新型攻击的问题。",
+      "tags": [
+        "LLM Agent",
+        "Harness",
+        "自动化防御"
+      ]
+    },
+    {
+      "id": 153,
+      "title": "MLCommons Jailbreak Benchmark v1.0",
+      "url": "https://arxiv.org/abs/2610.02827",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "MLCommons 发布 Jailbreak Benchmark v1.0，给出单轮文本越狱攻击的端到端评估方法论，含系统与攻击的选择标准和配对基线。",
+      "tags": [
+        "越狱",
+        "基准",
+        "AI 安全"
+      ]
+    },
+    {
+      "id": 154,
+      "title": "Bounded Reachability & Jailbreak Detection via Contraction-Constrained State Space Models",
+      "url": "https://arxiv.org/abs/2610.02853",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "研究 SSM 安全分类头的形式化鲁棒性，证明在收缩约束下可对嵌入空间有界扰动给出越狱检测的一致性证书。",
+      "tags": [
+        "越狱检测",
+        "形式化验证",
+        "安全分类器"
+      ]
+    },
+    {
+      "id": 155,
+      "title": "A GHOST in Long-Horizon Agents: Governance Hazard from Overlooked Safety Constraints across Turns",
+      "url": "https://arxiv.org/abs/2610.02664",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "命名并分析 GHOST 失效模式：长程 Agent 在多轮交互后违反早前轮次设定的安全约束，揭示执行安全随历史长度退化的问题。",
+      "tags": [
+        "LLM Agent",
+        "长程安全",
+        "约束治理"
+      ]
+    },
+    {
+      "id": 156,
+      "title": "Positive-Unlabeled Learning for Agent Safety False Alarm Auditing",
+      "url": "https://arxiv.org/abs/2610.02925",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "用 PU 学习审计 Agent 安全监控器的误报，只需少量已验证样本即可估计可靠告警阈值，降低人工复核成本。",
+      "tags": [
+        "LLM Agent",
+        "安全监控",
+        "误报审计"
+      ]
+    },
+    {
+      "id": 157,
+      "title": "DNAlign: Dynamic Null-Space Safe Alignment for LLMs",
+      "url": "https://arxiv.org/abs/2610.02844",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "DNAlign：通过动态零空间投影进行轻量级安全对齐，在保持模型良性能力的同时注入安全约束，缓解安全-效用权衡。",
+      "tags": [
+        "安全对齐",
+        "LLM",
+        "对齐方法"
+      ]
+    },
+    {
+      "id": 158,
+      "title": "Fast Models, Slow Evidence: A Paired and Self-Audited Evaluation of System-1 Decision Models for LLM Agent Harnesses",
+      "url": "https://arxiv.org/abs/2610.02267",
+      "source": "arXiv",
+      "date": "2026-10-01",
+      "summary": "对 Agent harness 中的 System-1 快速决策模型（含注入检测等 11 类决策）做配对自审计评估，衡量其相对 LLM 调用的成本与可靠性。",
+      "tags": [
+        "LLM Agent",
+        "Harness",
+        "评估"
+      ]
+    },
+    {
+      "id": 159,
+      "title": "CVE-2026-105697: Langflow 漏洞（CVSS 9.9 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105697",
+      "source": "NVD",
+      "date": "2026-10-05",
+      "summary": "影响产品：Langflow。MCP stdio 传输无白名单执行用户配置的任意命令（bash -c 包装），可致服务器远程代码执行。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 160,
+      "title": "CVE-2026-105740: Langflow 漏洞（CVSS 9.9 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105740",
+      "source": "NVD",
+      "date": "2026-10-05",
+      "summary": "影响产品：Langflow。1.9.0 前任意认证用户可通过添加 Stdio 传输的 MCP server 直接 RCE，env 字段还可注入任意环境变量。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 161,
+      "title": "CVE-2026-105699: Langflow 漏洞（CVSS 7.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105699",
+      "source": "NVD",
+      "date": "2026-10-05",
+      "summary": "影响产品：Langflow。项目级 MCP 连接的 resources/read 未校验资源 URI 归属，可越权读取他人 flow 文件。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 162,
+      "title": "CVE-2026-105741: Langflow 漏洞（CVSS 7.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105741",
+      "source": "NVD",
+      "date": "2026-10-05",
+      "summary": "影响产品：Langflow。MCP 安装端点信任 X-Forwarded-For，伪造 127.0.0.1 头即可绕过 local-only 限制改写 MCP 配置。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 163,
+      "title": "CVE-2026-105698: Langflow 漏洞（CVSS 5.4 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105698",
+      "source": "NVD",
+      "date": "2026-10-05",
+      "summary": "影响产品：Langflow。废弃的 flow build 接口不校验 flow 归属，知道 UUID 即可操作他人 flow 的顶点构建。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 164,
+      "title": "CVE-2026-89039: mcp-k6 漏洞（CVSS 6.5 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-89039",
+      "source": "NVD",
+      "date": "2026-10-05",
+      "summary": "影响产品：mcp-k6。convert_playwright_script 提示接受裸文件路径，路径遍历可读取服务器用户任意文件（含 SSH 密钥与云凭证）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 165,
+      "title": "CVE-2026-105761: Dify 漏洞（CVSS 7.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105761",
+      "source": "NVD",
+      "date": "2026-10-05",
+      "summary": "影响产品：Dify。MCP server 更新端点不校验 server 与应用/租户归属，认证成员可篡改他应用的 MCP server 状态与参数。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
     {
       "id": 138,
       "title": "Intent-Hiding Jailbreaks: An Information-Theoretic Framework for Compositional Attacks",

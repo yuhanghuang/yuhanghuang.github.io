@@ -1,6 +1,487 @@
 {
-  "updatedAt": "2026-10-06T09:05:00+08:00",
+  "updatedAt": "2026-10-08T09:10:00+08:00",
   "items": [
+    {
+      "id": 166,
+      "title": "What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions",
+      "url": "https://arxiv.org/abs/2610.05818",
+      "source": "arXiv",
+      "date": "2026-10-05",
+      "summary": "固定任务、只改变意图表述方式，测试安全监控器能否识别「以有害目的请求的普通机器人任务」；结果显示 VLA 本身无法拒绝、监控器对隐含伤害意图漏检明显。",
+      "tags": [
+        "VLA",
+        "具身智能",
+        "安全监控"
+      ]
+    },
+    {
+      "id": 167,
+      "title": "Benchmarking Jailbreak Guardrails for Embodied Agents",
+      "url": "https://arxiv.org/abs/2610.06122",
+      "source": "arXiv",
+      "date": "2026-10-05",
+      "summary": "面向具身智能体的越狱护栏基准：现有基准只评模型本身，该工作系统评估护栏在真实具身流水线中拦截危险物理动作的实际效果。",
+      "tags": [
+        "机器人越狱",
+        "护栏",
+        "基准"
+      ]
+    },
+    {
+      "id": 168,
+      "title": "Lie Rarely, Lie Big: Stealthy Insider Attacks on LLM Robot Teams",
+      "url": "https://arxiv.org/abs/2610.04744",
+      "source": "arXiv",
+      "date": "2026-10-03",
+      "summary": "研究 LLM 规划的多机器人团队中的内部威胁：单个被攻陷机器人通过「少撒谎、撒大谎」的隐蔽策略即可破坏团队成果，而验证需消耗预算。",
+      "tags": [
+        "多机器人",
+        "内部攻击",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 169,
+      "title": "TAPDreamer: Transferable Adversarial Patches for World Action Models",
+      "url": "https://arxiv.org/abs/2610.06814",
+      "source": "arXiv",
+      "date": "2026-10-05",
+      "summary": "针对机器人世界动作模型的可迁移对抗补丁攻击，操纵相机输入即可污染跨任务共享的视觉表征，揭示世界模型的物理对抗面。",
+      "tags": [
+        "对抗补丁",
+        "世界模型",
+        "机器人"
+      ]
+    },
+    {
+      "id": 170,
+      "title": "Inspect Robots: Evaluating the Capabilities and Safety of Embodied AI",
+      "url": "https://arxiv.org/abs/2610.06306",
+      "source": "arXiv",
+      "date": "2026-10-05",
+      "summary": "开源框架 Inspect Robots：为大语言模型控制的真实机器人提供模块化能力与安全评估，填补具身智能体系统评测工具空白。",
+      "tags": [
+        "具身智能",
+        "安全评估",
+        "开源框架"
+      ]
+    },
+    {
+      "id": 171,
+      "title": "Transferable Spatial Temporal Coherence Adversarial Attack on Black-Box Vision Language Models for Autonomous Driving",
+      "url": "https://arxiv.org/abs/2610.08331",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "针对自动驾驶黑盒 VLM 的可迁移时空连贯对抗攻击，利用视频时序相关性在未知模型上制造误判，触及物理世界安全。",
+      "tags": [
+        "对抗攻击",
+        "自动驾驶",
+        "VLM"
+      ]
+    },
+    {
+      "id": 172,
+      "title": "RAISED: Self-Distillation for Robustness to Prompt Injection in LLM Agents",
+      "url": "https://arxiv.org/abs/2610.06401",
+      "source": "arXiv",
+      "date": "2026-10-05",
+      "summary": "RAISED：用自蒸馏训练提升 LLM Agent 对间接提示注入的鲁棒性，同时指出训练式防御会引起输出分布漂移、损害良性能力。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "防御"
+      ]
+    },
+    {
+      "id": 173,
+      "title": "Who Is Your Agent Serving? Provider-Side Indirect Prompt Injection in Proactive Agents",
+      "url": "https://arxiv.org/abs/2610.05266",
+      "source": "arXiv",
+      "date": "2026-10-04",
+      "summary": "提出主动式个人 Agent 的新型攻击面：服务提供方无需接触用户隐私上下文，即可通过间接提示注入操纵 Agent 的推荐与后续行动。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "攻击面"
+      ]
+    },
+    {
+      "id": 174,
+      "title": "Blocking at the Boundary: Auditing Long-Horizon Agents against Staged Prompt Injection",
+      "url": "https://arxiv.org/abs/2610.05163",
+      "source": "arXiv",
+      "date": "2026-10-04",
+      "summary": "定义「分阶段提示注入」：注入内容沿因果相连的工作流阶段传播并在关键动作生效；构建自动化审计框架评估长程 Agent。",
+      "tags": [
+        "Prompt Injection",
+        "长程 Agent",
+        "审计"
+      ]
+    },
+    {
+      "id": 175,
+      "title": "The Same Zero: Why Identical ASR Can Imply Different Guarantees in LLM-Agent Security",
+      "url": "https://arxiv.org/abs/2610.04504",
+      "source": "arXiv",
+      "date": "2026-10-03",
+      "summary": "指出相同攻击成功率（ASR）背后防御保证可能完全不同，引入验证自主等级（VAL）框架刻画 Agent 防御保证的来源与强度。",
+      "tags": [
+        "LLM Agent",
+        "防御评估",
+        "框架"
+      ]
+    },
+    {
+      "id": 176,
+      "title": "COPEX: Benchmarking LLM Robustness to Adversarial Context Across Model Context Protocol Layers",
+      "url": "https://arxiv.org/abs/2610.04378",
+      "source": "arXiv",
+      "date": "2026-10-03",
+      "summary": "COPEX：沿 MCP 协议各层（用户指令、工具 schema、工具输出、协议消息）基准测试 LLM 对抗性上下文鲁棒性，剥离护栏与编排因素。",
+      "tags": [
+        "MCP",
+        "基准",
+        "鲁棒性"
+      ]
+    },
+    {
+      "id": 177,
+      "title": "Self-Propagating Misalignment in LLM Agents, and Why Auditing or Disabling Memory Is Not Enough",
+      "url": "https://arxiv.org/abs/2610.04083",
+      "source": "arXiv",
+      "date": "2026-10-02",
+      "summary": "无需外部攻击者：研究显示失对齐 Agent 可将「尚不能执行的目标」写入持久记忆，让未来已对齐的 Agent 代为执行，审计或禁用记忆不足以防御。",
+      "tags": [
+        "LLM Agent",
+        "记忆投毒",
+        "失对齐"
+      ]
+    },
+    {
+      "id": 178,
+      "title": "Readable Before Actionable: Causal Tracing of Indirect Prompt Injection",
+      "url": "https://arxiv.org/abs/2610.05295",
+      "source": "arXiv",
+      "date": "2026-10-04",
+      "summary": "用反事实角色探针与激活修补对间接提示注入做因果追踪，区分「读懂指令」与「改变下一步动作」之间的机制鸿沟。",
+      "tags": [
+        "Prompt Injection",
+        "可解释性",
+        "因果分析"
+      ]
+    },
+    {
+      "id": 179,
+      "title": "Self-Reflection Fine-Tuning: Enhancing Agent Security against Prompt Injection Attacks from Failure Experience",
+      "url": "https://arxiv.org/abs/2610.04269",
+      "source": "arXiv",
+      "date": "2026-10-03",
+      "summary": "自反思微调：让 Agent 从注入攻击失败经验中学习，而非依赖静态专家轨迹，提升工具增强环境下的提示注入抵抗力。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "微调防御"
+      ]
+    },
+    {
+      "id": 180,
+      "title": "Characterizing Security Effects of OSS Vulnerabilities in Agent Systems",
+      "url": "https://arxiv.org/abs/2610.05036",
+      "source": "arXiv",
+      "date": "2026-10-04",
+      "summary": "刻画开源组件漏洞在 Agent 系统中的放大效应：依赖缺陷可经工具输出、Agent 状态与信息流传播，影响远超单个进程。",
+      "tags": [
+        "LLM Agent",
+        "供应链",
+        "漏洞分析"
+      ]
+    },
+    {
+      "id": 181,
+      "title": "Topology-Conditioned Backdoors: Language Models That Insert Vulnerabilities When They Infer They Are in a Multi-Agent System",
+      "url": "https://arxiv.org/abs/2610.05793",
+      "source": "arXiv",
+      "date": "2026-10-05",
+      "summary": "揭示拓扑条件后门：模型在单 Agent 评测中表现安全，一旦从提示线索推断自己处于多智能体系统便生成带漏洞代码。",
+      "tags": [
+        "后门",
+        "多智能体",
+        "代码生成"
+      ]
+    },
+    {
+      "id": 182,
+      "title": "SkillPoison: Progressive Skill Poisoning via Successful Experiences",
+      "url": "https://arxiv.org/abs/2610.07645",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "SkillPoison：通过「成功经验」渐进污染自我改进 Agent 的技能库，规避现有基于触发器的攻击检测，隐蔽性更强。",
+      "tags": [
+        "LLM Agent",
+        "技能投毒",
+        "供应链"
+      ]
+    },
+    {
+      "id": 183,
+      "title": "HarnessSecurity-Bench: Do Security Mechanisms Really Protect Coding Agent Harnesses?",
+      "url": "https://arxiv.org/abs/2610.07639",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "HarnessSecurity-Bench：首个系统评估编码 Agent harness 安全机制的实证研究与基准，归纳十种防护机制并检验其真实有效性。",
+      "tags": [
+        "编码 Agent",
+        "Harness",
+        "基准"
+      ]
+    },
+    {
+      "id": 184,
+      "title": "Understanding and Enhancing Backdoor Persistency in LLM Agent Post-Training",
+      "url": "https://arxiv.org/abs/2610.07510",
+      "source": "arXiv",
+      "date": "2026-10-05",
+      "summary": "研究软件工程 Agent 供应链威胁：攻击者提供带后门模型，考察良性后训练能否清除后门，并给出增强后门持久性的分析。",
+      "tags": [
+        "后门",
+        "LLM Agent",
+        "后训练"
+      ]
+    },
+    {
+      "id": 185,
+      "title": "Efficient Auditing of Adversarial AI Agent Behavior from Agent Traces",
+      "url": "https://arxiv.org/abs/2610.07256",
+      "source": "arXiv",
+      "date": "2026-10-05",
+      "summary": "从 Agent 执行轨迹高效审计对抗性行为，弥补规则护栏可被绕过、LLM 审计成本高的不足。",
+      "tags": [
+        "LLM Agent",
+        "行为审计",
+        "监控"
+      ]
+    },
+    {
+      "id": 186,
+      "title": "AdvSim2Real : Training Web Agents Against Adaptive Prompt Injection in a Web World Model",
+      "url": "https://arxiv.org/abs/2610.08773",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "AdvSim2Real：在 Web 世界模型中训练 Web Agent 对抗自适应提示注入，解决防御方难以获得真实攻击分布的问题。",
+      "tags": [
+        "Prompt Injection",
+        "Web Agent",
+        "对抗训练"
+      ]
+    },
+    {
+      "id": 187,
+      "title": "Where Rules End and Judges Begin: Measuring the Judgment Boundary in Multi-Agent Systems Security",
+      "url": "https://arxiv.org/abs/2610.07657",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "将多智能体系统防御归纳为五类并测量「规则终止、裁判介入」的判定边界，指出孤立评估单类攻击会导致防御成本与审计困难。",
+      "tags": [
+        "多智能体",
+        "防御评估",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 188,
+      "title": "Red-TTT: Test-Time Training for Automated Jailbreaking Large Language Models",
+      "url": "https://arxiv.org/abs/2610.05282",
+      "source": "arXiv",
+      "date": "2026-10-04",
+      "summary": "Red-TTT：用测试时训练自动化越狱 LLM，相比采样搜索或离线训练攻击者更高效地发现规模化越狱样本。",
+      "tags": [
+        "越狱",
+        "自动化红队",
+        "LLM"
+      ]
+    },
+    {
+      "id": 189,
+      "title": "Reflections and Fragments: Securing LLMs Against Sequential Mosaic Attacks",
+      "url": "https://arxiv.org/abs/2610.05346",
+      "source": "arXiv",
+      "date": "2026-10-04",
+      "summary": "针对序列马赛克攻击（单轮无害、组合有害）建立攻防博弈理论并给出防御，改进自博弈红队的安全训练。",
+      "tags": [
+        "越狱",
+        "多轮攻击",
+        "防御"
+      ]
+    },
+    {
+      "id": 190,
+      "title": "Reactivating Alignment: Defending LLMs from Jailbreaks via Intention-Aware Input-Output Matching",
+      "url": "https://arxiv.org/abs/2610.04470",
+      "source": "arXiv",
+      "date": "2026-10-03",
+      "summary": "Reactivating Alignment：通过意图感知的输入-输出匹配防御越狱，直接建模恶意意图所在位置，减少脆弱防护与过度拒绝。",
+      "tags": [
+        "越狱防御",
+        "安全对齐",
+        "LLM"
+      ]
+    },
+    {
+      "id": 191,
+      "title": "Jailbreaking Open-Weight LLMs via Random Embedding Perturbations",
+      "url": "https://arxiv.org/abs/2610.07125",
+      "source": "arXiv",
+      "date": "2026-10-05",
+      "summary": "用随机嵌入扰动越狱六个主流开源权重模型，揭示开源模型拒绝机制的系统性脆弱。",
+      "tags": [
+        "越狱",
+        "开源模型",
+        "对抗攻击"
+      ]
+    },
+    {
+      "id": 192,
+      "title": "Which Image Property Carries the Jailbreak? A Controlled Dissection of Image-to-Text Jailbreaks",
+      "url": "https://arxiv.org/abs/2610.07009",
+      "source": "arXiv",
+      "date": "2026-10-04",
+      "summary": "受控拆解图生文越狱：在四个攻击家族、五个多模态模型上分析图像侧因素（内容、文本、二者关系）各自承载多少越狱效力。",
+      "tags": [
+        "多模态越狱",
+        "VLM",
+        "分析"
+      ]
+    },
+    {
+      "id": 193,
+      "title": "Does On-Policy Distillation for Safety Pose Backdoor Risks?",
+      "url": "https://arxiv.org/abs/2610.07654",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "考察用于安全对齐的在策略蒸馏（OPD）：即使教师与数据可信，蒸馏过程本身是否引入后门风险，给出系统性验证。",
+      "tags": [
+        "后门",
+        "安全对齐",
+        "蒸馏"
+      ]
+    },
+    {
+      "id": 194,
+      "title": "Beyond Refusal Patterns: Safe-Role Internalization for Robust and Generalizable LLM Safety Alignment",
+      "url": "https://arxiv.org/abs/2610.07023",
+      "source": "arXiv",
+      "date": "2026-10-04",
+      "summary": "提出 SSRFT 安全角色内化方法，让模型超越浅层拒绝模式形成鲁棒、可泛化的安全对齐，缓解过拒与攻击特异监督依赖。",
+      "tags": [
+        "安全对齐",
+        "越狱防御",
+        "LLM"
+      ]
+    },
+    {
+      "id": 195,
+      "title": "AI Safety via Debate is Compromised by Cognitive Biases",
+      "url": "https://arxiv.org/abs/2610.05461",
+      "source": "arXiv",
+      "date": "2026-10-04",
+      "summary": "证明 AI 安全辩论机制会被人类评估者的认知偏差（偏爱迎合与说服力胜过真实性）所破坏，对辩论式对齐提出警示。",
+      "tags": [
+        "AI 安全",
+        "对齐",
+        "辩论"
+      ]
+    },
+    {
+      "id": 196,
+      "title": "CVE-2026-104334: IBM Langflow OSS 漏洞（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104334",
+      "source": "NVD",
+      "date": "2026-10-07",
+      "summary": "影响产品：IBM Langflow OSS。远程攻击者可利用代码生成控制不当执行任意代码（未认证 RCE），影响 1.0.0–1.12.2。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 197,
+      "title": "CVE-2026-93674: IBM Langflow OSS 漏洞（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93674",
+      "source": "NVD",
+      "date": "2026-10-07",
+      "summary": "影响产品：IBM Langflow OSS。OS 命令特殊元素转义不当导致未认证远程命令执行，影响 1.0.0–1.12.2。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 198,
+      "title": "CVE-2026-97655: IBM Langflow OSS 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-97655",
+      "source": "NVD",
+      "date": "2026-10-07",
+      "summary": "影响产品：IBM Langflow OSS。代码安全扫描器黑名单不完整，远程攻击者可绕过检测执行任意代码。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 199,
+      "title": "CVE-2026-93675: IBM Langflow OSS 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93675",
+      "source": "NVD",
+      "date": "2026-10-07",
+      "summary": "影响产品：IBM Langflow OSS。依赖混淆缺陷致远程代码执行，属供应链型攻击面。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 200,
+      "title": "CVE-2026-104850: MCP TypeScript SDK 漏洞（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104850",
+      "source": "NVD",
+      "date": "2026-10-06",
+      "summary": "影响产品：MCP TypeScript SDK。官方 SDK 的 OAuth 客户端支持未将凭证绑定到所属授权服务器，恶意 MCP server 可诱导客户端把凭证发给攻击者控制的授权服务器（1.12.0 起，1.31.0/2.2.0 修复）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 201,
+      "title": "CVE-2026-76286: Splunk MCP Server 漏洞（CVSS 5.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76286",
+      "source": "NVD",
+      "date": "2026-10-07",
+      "summary": "影响产品：Splunk MCP Server。自定义 API 工具会把运行用户的 Splunk 认证令牌发往工具配置 URL，控制该 URL 者可窃取令牌冒用身份（<1.2.1）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 202,
+      "title": "CVE-2026-105762: Dify 漏洞（CVSS 8.3 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105762",
+      "source": "NVD",
+      "date": "2026-10-06",
+      "summary": "影响产品：Dify。/console/api/remote-files/upload 未认证接受攻击者 URL，构成 SSRF，可访问内网服务与云元数据端点并做网络跳板（<1.13.0）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
     {
       "id": 146,
       "title": "Passing the Test You Trained On: Re-evaluating Prompt-Injection Detectors for LLM Agents",

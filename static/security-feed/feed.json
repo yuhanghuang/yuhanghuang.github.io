@@ -1,6 +1,396 @@
 {
-  "updatedAt": "2026-10-08T09:10:00+08:00",
+  "updatedAt": "2026-10-10T09:05:00+08:00",
   "items": [
+    {
+      "id": 203,
+      "title": "Black-Box Adversarial Patch Attacks on VLAs via Ancestor VLM Exploitation",
+      "url": "https://arxiv.org/abs/2610.09708",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "首个黑盒对抗补丁攻击 VLA 的工作：通过攻击其「祖先」VLM 即可迁移到下游 VLA，无需白盒访问，直接威胁部署在物理环境中的机器人策略。",
+      "tags": [
+        "VLA",
+        "对抗补丁",
+        "黑盒攻击"
+      ]
+    },
+    {
+      "id": 204,
+      "title": "TMT: Runtime Backdoor Detection for Vision-Language-Action Policies on Unseen Tasks",
+      "url": "https://arxiv.org/abs/2610.09462",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "TMT：针对 VLA 策略的运行时后门检测，在未见任务上识别触发器激活——恶意动作单步看似合理、整体才显恶意，检测难度高。",
+      "tags": [
+        "VLA",
+        "后门检测",
+        "运行时防护"
+      ]
+    },
+    {
+      "id": 205,
+      "title": "RT-Safe: Benchmarking Agent Safety in Real-Time Embodied Environment",
+      "url": "https://arxiv.org/abs/2610.09294",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "RT-Safe：实时具身环境中的 Agent 安全基准，关注物理世界中失败即伤人损物的场景，把 Agent 安全评估从数字环境推进到具身环境。",
+      "tags": [
+        "具身智能",
+        "安全基准",
+        "Agent"
+      ]
+    },
+    {
+      "id": 206,
+      "title": "Understanding and Mitigating Token-Pruning-Induced Vulnerabilities in VLMs",
+      "url": "https://arxiv.org/abs/2610.09703",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "首次系统评估 VLM 视觉 token 剪枝的安全影响：多数剪枝策略会引入新脆弱性，并给出缓解方案。",
+      "tags": [
+        "VLM",
+        "模型压缩",
+        "安全评估"
+      ]
+    },
+    {
+      "id": 207,
+      "title": "Visual Memory Attacks Can Persist Through The KV Cache",
+      "url": "https://arxiv.org/abs/2610.09027",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "证明视觉记忆攻击可经 KV cache 持久化：即使恶意图像已移出上下文，仍能持续操纵模型行为，威胁长上下文自治系统。",
+      "tags": [
+        "VLM",
+        "持久化攻击",
+        "KV Cache"
+      ]
+    },
+    {
+      "id": 208,
+      "title": "Adversarial Images Hijack Web Agents from Visual Grounding to Browser Execution",
+      "url": "https://arxiv.org/abs/2610.09240",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "对抗图像从视觉定位到浏览器执行全链路劫持 Web Agent，相比以往只扰动输出内容的视觉红队更进一步控制实际动作。",
+      "tags": [
+        "Web Agent",
+        "对抗攻击",
+        "视觉劫持"
+      ]
+    },
+    {
+      "id": 209,
+      "title": "Secure-CUA: Controlling Untrusted Influence in Computer-Use Agents",
+      "url": "https://arxiv.org/abs/2610.09469",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "Secure-CUA：为计算机操作 Agent（CUA）控制不可信界面内容的影响，区分可信控件与不可信内容，降低提示注入导致的未授权操作。",
+      "tags": [
+        "Computer-Use Agent",
+        "Prompt Injection",
+        "防御"
+      ]
+    },
+    {
+      "id": 210,
+      "title": "Package Hallucination Attacks on Coding Agents through Prompt Injection in Rule Files",
+      "url": "https://arxiv.org/abs/2610.09264",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "揭示编码 Agent 的规则文件（如 .cursorrules）提示注入可诱发包幻觉攻击，引导 Agent 引入攻击者注册的恶意依赖包。",
+      "tags": [
+        "编码 Agent",
+        "Prompt Injection",
+        "供应链"
+      ]
+    },
+    {
+      "id": 211,
+      "title": "ASPIRE: Agentic Safety & Prompt Injection Red-teaming Engine",
+      "url": "https://arxiv.org/abs/2610.08951",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "ASPIRE：Agent 安全与提示注入红队引擎，不再只为预设场景优化 payload，而是自动探索潜在脆弱路径。",
+      "tags": [
+        "LLM Agent",
+        "Prompt Injection",
+        "红队"
+      ]
+    },
+    {
+      "id": 212,
+      "title": "LTBD: Learnable Trust-Boundary Delimiters for Prompt Injection Defense",
+      "url": "https://arxiv.org/abs/2610.11634",
+      "source": "arXiv",
+      "date": "2026-10-08",
+      "summary": "LTBD：可学习的信任边界分隔符，让模型无需微调即可区分指令与不可信数据，防御提示注入。",
+      "tags": [
+        "Prompt Injection",
+        "防御",
+        "LLM"
+      ]
+    },
+    {
+      "id": 213,
+      "title": "BRANCH: Bypassing Multi-Scanner AI Guardrails",
+      "url": "https://arxiv.org/abs/2610.10742",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "BRANCH：利用多扫描器护栏各自孤立、任务聚焦的检测盲区，构造可逐个绕过组合护栏的注入与越狱攻击。",
+      "tags": [
+        "越狱",
+        "护栏绕过",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 214,
+      "title": "One Word Opens the Gate: The Option-Channel Attack on Typed Decision Models as Agent Guardrails",
+      "url": "https://arxiv.org/abs/2610.12292",
+      "source": "arXiv",
+      "date": "2026-10-08",
+      "summary": "「选项通道」攻击：针对作为 Agent 护栏的类型化决策模型，仅改动选项的一个词即可翻转其判定，打开闸门。",
+      "tags": [
+        "护栏",
+        "LLM Agent",
+        "对抗攻击"
+      ]
+    },
+    {
+      "id": 215,
+      "title": "SpecGuard: Proving a Task Is Broken Before the Agent Cheats",
+      "url": "https://arxiv.org/abs/2610.09159",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "SpecGuard：在 Agent 作弊之前先证明任务规约本身有缺陷，应对任务中意外或被注入的错误规约导致危险行为的问题。",
+      "tags": [
+        "LLM Agent",
+        "规约博弈",
+        "防御"
+      ]
+    },
+    {
+      "id": 216,
+      "title": "From Expected Harmfulness to Likelihood: A Probabilistic Reformulation of Jailbreaking LLM Agents",
+      "url": "https://arxiv.org/abs/2610.09973",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "把越狱 LLM Agent 从「最大化期望危害」重构为「最大化有害输出似然」的概率框架，给出更高效的攻击构造与理论分析。",
+      "tags": [
+        "越狱",
+        "LLM Agent",
+        "理论"
+      ]
+    },
+    {
+      "id": 217,
+      "title": "From Reactive Containment to Proactive Assurance: Lessons from OpenAI, Anthropic, and Google Agent Security Incidents",
+      "url": "https://arxiv.org/abs/2610.12463",
+      "source": "arXiv",
+      "date": "2026-10-08",
+      "summary": "复盘 2026 年 OpenAI、Anthropic、Google 三家的 Agent 安全事件（越权入侵真实系统），总结从被动遏制走向主动保证的经验教训。",
+      "tags": [
+        "LLM Agent",
+        "事件复盘",
+        "AI 安全"
+      ]
+    },
+    {
+      "id": 218,
+      "title": "DITTO: A Context-aware Pickle-based Pre-Trained Model Scanner for Effective Security Audits",
+      "url": "https://arxiv.org/abs/2610.10735",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "DITTO：上下文感知的 Pickle 模型扫描器；分析显示不安全的 Pickle 序列化在模型分发中仍普遍，供应链反序列化攻击面依旧敞开。",
+      "tags": [
+        "模型供应链",
+        "反序列化",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 219,
+      "title": "Beyond Owls: Subliminal Learning Can Transfer Learned Capabilities and Backdoors",
+      "url": "https://arxiv.org/abs/2610.10657",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "拓展潜隐学习（subliminal learning）实验：蒸馏可在语义无关数据上把学习能力乃至后门传给学生模型，供应链安全含义重大。",
+      "tags": [
+        "后门",
+        "蒸馏",
+        "供应链"
+      ]
+    },
+    {
+      "id": 220,
+      "title": "A Security Meta-Model for Retrieval-Augmented Generation Systems",
+      "url": "https://arxiv.org/abs/2610.11893",
+      "source": "arXiv",
+      "date": "2026-10-08",
+      "summary": "为 RAG 系统建立安全元模型，刻画检索-生成多阶段流水线的结构性攻击面，统一描述注入、投毒等威胁。",
+      "tags": [
+        "RAG",
+        "威胁建模",
+        "LLM"
+      ]
+    },
+    {
+      "id": 221,
+      "title": "Safe at One Loop, Risky at Another: Aligning Safety Across Recurrent Depths in Looped Language Models",
+      "url": "https://arxiv.org/abs/2610.10625",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "发现循环语言模型（LoopLM）在不同递归深度上的安全性不对齐：同一模型在某个循环深度安全、换个深度就失守。",
+      "tags": [
+        "安全对齐",
+        "LLM",
+        "递归模型"
+      ]
+    },
+    {
+      "id": 222,
+      "title": "How Fragile Is On-Device Language Model Safety? Localizing Safety-Critical Parameters for Sparse Fault Analysis",
+      "url": "https://arxiv.org/abs/2610.09000",
+      "source": "arXiv",
+      "date": "2026-10-06",
+      "summary": "研究端侧小模型安全的脆弱性：定位安全关键参数并做稀疏故障分析，本地存储参数被篡改即可击穿安全机制。",
+      "tags": [
+        "端侧模型",
+        "安全对齐",
+        "故障注入"
+      ]
+    },
+    {
+      "id": 223,
+      "title": "SafeEvo: Deciphering the Safety Alignment Mechanism and Evolution in Language Models",
+      "url": "https://arxiv.org/abs/2610.09600",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "SafeEvo：从内部机制层面解读大模型安全对齐的形成与演化，把安全可解释性从行为约束推进到机制理解。",
+      "tags": [
+        "安全对齐",
+        "可解释性",
+        "LLM"
+      ]
+    },
+    {
+      "id": 224,
+      "title": "AI Safety Considerations for Agents With Limited Time to Act",
+      "url": "https://arxiv.org/abs/2610.10285",
+      "source": "arXiv",
+      "date": "2026-10-07",
+      "summary": "讨论「行动时间受限」的 Agent 的 AI 安全：指出多数对齐论证忽略了 Agent 所处环境的实时约束，需重新评估安全架构。",
+      "tags": [
+        "AI 安全",
+        "Agent",
+        "对齐理论"
+      ]
+    },
+    {
+      "id": 225,
+      "title": "Safe Actions Alone Do Not Ensure Safe Agents: Identifying Unfulfilled Obligations with Guard Models",
+      "url": "https://arxiv.org/abs/2610.11773",
+      "source": "arXiv",
+      "date": "2026-10-08",
+      "summary": "指出护栏模型只识别「禁止动作」不够：Agent 安全还要求识别「未履行的义务」，否则不作为也会造成危害。",
+      "tags": [
+        "LLM Agent",
+        "护栏",
+        "安全评估"
+      ]
+    },
+    {
+      "id": 226,
+      "title": "CVE-2026-103663: Ollama 漏洞（CVSS 9.4 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-103663",
+      "source": "NVD",
+      "date": "2026-10-08",
+      "summary": "影响产品：Ollama。/api/pull 端点 digestToPath 校验不足致路径遍历，未认证攻击者可将恶意二进制写出模型存储目录，若进程可写 /usr/lib/ollama 可进一步 RCE。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 227,
+      "title": "CVE-2026-107824: x64dbg-MCP Server 漏洞（CVSS 9.3 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107824",
+      "source": "NVD",
+      "date": "2026-10-09",
+      "summary": "影响产品：x64dbg-MCP Server。1.1 之前默认监听 0.0.0.0 且无认证，任意网络可达客户端可经 HTTP/SSE 执行任意调试器命令、附加进程，等同 RCE。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 228,
+      "title": "CVE-2026-108263: Astron Agent 漏洞（CVSS 9.9 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108263",
+      "source": "NVD",
+      "date": "2026-10-09",
+      "summary": "影响产品：Astron Agent。默认 workflow 代码节点在未显式配置时落到无沙箱的 LocalExecutor，提供完整 Python builtins 的动态代码执行，致 RCE。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 229,
+      "title": "CVE-2026-107286: Pydantic AI 漏洞（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107286",
+      "source": "NVD",
+      "date": "2026-10-08",
+      "summary": "影响产品：Pydantic AI。ConcurrencyLimitedModel 流式请求清理跨任务运行致并发槽位滞留，可耗尽并发上限造成拒绝服务。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 230,
+      "title": "CVE-2026-107295: Pydantic AI 漏洞（CVSS 7.6 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107295",
+      "source": "NVD",
+      "date": "2026-10-08",
+      "summary": "影响产品：Pydantic AI。Agent.to_web() 本地聊天端点缺少 Content-Type 校验，恶意网站可经浏览器跨站请求驱动 loopback 上的 Agent 以开发者权限执行工具（CSRF）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 231,
+      "title": "CVE-2026-107289: Pydantic AI 漏洞（CVSS 6.8 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107289",
+      "source": "NVD",
+      "date": "2026-10-08",
+      "summary": "影响产品：Pydantic AI。allow-local 场景的云端元数据黑名单可被 IPv6 zone identifier 绕过，造成 SSRF 访问云元数据地址。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 232,
+      "title": "CVE-2026-88257: BeamMCP（ScriptKittyOS） 漏洞（CVSS 5.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88257",
+      "source": "NVD",
+      "date": "2026-10-08",
+      "summary": "影响产品：BeamMCP（ScriptKittyOS）。Schema 校验只检查顶层参数，嵌套对象与数组约束不生效，MCP 客户端可携带违反服务端声明 schema 的参数直达工具分发函数。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "AI 框架"
+      ]
+    },
     {
       "id": 166,
       "title": "What the Guard Misses, the Robot Executes: Implied Harm in VLA Instructions",

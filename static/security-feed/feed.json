@@ -1,6 +1,84 @@
 {
-  "updatedAt": "2026-10-10T09:05:00+08:00",
+  "updatedAt": "2026-10-12T13:15:00+08:00",
   "items": [
+    {
+      "id": 233,
+      "title": "RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors",
+      "url": "https://arxiv.org/abs/2610.13516",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "RESCUE：用反事实框架评估 VLA 运行时监控器的告警是否「值得行动」——准确的告警可能来得太晚无法恢复，不必要的干预反而打断本可成功的执行。",
+      "tags": [
+        "VLA",
+        "具身智能",
+        "运行时监控"
+      ]
+    },
+    {
+      "id": 234,
+      "title": "Safety Graph: When Safety Responses Become Attack Surfaces in Cyber-Physical Systems",
+      "url": "https://arxiv.org/abs/2610.13086",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "揭示工业控制系统（ICS/OT）中安全响应机制本身成为新攻击面：攻击者可借安全响应大幅扩展横向移动范围，现有建模框架未覆盖此风险。",
+      "tags": [
+        "信息物理系统",
+        "工业控制",
+        "攻击面"
+      ]
+    },
+    {
+      "id": 235,
+      "title": "Understanding and Mitigating Cross-Session Attacks via Persistent Artifacts in Agent Skill Composition",
+      "url": "https://arxiv.org/abs/2610.13227",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "发现并缓解 Agent 技能组合中的跨会话攻击：技能执行产生的文件、配置、缓存等持久产物可被后续会话的其他技能利用，形成新的持久化攻击通道。",
+      "tags": [
+        "LLM Agent",
+        "持久化攻击",
+        "技能生态"
+      ]
+    },
+    {
+      "id": 236,
+      "title": "CVE-2026-108714: MCP Kotlin SDK 漏洞（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108714",
+      "source": "NVD",
+      "date": "2026-10-11",
+      "summary": "影响产品：MCP Kotlin SDK。Ktor WebSocket 未设 maxFrameSize，远程客户端声明近 2GiB 帧即可耗尽服务端内存造成 DoS（≤0.15.0）。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 237,
+      "title": "CVE-2026-108859: mcp-go 漏洞（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108859",
+      "source": "NVD",
+      "date": "2026-10-11",
+      "summary": "影响产品：mcp-go。StreamableHTTPServer 先 io.ReadAll 再校验，未认证攻击者发送超大 POST body 耗内存致 OOM（≤1.2.1）。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "AI 框架"
+      ]
+    },
+    {
+      "id": 238,
+      "title": "CVE-2026-108865: AmoyLab Unla（MCP 网关） 漏洞（CVSS 8.2 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108865",
+      "source": "NVD",
+      "date": "2026-10-11",
+      "summary": "影响产品：AmoyLab Unla（MCP 网关）。OAuth2 服务器从不认证资源所有者，未认证攻击者可注册客户端直接换取访问令牌，进而访问受保护的 MCP 前缀、代理上游 API 与注入凭证（≤0.10.0）。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "AI 框架"
+      ]
+    },
     {
       "id": 203,
       "title": "Black-Box Adversarial Patch Attacks on VLAs via Ancestor VLM Exploitation",

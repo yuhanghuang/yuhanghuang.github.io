@@ -1,6 +1,253 @@
 {
-  "updatedAt": "2026-10-12T13:15:00+08:00",
+  "updatedAt": "2026-10-13T09:10:00+08:00",
   "items": [
+    {
+      "id": 239,
+      "title": "ToFu: Exploiting and Fuzzing the LLM-Orchestrator-Tool Trust Boundary",
+      "url": "https://arxiv.org/abs/2610.13651",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "ToFu：针对「LLM-编排层-工具」信任边界做漏洞挖掘与模糊测试，揭示编排层把模型输出翻译成工具调用时的语义信任缺陷。",
+      "tags": [
+        "LLM Agent",
+        "工具调用",
+        "模糊测试"
+      ]
+    },
+    {
+      "id": 240,
+      "title": "APEX-Harm: Evaluating Agent Safety in Shared Professional Workspaces",
+      "url": "https://arxiv.org/abs/2610.13623",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "APEX-Harm：评估共享专业工作区（文件、消息、业务应用）中 Agent 的安全性，覆盖不止单一已知读取点的复杂注入面。",
+      "tags": [
+        "LLM Agent",
+        "安全评估",
+        "工作区"
+      ]
+    },
+    {
+      "id": 241,
+      "title": "An Exploration of Attacks on AI Agent Systems",
+      "url": "https://arxiv.org/abs/2610.12524",
+      "source": "arXiv",
+      "date": "2026-10-08",
+      "summary": "系统梳理对单/多 Agent 系统的攻击：提示注入可经直接输入与 Agent 间通信泄露敏感信息，并给出实验验证。",
+      "tags": [
+        "LLM Agent",
+        "Prompt Injection",
+        "多智能体"
+      ]
+    },
+    {
+      "id": 242,
+      "title": "VEPA: Verified Evolving Formal Policy for Lifelong LLM Agent Guardrails",
+      "url": "https://arxiv.org/abs/2610.12813",
+      "source": "arXiv",
+      "date": "2026-10-08",
+      "summary": "VEPA：为 LLM Agent 护栏引入可验证、可演化、形式化的策略，在潜在危险动作前给出可检查、可复现、确定性的允许/拒绝判定。",
+      "tags": [
+        "LLM Agent",
+        "护栏",
+        "形式化验证"
+      ]
+    },
+    {
+      "id": 243,
+      "title": "Cancerous Backdoor Attack: Gradual Activation via Invisible Tokens and A Stage Controller",
+      "url": "https://arxiv.org/abs/2610.12644",
+      "source": "arXiv",
+      "date": "2026-10-08",
+      "summary": "「癌变」后门：通过不可见 token 与阶段控制器让恶意行为逐步激活，突破单点触发-响应模式，更难被检测。",
+      "tags": [
+        "后门",
+        "LLM",
+        "隐蔽攻击"
+      ]
+    },
+    {
+      "id": 244,
+      "title": "Vulnerable Models in the AI Supply Chain: An Empirical Study of Adoption, Propagation, and Usage Patterns",
+      "url": "https://arxiv.org/abs/2610.12893",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "AI 供应链实证研究：不只扫描模型仓库，还追踪含不安全序列化、架构后门等漏洞的模型如何被采纳、传播与使用。",
+      "tags": [
+        "AI 供应链",
+        "漏洞传播",
+        "实证研究"
+      ]
+    },
+    {
+      "id": 245,
+      "title": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
+      "url": "https://arxiv.org/abs/2610.13886",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "X-AgentRed：面向多服务生态中个人 Agent 的红队框架，发现良性请求在跨服务动作累积交互下产生的有害组合后果。",
+      "tags": [
+        "LLM Agent",
+        "红队",
+        "组合风险"
+      ]
+    },
+    {
+      "id": 246,
+      "title": "Forgetting is Not Always Bad: A Neuro-Inspired Memory Repair Mechanism for Poisoned LLM Agents",
+      "url": "https://arxiv.org/abs/2610.13267",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "针对 Agent 记忆投毒提出类脑记忆修复机制，相比外部隔离/在线审计模块，降低记忆开销与计算成本。",
+      "tags": [
+        "LLM Agent",
+        "记忆投毒",
+        "防御"
+      ]
+    },
+    {
+      "id": 247,
+      "title": "DRYLAB-Bench: Benchmarking the Biosecurity Risk of Agentic LLM Mutation Design",
+      "url": "https://arxiv.org/abs/2610.13116",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "DRYLAB-Bench：评估 Agentic LLM 在突变设计任务上的生物安全双重用途风险，如增强病原体或耐药菌设计能力。",
+      "tags": [
+        "AI 安全",
+        "双重用途",
+        "基准"
+      ]
+    },
+    {
+      "id": 248,
+      "title": "Attention Sees, MLP Refuses: Tracing the Attention-to-MLP Safety Pathway in LLMs",
+      "url": "https://arxiv.org/abs/2610.13078",
+      "source": "arXiv",
+      "date": "2026-10-09",
+      "summary": "区分 LLM 的「有害性识别」（attention）与「拒答写入」（MLP）两条通路并使其可测量，解释越狱与过度拒绝的机制根源。",
+      "tags": [
+        "安全对齐",
+        "可解释性",
+        "越狱"
+      ]
+    },
+    {
+      "id": 249,
+      "title": "CVE-2026-77363: obsidian-tc（MCP server） 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77363",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：obsidian-tc（MCP server）。Streamable HTTP 传输不校验 Host/Origin 且无 DNS-rebinding 防护，auth.mode=none 时恶意网页可经浏览器访问本地 MCP 端点，获取 Obsidian 笔记库无限制访问权。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 250,
+      "title": "CVE-2026-84318: Nginx UI 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84318",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：Nginx UI。MCP 工具 nginx_config_add 写 nginx 配置并 reload 时不调用校验函数，认证攻击者可写入 REST API 会拒绝的危险指令。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 251,
+      "title": "CVE-2026-84360: Nginx UI 漏洞（CVSS 8.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-84360",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：Nginx UI。HTTP 配置变更路由要求 RequireSecureSession，但 /mcp 与 /mcp_message 仅需普通认证，绕过 OTP 安全会话即可改 nginx 配置并触发 reload。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 252,
+      "title": "CVE-2026-108953: mac-shell-mcp 漏洞（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108953",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：mac-shell-mcp。execute_command 参数注入 shell 元字符即可绕过命令白名单，以服务器用户身份执行禁用命令，恶意提示也可触发。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 253,
+      "title": "CVE-2026-108836: Ollama 漏洞（CVSS 7.3 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108836",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：Ollama。Pull API 的 model name 校验函数 IsValid 缺陷致 SSRF，可远程利用且 exploit 已公开（≤0.34.1，升级 0.34.2 修复）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 254,
+      "title": "CVE-2026-108542: elvix-sdk 漏洞（CVSS 6.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108542",
+      "source": "NVD",
+      "date": "2026-10-11",
+      "summary": "影响产品：elvix-sdk。MCP 请求处理组件中 path 参数可被操纵造成 SSRF，可远程发起，exploit 已公开（≤0.10.1）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 255,
+      "title": "CVE-2026-109239: Crawl4AI 漏洞（CVSS 5.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109239",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：Crawl4AI。RobotsParser.can_fetch 存在盲 SSRF，开启 check_robots_txt 时可经重定向/DNS rebinding 绕过 Docker 出口管控访问内网与云元数据（<0.9.4）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 256,
+      "title": "CVE-2026-108856: UnicomAI Wanwu（万有） 漏洞（CVSS 4.2 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108856",
+      "source": "NVD",
+      "date": "2026-10-11",
+      "summary": "影响产品：UnicomAI Wanwu（万有）。认证用户可冒用他人 MCP server 的 UUID 铸造 AppKey，以受害者上游凭据开启 MCP 会话并调用其工具（≤0.6.5）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 257,
+      "title": "CVE-2026-109296: Open WebUI 漏洞（CVSS 4.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109296",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：Open WebUI。缺失授权校验，认证用户显式指定后端索引即可访问已禁用的模型提供商后端，携带配置的 API key 发起请求（<0.11.4）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
     {
       "id": 233,
       "title": "RESCUE: Is This Alarm Worth Acting On? Counterfactual Evaluation of VLA Runtime Monitors",

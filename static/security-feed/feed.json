@@ -1,6 +1,110 @@
 {
-  "updatedAt": "2026-10-13T09:10:00+08:00",
+  "updatedAt": "2026-10-14T09:15:00+08:00",
   "items": [
+    {
+      "id": 258,
+      "title": "CVE-2026-86063: Claude Code / Claude Desktop 漏洞（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-86063",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：Claude Code / Claude Desktop。插件安装流程对 marketplace 钉住的 commit 执行 git checkout 时不校验 HEAD 是否等于钉住的 40 位 SHA，允许 SHA 形分支名的 Git 宿主可用同名分支偷换已审查提交，安装攻击者控制的插件代码。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "供应链安全"
+      ]
+    },
+    {
+      "id": 259,
+      "title": "CVE-2026-55376: Heym agentic 工作流平台 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55376",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：Heym agentic 工作流平台。Agent 自定义 Python 工具的黑名单沙箱可绕过：标准库模块经公开属性暴露 OS/进程/文件能力并通过安全检查，最终以 exec() 执行，认证用户可在后端上下文中执行任意命令。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "沙箱逃逸"
+      ]
+    },
+    {
+      "id": 260,
+      "title": "CVE-2026-109403: conductor-oss conductor 漏洞（CVSS 7.3 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109403",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：conductor-oss conductor。A2AService.getAgentCard 的 agentUrl 参数存在 SSRF，可远程发起，影响 ≤3.32.5 版本，exploit 已公开。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "SSRF"
+      ]
+    },
+    {
+      "id": 261,
+      "title": "CVE-2026-109402: conductor-oss conductor 漏洞（CVSS 6.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109402",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：conductor-oss conductor。MCPService.listTools 的 mcpServer 参数存在 SSRF，可远程发起，影响 3.22.0 版本，exploit 已公开。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "SSRF"
+      ]
+    },
+    {
+      "id": 262,
+      "title": "CVE-2026-109286: Open WebUI 漏洞（CVSS 8.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109286",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：Open WebUI。SyncStatsModal 跨域消息处理不校验来源，任意网站可发送伪造 verify:chat 消息并利用路径遍历 chat id 将认证请求重定向到 auths 端点，窃取登录用户的 JWT 获得完整 API 访问。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "Web 安全"
+      ]
+    },
+    {
+      "id": 263,
+      "title": "CVE-2026-109572: Open WebUI 漏洞（CVSS 7.6 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109572",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：Open WebUI。terminal proxy 提权：认证用户可携带共享密钥访问 Terminals 管理 API，列出/停止其他用户终端、修改终端策略并注入环境变量。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "权限提升"
+      ]
+    },
+    {
+      "id": 264,
+      "title": "CVE-2026-109290: Open WebUI 漏洞（CVSS 7.3 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109290",
+      "source": "NVD",
+      "date": "2026-10-12",
+      "summary": "影响产品：Open WebUI。DocxPreview.svelte 存储型 XSS：上传含 OOXML altChunk HTML 部件或 script 协议超链接的特制 DOCX，可窃取预览管理员的 localStorage 会话令牌并接管实例。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "XSS"
+      ]
+    },
+    {
+      "id": 265,
+      "title": "CVE-2026-96893: GitLab EE 漏洞（CVSS 7.3 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96893",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：GitLab EE。AI 会话上下文构建时对特殊元素中和不当，认证用户可向 AI agent 指令注入特制内容，导致以其他用户身份执行非预期命令（19.1–19.4 多个分支受影响）。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
     {
       "id": 239,
       "title": "ToFu: Exploiting and Fuzzing the LLM-Orchestrator-Tool Trust Boundary",

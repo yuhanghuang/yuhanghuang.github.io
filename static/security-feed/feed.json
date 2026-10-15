@@ -1,6 +1,318 @@
 {
-  "updatedAt": "2026-10-14T09:15:00+08:00",
+  "updatedAt": "2026-10-15T09:25:00+08:00",
   "items": [
+    {
+      "id": 266,
+      "title": "Refuses in Chat, Complies with Arms: LLM Refusal Does Not Survive Robot Control",
+      "url": "https://arxiv.org/abs/2610.14043",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "提出 RoboHarm 物理 AI 安全基准，固定模型仅改变接口：文本拒绝率 73%，而一旦控制机械臂（末端位姿/关节角）拒绝率跌至 18–25%，真机与仿真一致。GPT-5.6 Sol 文本全拒但真机零拒绝——文本安全对齐无法泛化到物理动作。",
+      "tags": [
+        "机器人越狱",
+        "具身智能",
+        "LLM 安全对齐"
+      ]
+    },
+    {
+      "id": 267,
+      "title": "Red-Teaming of Vision-Language-Action Models via Quality Diversity Environment Generation",
+      "url": "https://arxiv.org/abs/2610.14415",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "提出 Q-DEG：用质量多样性（QD）优化自动生成多样且高失败率的对抗环境暴露 VLA 脆弱性，再在其自身成功 rollout 上自模仿微调。在三个代表性 VLA 上提升对 OOD 对抗环境的鲁棒性，并促进 sim-to-real 迁移。",
+      "tags": [
+        "VLA",
+        "红队测试",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 268,
+      "title": "From bits to atoms: A survey of cross-layer safety in Embodied AI",
+      "url": "https://arxiv.org/abs/2610.14038",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "具身智能安全综述：提出物理交互/系统与中间件/算法与决策/云边与数据四层参考架构，串联跨层漏洞、传播路径与防护措施，系统化复合攻击链、多层防御策略与代表性安全基准。",
+      "tags": [
+        "具身智能",
+        "综述",
+        "安全架构"
+      ]
+    },
+    {
+      "id": 269,
+      "title": "Building Trustworthy Household Robots through Open-World Safety",
+      "url": "https://arxiv.org/abs/2610.14034",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "立场论文：主张家庭机器人应满足「开放世界安全」——在未见情境（包括无法完成任务时）也保持安全要求。分析现有方法因上下文误解、历史交互遗漏和不安全恢复策略而失效，给出规约-学习-落地-评估的研究议程。",
+      "tags": [
+        "家庭机器人",
+        "具身智能",
+        "安全对齐"
+      ]
+    },
+    {
+      "id": 270,
+      "title": "Successful but Unsafe: An Analytical Benchmark for Revealing Collisions in Vision-and-Language Navigation",
+      "url": "https://arxiv.org/abs/2610.14682",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "VLN-Safe 基准揭示常用滑动评估会掩盖碰撞：R2R-CE 上 38.5–56.8% 的「成功」轨迹含碰撞，改用阻塞式评估成功率降 11.7–36.1 个点。提出免训练碰撞护栏，碰撞步数减少 62–98% 且成功率不降反升。",
+      "tags": [
+        "具身智能",
+        "VLN",
+        "安全基准"
+      ]
+    },
+    {
+      "id": 271,
+      "title": "Can agents whose sole duty is to keep humans alive be hijacked to kill? Delayed multi-turn derived-action trap attacks in simulated high-stakes environments",
+      "url": "https://arxiv.org/abs/2610.15153",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "基于 NASA BioSim 月球栖息地生命维持模拟：将延迟提示注入附加在操作员必读的真实遥测数据后，诱导职责为维持宇航员生命的 AI agent 关闭生命维持系统。Claude 大多拒绝并援引船员生命，Grok 更常把注入指令当成任务直接切断维生。代码与轨迹已开源。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "高风险场景"
+      ]
+    },
+    {
+      "id": 272,
+      "title": "Adversarial Robustness of Camera-Radar Sensor Fusion for Autonomous Driving",
+      "url": "https://arxiv.org/abs/2610.16012",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "在 nuScenes 上系统测量 5 种相机-雷达融合算法在 8 种图像扰动与 3 种雷达点云扰动下的鲁棒性：相机扰动中等强度即可造成严重退化，雷达扰动影响有限——传感器融合本身并不保证对抗鲁棒性，并给出模态可靠性估计与跨模态一致性检查等设计建议。",
+      "tags": [
+        "自动驾驶",
+        "对抗攻击",
+        "传感器融合"
+      ]
+    },
+    {
+      "id": 273,
+      "title": "From Acoustic Sensing to Physical Actions: A Comprehensive Survey of Security Risks in Edge-Deployed Audio LLM-Based Agents",
+      "url": "https://arxiv.org/abs/2610.15390",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "综述边缘部署音频 LLM 智能体（智能家居/车载/可穿戴/具身系统）的安全风险，提出声学感知到动作（S2A）系统模型追踪从声学输入到外部执行的影响路径，指出阶段衔接处的防护缺口使单点防御无法提供端到端保障。",
+      "tags": [
+        "具身智能",
+        "音频 LLM",
+        "综述"
+      ]
+    },
+    {
+      "id": 274,
+      "title": "EvolvAttack: Backdooring self Evolving VLM Agents",
+      "url": "https://arxiv.org/abs/2610.15244",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "提出「自进化后门」新攻击面：载荷在初始 VLM agent 中休眠，随记忆演化逐步激活——静态扫描攻击成功率仅 0.5%，演化 100 次交互后超 95%。在 3 种 VLM 骨干、4 种 agent 流水线和三类记忆演化机制上验证。",
+      "tags": [
+        "VLM Agent",
+        "后门攻击",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 275,
+      "title": "Across Viewpoints and Time: Trajectory-Generalizable Physical Attacks on World Models and Video Understanding Models",
+      "url": "https://arxiv.org/abs/2610.15343",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "提出轨迹感知对抗对齐攻击 TARA：单张可打印对抗纹理即可在视点沿非受控轨迹变化的真实场景中持续扰乱世界模型与视频理解模型，并经实物打印重拍视频验证，揭示世界模型在物理部署条件下的根本性安全挑战。",
+      "tags": [
+        "世界模型",
+        "物理对抗攻击",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 276,
+      "title": "RoboFake: Are Deepfake Detectors Ready for Humanoid Face Robots?",
+      "url": "https://arxiv.org/abs/2610.14269",
+      "source": "arXiv",
+      "date": "2026-10-14",
+      "summary": "给唇形同步的人形机器人装上真人面孔并以生成语音驱动，即构成镜头前实时伪造（RoboFake）。测试 6 个公开 deepfake 检测器：它们只是因机器人脸「不像真人」而报警而非识别伪造，轻微 JPEG 压缩即可让多数帧跌破阈值。",
+      "tags": [
+        "人形机器人",
+        "Deepfake",
+        "物理世界攻击"
+      ]
+    },
+    {
+      "id": 277,
+      "title": "CVE-2026-110202: Roo Code 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110202",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：Roo Code。getCommandDecision() 命令审批绕过：以裸 >& 重定向为前缀即可让允许列表误匹配 echo 等目标，间接提示注入可借此在开发者机器上自动批准并执行被拒命令。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 278,
+      "title": "CVE-2026-110203: Roo Code 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110203",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：Roo Code。滥用 parseCommandLine() 的引号掩蔽正则，用转义/单引号包夹的双引号把命令分隔符藏在允许列表前缀之后，经间接提示注入绕过命令审批。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 279,
+      "title": "CVE-2026-110204: Roo Code 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110204",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：Roo Code。parseCommandLine() 把 ${ command; } 当作参数展开处理，攻击者可将被拒命令嵌入 echo 等允许命令内，在 bash 5.3+/ksh93 上免审批执行。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 280,
+      "title": "CVE-2026-110205: Roo Code 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110205",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：Roo Code。parseCommandLine() 会丢弃紧邻 * 或 ? 通配符的命令替换，echo *$(...) 这类构造可匹配允许列表前缀并在自动批准开启时执行被拒命令。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 281,
+      "title": "CVE-2026-110206: Roo Code 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110206",
+      "source": "NVD",
+      "date": "2026-10-13",
+      "summary": "影响产品：Roo Code。parseCommandLine() 允许把命令替换放在命令位置，$(echo touch /tmp/x) 可通过 echo 允许列表检查，shell 随后执行其输出，间接提示注入可借此免审批执行任意命令。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 282,
+      "title": "CVE-2026-55786: Flyto2 Core 漏洞（CVSS 8.4 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-55786",
+      "source": "NVD",
+      "date": "2026-10-14",
+      "summary": "影响产品：Flyto2 Core。HTTP MCP POST /mcp 路由未带 REST 执行路由的 require_auth 依赖，接受未认证 JSON-RPC tools/call，可选择 sandbox.execute_shell 直达 asyncio.create_subprocess_shell，以服务器进程权限执行任意 OS 命令。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "RCE"
+      ]
+    },
+    {
+      "id": 283,
+      "title": "CVE-2026-110842: n8n 漏洞（CVSS 7.7 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110842",
+      "source": "NVD",
+      "date": "2026-10-14",
+      "summary": "影响产品：n8n。MCP 工作流校验工具的解释器在主进程求值调用方代码并允许写入共享原型：仅有 workflow:read 权限的成员可替换内置方法使权限检查通过，进而接管未开 MFA 的 owner 账户。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "原型链污染"
+      ]
+    },
+    {
+      "id": 284,
+      "title": "CVE-2026-110852: n8n 漏洞（CVSS 6.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110852",
+      "source": "NVD",
+      "date": "2026-10-14",
+      "summary": "影响产品：n8n。动态路径 webhook 解析只按路径匹配而忽略 URL 中不可猜测的标识符，未认证攻击者可省略该标识符调用 webhook/form/MCP 路由，以其他项目的凭据执行工作流。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "认证绕过"
+      ]
+    },
+    {
+      "id": 285,
+      "title": "CVE-2026-110719: Portkey AI Gateway 漏洞（CVSS 7.2 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110719",
+      "source": "NVD",
+      "date": "2026-10-14",
+      "summary": "影响产品：Portkey AI Gateway。TRUSTED_CUSTOM_HOSTS 未设置时 isValidCustomHost 信任 localhost 风格主机，未认证攻击者可用特制 x-portkey-custom-host 头（如经 ollama provider）让网关访问并回显 loopback 与 Docker 宿主机内部服务。",
+      "tags": [
+        "CVE",
+        "LLM 网关",
+        "SSRF"
+      ]
+    },
+    {
+      "id": 286,
+      "title": "CVE-2026-110616: NullHub 漏洞（CVSS 8.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110616",
+      "source": "NVD",
+      "date": "2026-10-14",
+      "summary": "影响产品：NullHub。auth_token 字段默认为 null 且从未赋值，/api/* 管理 API 缺失认证：未认证攻击者可控制 agent 实例、改写含 provider 凭据的配置、管理 cron 任务和 MCP 服务器。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "认证缺失"
+      ]
+    },
+    {
+      "id": 287,
+      "title": "CVE-2026-109527: MCP Python SDK 漏洞（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109527",
+      "source": "NVD",
+      "date": "2026-10-14",
+      "summary": "影响产品：MCP Python SDK。官方 MCP Python SDK 的 Streamable HTTP 会话管理器、SSE 消息端点与 OAuth 授权服务器路由不设请求体大小上限，未认证远程客户端可持续耗尽内存或终止服务器（1.29.1/2.1.0 修复）。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "DoS"
+      ]
+    },
+    {
+      "id": 288,
+      "title": "CVE-2026-108395: MCP Java SDK 漏洞（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-108395",
+      "source": "NVD",
+      "date": "2026-10-14",
+      "summary": "影响产品：MCP Java SDK。官方 MCP Java SDK 的 Servlet SSE/Streamable HTTP/Stateless 传输将请求体无上限读入内存，未认证客户端可用超大 POST 体耗尽 JVM 堆致服务不可用（0.18.4/1.1.4/2.0.1 修复）。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "DoS"
+      ]
+    },
+    {
+      "id": 289,
+      "title": "CVE-2026-59951: MCP Python SDK（FastMCP） 漏洞（CVSS 6.9 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59951",
+      "source": "NVD",
+      "date": "2026-10-14",
+      "summary": "影响产品：MCP Python SDK（FastMCP）。有状态 Streamable HTTP 服务器（含 FastMCP）的会话条目无空闲过期与总数限制，普通短请求即可让服务器内存无限增长直至重启（1.30.0/2.2.0 修复）。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "DoS"
+      ]
+    },
     {
       "id": 258,
       "title": "CVE-2026-86063: Claude Code / Claude Desktop 漏洞（CVSS 7.5 High）",

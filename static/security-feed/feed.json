@@ -1,6 +1,331 @@
 {
-  "updatedAt": "2026-10-15T09:25:00+08:00",
+  "updatedAt": "2026-10-16T18:50:00+08:00",
   "items": [
+    {
+      "id": 290,
+      "title": "Limits of Statistical Assurance for Embodied and Agentic AI under Adaptive Adversaries",
+      "url": "https://arxiv.org/abs/2610.18948",
+      "source": "arXiv",
+      "date": "2026-10-15",
+      "summary": "证明有限次安全评估无法排除「认证时切换」的自适应对抗者：攻击者在通过认证前保持正常、之后激活攻击恰为最优策略。RoCo 多机器人协作仿真中切换后 36 局中 34 局违反安全间隔，AgentDojo 实验每 4 个任务多出约 2 个安全违规；同时给出可将违规压制到 √n 阶的实时混合监测器。",
+      "tags": [
+        "具身智能",
+        "LLM Agent",
+        "安全评估"
+      ]
+    },
+    {
+      "id": 291,
+      "title": "Can Autonomous Vehicles Keep Their Cool? A Survey of Thermal Side-Channel and Perception Attacks",
+      "url": "https://arxiv.org/abs/2610.21034",
+      "source": "arXiv",
+      "date": "2026-10-16",
+      "summary": "综述自动驾驶的热侧信道与感知攻击：物理攻击者可欺骗夜视热红外传感器，非特权软件共租者可借热/DVFS/TEI 遥测指纹感知工作负载——这些接口因 SOTIF 无法关闭，构成一类残余风险，并梳理了 13 项代表工作与开放问题。",
+      "tags": [
+        "自动驾驶",
+        "侧信道",
+        "物理世界攻击"
+      ]
+    },
+    {
+      "id": 292,
+      "title": "Paraphrase Consensus Is Not Self-Consistency: Instruction Reliance and Robustness in VLA Policies",
+      "url": "https://arxiv.org/abs/2610.19438",
+      "source": "arXiv",
+      "date": "2026-10-15",
+      "summary": "测量 VLA 对指令措辞的依赖：LIBERO 上训练评测同用 10 条指令，改写指令使 OpenVLA 成功率暴跌 38 个点，测试时提示集成无法挽回；LoRA 用改写指令后训练可将影响降到 +2.0 点并泛化到保留措辞。",
+      "tags": [
+        "VLA",
+        "鲁棒性",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 293,
+      "title": "MMA-SafetyBench: A Benchmark for Multimodal Agent Safety Evaluation",
+      "url": "https://arxiv.org/abs/2610.19384",
+      "source": "arXiv",
+      "date": "2026-10-15",
+      "summary": "研究「视觉语义劫持」：伪造系统弹窗等语义化界面元素可让多模态 agent 偏离授权任务。构建含 1083 条对抗轨迹的 MMA-SafetyBench（Web/桌面 GUI/移动/文档/视频五域），9 个模型 ASR 最高 87.96%，安全优先提示无法根除该失效模式。",
+      "tags": [
+        "多模态 Agent",
+        "Prompt Injection",
+        "GUI Agent"
+      ]
+    },
+    {
+      "id": 294,
+      "title": "INFUSE: A Unified Surface Benchmark for Indirect Prompt Injection in Agentic Systems",
+      "url": "https://arxiv.org/abs/2610.20776",
+      "source": "arXiv",
+      "date": "2026-10-16",
+      "summary": "面向长程 agent 工作流全生命周期的间接提示注入基准：40 个真实任务、56 个攻击场景、5 类威胁，对 19 个模型产出 4.1 万条对抗轨迹；平均攻击成功率 19.6%（单模型最高 41.9%），现有护栏模型防护有限，提示级加固有明显但因模型而异的安全-效用折损。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "基准"
+      ]
+    },
+    {
+      "id": 295,
+      "title": "Language Is a Security Surface for Agent Guards",
+      "url": "https://arxiv.org/abs/2610.22244",
+      "source": "arXiv",
+      "date": "2026-10-16",
+      "summary": "构建 LinguaGuardBench：只把用户指令翻译成德/法/土/斯瓦希里/阿姆哈拉语而保持工具调用与标签不变，19 个 agent 防护模型中多数小模型和专用防护的判定随语言改变，语言越罕见翻转率越高——防护结论本身依赖请求语言。",
+      "tags": [
+        "LLM Agent",
+        "护栏",
+        "多语言安全"
+      ]
+    },
+    {
+      "id": 296,
+      "title": "CoRedSkill: Stealthy Skill Composition Attacks via AST-Guided Injection",
+      "url": "https://arxiv.org/abs/2610.20049",
+      "source": "arXiv",
+      "date": "2026-10-15",
+      "summary": "组合式红队攻击：把恶意操作拆进多个互相依赖的 agent skill，经 AST 重写嵌入任务函数，单个包审计难以发现。150 例基准上攻击成功率 98.0%、任务完成率 95.3%，审计检出率仅 3.3%。",
+      "tags": [
+        "LLM Agent",
+        "Skill 投毒",
+        "红队测试"
+      ]
+    },
+    {
+      "id": 297,
+      "title": "Beyond Maliciousness: Static and Runtime Attack-Surface Profiling of Agent Skills",
+      "url": "https://arxiv.org/abs/2610.19264",
+      "source": "arXiv",
+      "date": "2026-10-15",
+      "summary": "对两个市场的 6309 个 agent skill 做静态+沙箱动态攻击面画像：约半数具备 shell 执行能力，七成至少有一项高危能力，而权限声明机制近乎形同虚设——59% 的声明低估实际能力，安装时用户几乎看不到真实授权面。",
+      "tags": [
+        "LLM Agent",
+        "Skill 生态",
+        "攻击面分析"
+      ]
+    },
+    {
+      "id": 298,
+      "title": "Screwtape: Adversarial Transcript Editing for Monitor Red-Teaming",
+      "url": "https://arxiv.org/abs/2610.20941",
+      "source": "arXiv",
+      "date": "2026-10-16",
+      "summary": "Redwood Research 的监测器红队管线：把真实 agent 轨迹编辑成「造成危害但不触发行为监测器」的攻击样本，252 次运行产出 35 个绕过自家监测器的攻击，其中 6 个经人工确认还绕过了某前沿厂商的留出监测器——外部红队无需内部设施即可找到监测器盲区。",
+      "tags": [
+        "LLM Agent",
+        "AI 监控",
+        "红队测试"
+      ]
+    },
+    {
+      "id": 299,
+      "title": "Multiple EnergizeLab Eilik / EilikO Platform Vulnerabilities（AHA! 披露咨询）",
+      "url": "https://takeonme.org/cves/multiple-energizelab-eilik-eiliko-platform-vulnerabilities/",
+      "source": "AHA! (takeonme.org)",
+      "date": "2026-10-15",
+      "summary": "研究者 Sammy Azdoufal 对 EnergizeLab 桌面陪伴机器人 Eilik/EilikO 及其云端、AI Station、固件更新链路的完整披露：10 个 CVE + 8 项发现，覆盖未认证命令注入、任意文件写、硬编码 AES 密钥、HTTP 明文固件更新、AI 模型运行时切换、跨用户记忆访问与持久化提示注入；厂商三次复测未修复，可链式实现云端到整队机器人固件的接管。",
+      "tags": [
+        "机器人安全",
+        "漏洞披露",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 300,
+      "title": "CVE-2026-105032: EnergizeLab Eilik / EilikO 机器人 漏洞（CVSS 9.1 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105032",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：EnergizeLab Eilik / EilikO 机器人。AI skill 上传端点（FastAPI 推理服务）无需认证且不限制上传路径，未认证远程攻击者可路径遍历写任意文件，篡改机器人使用的 AI skill 文件。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "任意文件写"
+      ]
+    },
+    {
+      "id": 301,
+      "title": "CVE-2026-105033: EnergizeLab AI Station 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105033",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：EnergizeLab AI Station。AI Station（RK3562）固件镜像自带默认 root 凭据且开启 SSH，网络可达即可 root 登录完全控制设备。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "默认凭据"
+      ]
+    },
+    {
+      "id": 302,
+      "title": "CVE-2026-105034: EnergizeLab Eilik 云服务 漏洞（CVSS 8.2 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105034",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：EnergizeLab Eilik 云服务。NestJS 认证服务无需认证即可为任意机器人序列号签发设备令牌，攻击者可冒充任意设备对接云服务。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "认证缺失"
+      ]
+    },
+    {
+      "id": 303,
+      "title": "CVE-2026-105035: EnergizeLab FirmwareUpdater 漏洞（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105035",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：EnergizeLab FirmwareUpdater。固件更新器使用全安装共享的硬编码 AES 密钥，恢复该密钥即可解密并伪造任意设备信任的固件包。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "硬编码密钥"
+      ]
+    },
+    {
+      "id": 304,
+      "title": "CVE-2026-105036: EnergizeLab AI Station / EilikO 固件 漏洞（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105036",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：EnergizeLab AI Station / EilikO 固件。固件更新经明文 HTTP 下载且不校验完整性与真实性，可拦截替换为恶意固件。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "固件安全"
+      ]
+    },
+    {
+      "id": 305,
+      "title": "CVE-2026-105037: EnergizeLab station-middleware 漏洞（CVSS 9.9 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105037",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：EnergizeLab station-middleware。任意注册低权账户可提供攻击者控制的文件路径读取服务器任意文件，暴露中间件文件与服务器密钥。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "路径遍历"
+      ]
+    },
+    {
+      "id": 306,
+      "title": "CVE-2026-105038: EnergizeLab Eilik / EilikO AI 服务 漏洞（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105038",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：EnergizeLab Eilik / EilikO AI 服务。FastAPI AI 推理与画像服务暴露无认证的模型管理功能，未认证远程攻击者可修改 AI 模型配置并在运行时切换模型。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "AI 配置"
+      ]
+    },
+    {
+      "id": 307,
+      "title": "CVE-2026-105039: EnergizeLab station-middleware 漏洞（CVSS 9.6 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105039",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：EnergizeLab station-middleware。管理 API 不检查用户角色，任意低权认证用户可获取 AI provider 密钥并修改配置与对象存储内容。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "越权"
+      ]
+    },
+    {
+      "id": 308,
+      "title": "CVE-2026-105040: EnergizeLab Eilik 认证服务 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-105040",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：EnergizeLab Eilik 认证服务。账户更新请求接受用户控制的 user ID（批量赋值），注册用户可设置他人账户标识完成账户接管。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "账户接管"
+      ]
+    },
+    {
+      "id": 309,
+      "title": "CVE-2026-111322: Archon 漏洞（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111322",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：Archon。AI coding agent 平台 Archon 的 /api/* 控制 API 默认绑定 0.0.0.0 且缺失认证，未认证攻击者可向以 bypassPermissions 运行的 agent 发消息，在宿主机上执行命令。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "RCE"
+      ]
+    },
+    {
+      "id": 310,
+      "title": "CVE-2026-57496: NetLicensing MCP Server 漏洞（CVSS 9.6 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57496",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：NetLicensing MCP Server。netlicensing_get_product 将调用方控制的 product_number 直接拼入 REST 路径，遍历段可改写至 /token 端点并绕过令牌脱敏，非管理员 API key 可取回明文管理令牌进而全权读写删 NetLicensing 账户。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "路径遍历"
+      ]
+    },
+    {
+      "id": 311,
+      "title": "CVE-2026-111091: JetBrains Junie CLI 漏洞（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111091",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：JetBrains Junie CLI。不可信项目的 MCP server 配置可触发代码执行（26.8.3 修复）。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "代码执行"
+      ]
+    },
+    {
+      "id": 312,
+      "title": "CVE-2026-111451: Wheels CLI 漏洞（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111451",
+      "source": "NVD",
+      "date": "2026-10-16",
+      "summary": "影响产品：Wheels CLI。部署 release/version/rollback 等参数未充分校验转义，可在部署主机与 CI runner 上执行 shell 命令，输入可来自 CI 变量、分支名、包内容或调用其 MCP 工具的 AI agent（4.1.2 修复）。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 313,
+      "title": "CVE-2026-76066: IntentKit 漏洞（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76066",
+      "source": "NVD",
+      "date": "2026-10-15",
+      "summary": "影响产品：IntentKit。执行器对工具调用按完整工具注册表而非按请求收窄的工具列表校验，wallet transfer、发帖、记忆写入等 owner 专属工具可经间接提示注入或重放历史在无人工审批下执行。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 314,
+      "title": "CVE-2026-109382: WSP MCP AI Agents Connector（WordPress 插件） 漏洞（CVSS 6.5 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109382",
+      "source": "NVD",
+      "date": "2026-10-16",
+      "summary": "影响产品：WSP MCP AI Agents Connector（WordPress 插件）。wsp_get_posts MCP 工具以空能力要求注册且认证方法接受任意登录用户，status=all 参数可越权读取全站未发布文章的标题、作者与摘要。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "信息泄露"
+      ]
+    },
     {
       "id": 266,
       "title": "Refuses in Chat, Complies with Arms: LLM Refusal Does Not Survive Robot Control",

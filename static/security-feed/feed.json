@@ -1,6 +1,58 @@
 {
-  "updatedAt": "2026-10-16T18:50:00+08:00",
+  "updatedAt": "2026-10-19T09:15:00+08:00",
   "items": [
+    {
+      "id": 315,
+      "title": "CVE-2026-96620: Claude Agent SDK 漏洞（CVSS 9.2 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96620",
+      "source": "NVD",
+      "date": "2026-10-16",
+      "summary": "影响产品：Claude Agent SDK。resume 选项未校验即作为独立 token 传给 Claude CLI，dash 开头的值被解析为 CLI flag：应用将不可信输入作为会话 ID 时，攻击者可注入 --mcp-config 定义 stdio MCP server，在 CLI 启动时绕过 SDK 权限控制执行任意命令（0.2.121 修复）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 316,
+      "title": "CVE-2026-88755: Z.ai ZCode 漏洞（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88755",
+      "source": "NVD",
+      "date": "2026-10-16",
+      "summary": "影响产品：Z.ai ZCode。ZCode v3.11.2.6792 会自动连接仓库 workspace 配置中声明的 MCP server，攻击者诱导用户打开特制仓库即可执行任意代码。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 317,
+      "title": "CVE-2026-77474: destructive_command_guard（dcg） 漏洞（CVSS 7.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77474",
+      "source": "NVD",
+      "date": "2026-10-16",
+      "summary": "影响产品：destructive_command_guard（dcg）。AI coding agent 的破坏性命令防护工具：嵌套或未闭合的 $( / $(( 替换触发指数级重复扫描，挂起 PreToolUse hook 后 fail-open，破坏性命令得以放行执行（0.6.6 修复）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "护栏绕过"
+      ]
+    },
+    {
+      "id": 318,
+      "title": "CVE-2026-95183: DeepSeek Harness（dsh） 漏洞（CVSS 待评定）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-95183",
+      "source": "NVD",
+      "date": "2026-10-16",
+      "summary": "影响产品：DeepSeek Harness（dsh）。context-compaction（上下文压缩）功能存在提示注入问题，攻击者可通过特制外部内容实施 prompt injection 攻击。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
     {
       "id": 290,
       "title": "Limits of Statistical Assurance for Embodied and Agentic AI under Adaptive Adversaries",

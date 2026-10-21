@@ -1,6 +1,266 @@
 {
-  "updatedAt": "2026-10-19T09:15:00+08:00",
+  "updatedAt": "2026-10-21T09:20:00+08:00",
   "items": [
+    {
+      "id": 319,
+      "title": "PhantomTac: Hijacking Robotic Tactile Systems with Deploy-and-forget Tags",
+      "url": "https://arxiv.org/abs/2610.26174",
+      "source": "arXiv",
+      "date": "2026-10-20",
+      "summary": "发现磁触觉传感器的物理层漏洞：把约 0.5mm 厚、无源的磁性标签贴在物体表面（可藏在条形码贴纸下）即可欺骗力感知——伪造法向力可压碎物体、伪造剪切力可致滑脱。真机实验中绕过现有抗干扰机制劫持闭环抓取控制，成功率超 95%，并提出多模态一致性防御。",
+      "tags": [
+        "机器人安全",
+        "物理世界攻击",
+        "传感器欺骗"
+      ]
+    },
+    {
+      "id": 320,
+      "title": "Enhancing Visual Task-Redirection Attacks on Vision-Language-Action Models via Closed-Loop Optimization",
+      "url": "https://arxiv.org/abs/2610.23566",
+      "source": "arXiv",
+      "date": "2026-10-19",
+      "summary": "指出对 VLA 的定目标视觉攻击存在闭环失配：扰动改变早期动作后，固定目标监督不再匹配实际到达的状态。提出 TRACO 闭环攻击框架（执行驱动监督 + 进度引导选择），在多个 VLA 与仿真环境中显著提升任务重定向攻击成功率。",
+      "tags": [
+        "VLA",
+        "对抗攻击",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 321,
+      "title": "Refuse the Harm, Complete the Task via Graph-of-Rules Planning for LLM-Enabled Robots",
+      "url": "https://arxiv.org/abs/2610.24603",
+      "source": "arXiv",
+      "date": "2026-10-20",
+      "summary": "提出「安全任务完成」设定：机器人应拒绝指令中的有害子任务同时完成合法部分。RuleGraph 用五个协作 agent 把通用安全原则落地为场景规则并逐层验证计划，在两个基准上 ASR 降为 0%，RoboGuard 上任务成功率 98.57%。",
+      "tags": [
+        "机器人越狱",
+        "具身智能",
+        "安全规划"
+      ]
+    },
+    {
+      "id": 322,
+      "title": "MobileInject: Evaluating Reasoning-to-Action Security of MLLM-Based Mobile Agents under Cross-Modal Consistency Injection",
+      "url": "https://arxiv.org/abs/2610.23307",
+      "source": "arXiv",
+      "date": "2026-10-19",
+      "summary": "首个移动 agent 多模态注入基准：11 个场景、9 类安全风险、108 个可执行实例，提出跨模态一致性注入与多角色协同欺骗等增强攻击；系统实验表明移动 agent 普遍易受多模态注入，许多失败源于早期推理劫持。",
+      "tags": [
+        "移动 Agent",
+        "Prompt Injection",
+        "多模态"
+      ]
+    },
+    {
+      "id": 323,
+      "title": "MobileJailBench: Red Queen Jailbreak Benchmarking for Mobile Agents",
+      "url": "https://arxiv.org/abs/2610.23303",
+      "source": "arXiv",
+      "date": "2026-10-19",
+      "summary": "首个可持续演化的移动 agent 越狱基准：520 个任务覆盖 3 种越狱范式与 14 类风险，基于自建高保真移动沙箱；实验显示当前移动 agent 对隐式越狱尤其脆弱，动态演化机制在 Qwen3.5-122B 上达到 100% ASR。",
+      "tags": [
+        "移动 Agent",
+        "越狱",
+        "基准"
+      ]
+    },
+    {
+      "id": 324,
+      "title": "The Window Is in the Reasoning: When LLM Agents Decide to Follow Prompt Injections",
+      "url": "https://arxiv.org/abs/2610.24048",
+      "source": "arXiv",
+      "date": "2026-10-20",
+      "summary": "用分支回放分解「读到注入时结局是否已定」：无思考模式 agent 91% 的结局方差在读取时已确定，开启思考后降至 62%；决策在推理过程中逐渐形成，单次运行的基准标签与重跑不一致率高达 35%——注入评估需要多次重复运行。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "评估方法"
+      ]
+    },
+    {
+      "id": 325,
+      "title": "SoK: PIAtlas: Decomposing the Unbounded Prompt Injection Attack Space",
+      "url": "https://arxiv.org/abs/2610.24999",
+      "source": "arXiv",
+      "date": "2026-10-20",
+      "summary": "提示注入 SoK：按「颠覆模型的机制」而非投递向量构建六类攻击分类体系，并发布目前最大的许可干净公开注入数据集 PICorpus 完成人工核验映射；发现常用 agent 基准只覆盖部分攻击空间，自适应攻击者偏好的机制恰被基准低估。",
+      "tags": [
+        "Prompt Injection",
+        "SoK",
+        "基准"
+      ]
+    },
+    {
+      "id": 326,
+      "title": "When Approval Becomes Execution: Authorization-Grounded Workflow Attacks on Tool-Using Agents",
+      "url": "https://arxiv.org/abs/2610.23077",
+      "source": "arXiv",
+      "date": "2026-10-19",
+      "summary": "OpenClaw 安全竞赛中的授权工作流攻击：不用显式覆盖指令，而是引导 agent 走「申请-获批-出示令牌」的本地连贯流程完成越权文档操作。受控实验 8/9 完成目标操作，揭示「持有令牌即视为授权」的授权上下文缺口。",
+      "tags": [
+        "LLM Agent",
+        "授权绕过",
+        "工具调用"
+      ]
+    },
+    {
+      "id": 327,
+      "title": "SEAL: Towards Persistent Tool Poisoning Attack against LLM Agents via Prefix-Eliciting Trigger",
+      "url": "https://arxiv.org/abs/2610.25372",
+      "source": "arXiv",
+      "date": "2026-10-20",
+      "summary": "指出现有工具投毒攻击在多轮真实 agent 场景中效果骤降，提出两阶段持久化工具投毒 SEAL：前缀诱发触发优化（PETO）+ 局部到通用触发聚合（L2U），在 7 个多轮场景中保持攻击有效性、跨模型迁移并抵抗现有防御。",
+      "tags": [
+        "LLM Agent",
+        "工具投毒",
+        "MCP"
+      ]
+    },
+    {
+      "id": 328,
+      "title": "GatewayBench: Unified Capability and Security Evaluation Platform for MCP Gateways",
+      "url": "https://arxiv.org/abs/2610.23449",
+      "source": "arXiv",
+      "date": "2026-10-19",
+      "summary": "首个 MCP 网关统一评测框架：524 个任务、251 个真实 MCP server 的 11118 个工具，对比 7 个主流网关的两种架构范式，在良性与对抗任务下测量任务完成、工具效率与抗攻击性的显著差异，并揭示其与模型/harness 的强交互。",
+      "tags": [
+        "MCP",
+        "LLM Agent",
+        "基准"
+      ]
+    },
+    {
+      "id": 329,
+      "title": "From Approval to Abuse: Privilege Escalation Attacks on Harness-Protected Coding Agents",
+      "url": "https://arxiv.org/abs/2610.22987",
+      "source": "arXiv",
+      "date": "2026-10-19",
+      "summary": "针对 coding agent 权限更新机制的提权攻击：仓库中的对抗上下文可诱导 agent 申请看似合理但过宽的 allow-rule，用户一旦批准即致盲 harness。在 Claude Code 与 Codex CLI 上 58% 实例成功诱取目标规则，获批后 81% 实现静默目标完成。",
+      "tags": [
+        "LLM Agent",
+        "权限提升",
+        "Prompt Injection"
+      ]
+    },
+    {
+      "id": 330,
+      "title": "CVE-2026-102503: Google OSS Agent Mesh（SAM） 漏洞（CVSS 9.3 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102503",
+      "source": "NVD",
+      "date": "2026-10-19",
+      "summary": "影响产品：Google OSS Agent Mesh（SAM）。/libp2p-http ingress 路由绕过 Biscuit 能力策略校验，未认证远程 libp2p 节点可直接调用任意已注册后端服务（含命令/stdio 型 MCP server、A2A 与推理端点），0.1.0-alpha.3 修复。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "MCP"
+      ]
+    },
+    {
+      "id": 331,
+      "title": "CVE-2026-109442: piflow（DeepAgents chat agent） 漏洞（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109442",
+      "source": "NVD",
+      "date": "2026-10-20",
+      "summary": "影响产品：piflow（DeepAgents chat agent）。POST /chat 与 /chat/stream 端点无认证，攻击者可指示 agent 调用 exec_shell 工具经 subprocess.run 无审批执行任意命令，暴露 LLM API key 与数据库凭据。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "RCE"
+      ]
+    },
+    {
+      "id": 332,
+      "title": "CVE-2026-109444: OpenSRE 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109444",
+      "source": "NVD",
+      "date": "2026-10-20",
+      "summary": "影响产品：OpenSRE。headless presenter 的 execution_allowed() 恒返回 True 导致审批门失效，攻击者可向告警或 Slack 消息注入指令，让 AI SRE agent 在主机执行命令并窃取 LLM/Slack/云凭据。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 333,
+      "title": "CVE-2026-109440: LangAlpha 漏洞（CVSS 8.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-109440",
+      "source": "NVD",
+      "date": "2026-10-20",
+      "summary": "影响产品：LangAlpha。间接提示注入：在 agent 抓取的网页内容中植入指令即可执行 shell/Python（Bash 与 ExecuteCode 无白名单与人工审批），并可窃取 _internal/.vault_secrets.json 中的 vault 密钥。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 334,
+      "title": "CVE-2026-77926: Aix-DB（ChatBI agent） 漏洞（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77926",
+      "source": "NVD",
+      "date": "2026-10-20",
+      "summary": "影响产品：Aix-DB（ChatBI agent）。认证非管理员用户可经 POST /dify/get_answer 聊天输入或上传恶意文档，调用未设闸的 deepagents execute 工具在主机执行系统命令，暴露数据源凭据与模型 API key。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "RCE"
+      ]
+    },
+    {
+      "id": 335,
+      "title": "CVE-2026-107366: IBM Langflow 漏洞（CVSS 8.3 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107366",
+      "source": "NVD",
+      "date": "2026-10-20",
+      "summary": "影响产品：IBM Langflow。三个消息端点不校验归属：任意认证用户可批量删除他人消息、覆写消息内容注入恶意提示，或通过重分配 session ID 劫持整个会话。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "越权"
+      ]
+    },
+    {
+      "id": 336,
+      "title": "CVE-2026-111767: MCP TypeScript SDK 漏洞（CVSS 8.6 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111767",
+      "source": "NVD",
+      "date": "2026-10-20",
+      "summary": "影响产品：MCP TypeScript SDK。官方 SDK 实验性 tasks 功能（taskStore）不校验任务所属会话，共享 InMemoryTaskStore 的客户端可互相查看、读取和取消对方任务（1.32.0 修复）。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "越权"
+      ]
+    },
+    {
+      "id": 337,
+      "title": "CVE-2026-112308: crewai-tools 漏洞（CVSS 7.4 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-112308",
+      "source": "NVD",
+      "date": "2026-10-19",
+      "summary": "影响产品：crewai-tools。SeleniumScrapingTool 不做私网地址校验，经提示注入操纵工具输入可让 headless Chrome 访问 loopback/RFC1918/云元数据地址，泄露内部数据与云凭据。",
+      "tags": [
+        "CVE",
+        "Prompt Injection",
+        "SSRF"
+      ]
+    },
+    {
+      "id": 338,
+      "title": "CVE-2026-8355: IBM ContextForge MCP Gateway 漏洞（CVSS 5.4 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-8355",
+      "source": "NVD",
+      "date": "2026-10-20",
+      "summary": "影响产品：IBM ContextForge MCP Gateway。OAuth 网关注册时未校验 oauth_config.token_url，可指向内网或云元数据端点（AWS IMDSv1/GCP/Azure）发起 POST，并在 502 报错中回显最多 256 字符响应，绕过了 gateway.url 上已有的 SSRF 防护。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "SSRF"
+      ]
+    },
     {
       "id": 315,
       "title": "CVE-2026-96620: Claude Agent SDK 漏洞（CVSS 9.2 Critical）",

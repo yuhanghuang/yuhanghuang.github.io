@@ -1,6 +1,299 @@
 {
-  "updatedAt": "2026-10-21T09:20:00+08:00",
+  "updatedAt": "2026-10-24T09:10:42+08:00",
   "items": [
+    {
+      "id": 339,
+      "title": "CVE-2026-114612: LiteLLM 代理静态密钥与会话令牌复用同一加密上下文（CVSS 9.9 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114612",
+      "source": "NVD",
+      "date": "2026-10-22",
+      "summary": "影响产品：LiteLLM 1.87.0 至 1.104.0-rc.2 多个版本。LiteLLM 代理对静态密钥和会话令牌复用同一加密上下文，认证内部用户可借构造的元数据解密敏感信息。",
+      "tags": [
+        "CVE",
+        "LLM网关",
+        "LiteLLM",
+        "密钥管理"
+      ]
+    },
+    {
+      "id": 340,
+      "title": "CVE-2026-115727: AgenticSeek 远程代码执行（CVSS 8.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115727",
+      "source": "NVD",
+      "date": "2026-10-23",
+      "summary": "影响产品：AgenticSeek（commit 409840c 之前）。llm_server/app.py 硬编码 Flask debug 模式并绑定全部网卡，攻击者获取可推导的 Werkzeug 调试器 PIN 后可远程执行 Python 代码与系统命令。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "RCE",
+        "AgenticSeek"
+      ]
+    },
+    {
+      "id": 341,
+      "title": "CVE-2026-114123: D365 F&O MCP Server 默认部署 apiKey 为空（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114123",
+      "source": "NVD",
+      "date": "2026-10-21",
+      "summary": "影响产品：D365 F&O MCP Server 1.11.0 之前版本。官方 Azure 一键部署模板默认将 apiKey 置空，导致 MCP 接口无认证暴露，可查询 Dynamics 365 X++ 代码与元数据。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "认证缺失"
+      ]
+    },
+    {
+      "id": 342,
+      "title": "CVE-2026-115845: AWS MCP Server run_script 工具代码注入（CVSS 6.4 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115845",
+      "source": "NVD",
+      "date": "2026-10-23",
+      "summary": "影响产品：AWS MCP Server。run_script 工具的 Python 代码校验器黑名单不完整，认证远程用户可通过构造脚本在自身隔离会话内执行任意代码；AWS 已在服务端修复。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "AWS",
+        "代码执行"
+      ]
+    },
+    {
+      "id": 343,
+      "title": "CVE-2026-115886: MLflow 未授权反序列化第三方 scorer（CVSS 6.5 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115886",
+      "source": "NVD",
+      "date": "2026-10-23",
+      "summary": "影响产品：MLflow 3.12.0rc0 至 3.17.0。scorer invoke/register 与 GenAI evaluate 端点（含未认证 POST /ajax-api/3.0/mlflow/scorer/invoke）接受序列化的第三方 scorer，可被用于恶意载荷注入。",
+      "tags": [
+        "CVE",
+        "MLflow",
+        "AI平台",
+        "反序列化"
+      ]
+    },
+    {
+      "id": 344,
+      "title": "CVE-2026-57207: NetBox MCP Server HTTP 端点无认证（CVSS 5.9 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-57207",
+      "source": "NVD",
+      "date": "2026-10-23",
+      "summary": "影响产品：NetBox MCP Server 1.2.1 之前版本。以 TRANSPORT=http 运行时 HTTP 端点完全无认证，任何可达端口的客户端均可获得有效 MCP 会话并调用全部 NetBox 工具。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "认证缺失"
+      ]
+    },
+    {
+      "id": 345,
+      "title": "CVE-2026-58497: Uni-CLI 本地 MCP 传输未校验浏览器 Origin",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58497",
+      "source": "NVD",
+      "date": "2026-10-23",
+      "summary": "影响产品：Uni-CLI 0.225.2 之前版本。其在 loopback 暴露的 JSON-RPC-over-HTTP MCP 旧版传输未校验浏览器 Origin，恶意网页可经浏览器跨域调用本地 agent 工具接口。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "CSRF",
+        "Agent工具"
+      ]
+    },
+    {
+      "id": 346,
+      "title": "CVE-2026-115751: mcp-from-openapi SSRF 黑名单绕过（CVSS 3.7 Low）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115751",
+      "source": "NVD",
+      "date": "2026-10-23",
+      "summary": "影响产品：Agentfront mcp-from-openapi 2.2.0 至 2.9.0。可利用末尾带点的主机名绕过 ssrf.blockedHosts 黑名单，控制 OpenAPI 规范 URL 的攻击者可发起 SSRF。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "SSRF"
+      ]
+    },
+    {
+      "id": 347,
+      "title": "I Ran 60 Prompt Injections Through a Policy Gate. Here Is What Got Through",
+      "url": "https://dev.to/mbuthi/i-ran-60-prompt-injections-through-a-policy-gate-here-is-what-got-through-5fai",
+      "source": "DEV Community (mbuthi)",
+      "date": "2026-10-21",
+      "summary": "作者构建了一个不可被提示词绕过的策略门（policy gate），用 15 份文档对 Haiku/Sonnet 跑 60 次注入实测：模型被说服两次（含 Base64 伪装指令），均被百行 Python 策略代码拦截。结论：模型层拦截不可靠，策略必须写在代码里，附有完整开源代码。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "防护实测"
+      ]
+    },
+    {
+      "id": 348,
+      "title": "Alpha: Systematic Fault Injection and Robustness Evaluation for LLM-Driven Embodied Manipulation",
+      "url": "https://arxiv.org/abs/2610.30197",
+      "source": "arXiv",
+      "date": "2026-10-23",
+      "summary": "提出 Alpha 故障注入与鲁棒性评估框架，针对 LLM 驱动的具身操作在仿真中系统注入感知延迟、夹爪滑脱、不可达目标、规划器输出损坏等校准故障，将物理脆弱性与模型失效分离定位，弥补标准基准只看任务完成率的盲区。",
+      "tags": [
+        "具身智能",
+        "故障注入",
+        "鲁棒性",
+        "VLA"
+      ]
+    },
+    {
+      "id": 349,
+      "title": "Progress Probes P²: Lightweight Runtime Monitoring for Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2610.31613",
+      "source": "arXiv",
+      "date": "2026-10-23",
+      "summary": "针对 VLA 策略部署时缺乏可靠运行时监控的问题，提出轻量级进度探针，用策略内部表征代替外部 VLM 监督来检测策略是否偏离任务轨道，显著降低运行时监控的复杂度与算力开销。",
+      "tags": [
+        "VLA",
+        "运行时监控",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 350,
+      "title": "Combining Long-Term Memory and LLMs Comes at a High Cost: From Prompt Injection to Persistent Compromise",
+      "url": "https://arxiv.org/abs/2610.28810",
+      "source": "arXiv",
+      "date": "2026-10-22",
+      "summary": "系统研究长期记忆如何把一次性 prompt injection 升级为跨会话持久化攻陷（memory injection）：恶意指令写入持久记忆后在后续会话自动重新触发，构成传统单会话威胁模型未覆盖的新攻击面。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "记忆注入"
+      ]
+    },
+    {
+      "id": 351,
+      "title": "Prompt Injection Through Forensic Evidence: A Taxonomy and Proof of Concept of Anti-Forensic Attacks on LLM-Assisted Digital Investigations",
+      "url": "https://arxiv.org/abs/2610.29747",
+      "source": "arXiv",
+      "date": "2026-10-22",
+      "summary": "指出数字取证场景天然反转了间接 prompt injection 的威胁模型——证据本身就由攻击者控制且调查员必须精读。作者扩展反取证分类体系并给出针对 LLM 辅助取证的概念验证攻击。",
+      "tags": [
+        "Prompt Injection",
+        "数字取证",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 352,
+      "title": "Implementation of Dynamic Microsegmentation for a Multi-Robot Network",
+      "url": "https://arxiv.org/abs/2610.30102",
+      "source": "arXiv",
+      "date": "2026-10-22",
+      "summary": "在多机器人网络上落地动态微分段：按资产功能与健康标签自动调整分段策略，演示中可在实时检测到威胁后自动隔离受感染机器人，同时保持其余机器人作业不受影响。",
+      "tags": [
+        "机器人安全",
+        "网络隔离",
+        "多机器人"
+      ]
+    },
+    {
+      "id": 353,
+      "title": "Refuses When Asked, Complies When Acting: A Runtime Safety Check for Robot Control Loops",
+      "url": "https://arxiv.org/abs/2610.27350",
+      "source": "arXiv",
+      "date": "2026-10-21",
+      "summary": "实测前沿模型驱动机器人执行公认危险指令（如「把刀放进玩具篮」）：GPT-6 Astra 控制 SO-101 机械臂 15 次试验 0% 拒绝、27% 完成伤害动作。作者提出运行时安全检查拦截控制循环中的危险指令。",
+      "tags": [
+        "机器人安全",
+        "具身智能",
+        "运行时防护",
+        "LLM"
+      ]
+    },
+    {
+      "id": 354,
+      "title": "CAPSafe: A Benchmark for Contextual Action and Plan Safety Reasoning in Embodied Agents",
+      "url": "https://arxiv.org/abs/2610.28381",
+      "source": "arXiv",
+      "date": "2026-10-21",
+      "summary": "提出具身智能体安全推理基准 CAPSafe，分动作级（结合环境上下文判断单动作是否安全）与规划级（为含多重隐患的家庭任务生成安全长程规划）两层评测，覆盖由物体属性推断的情境性危险。",
+      "tags": [
+        "具身智能",
+        "安全推理",
+        "基准测试"
+      ]
+    },
+    {
+      "id": 355,
+      "title": "What Would Removing This Corruption Change? Failure Attribution for Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2610.27277",
+      "source": "arXiv",
+      "date": "2026-10-21",
+      "summary": "定义 VLA 模型的失效归因问题：仅检测视觉扰动的存在无法判断清除它能否挽救当前任务，本文量化各扰动对失败风险的贡献与移除收益，为机器人现场决策「先修哪个」提供依据。",
+      "tags": [
+        "VLA",
+        "失效归因",
+        "鲁棒性"
+      ]
+    },
+    {
+      "id": 356,
+      "title": "PACT-VLA: Speculative Action-Chunk Verification with Pre-Commit Observations",
+      "url": "https://arxiv.org/abs/2610.28019",
+      "source": "arXiv",
+      "date": "2026-10-21",
+      "summary": "针对 VLA 异步推理中动作块基于过期观测提交导致成功率骤降的问题，提出投机式动作块验证机制，用提交前的新鲜观测裁决候选动作块，降低推理延迟带来的物理执行风险。",
+      "tags": [
+        "VLA",
+        "机器人安全",
+        "实时验证"
+      ]
+    },
+    {
+      "id": 357,
+      "title": "Perceives but Doesn't Brake: A Perception-Action Binding Gap in Reasoning Driving VLAs",
+      "url": "https://arxiv.org/abs/2610.28184",
+      "source": "arXiv",
+      "date": "2026-10-21",
+      "summary": "揭示推理增强的驾驶 VLA 存在感知-动作绑定缺口：模型内部表征确实编码了前方危险，但纵向规划被自车速度历史主导、对危险接近度响应微弱，「看得见却不刹车」。",
+      "tags": [
+        "VLA",
+        "自动驾驶",
+        "安全对齐"
+      ]
+    },
+    {
+      "id": 358,
+      "title": "Execution-Time Validation of Context-Carrying Action Intents in Industrial Cyber-Physical Systems",
+      "url": "https://arxiv.org/abs/2610.27971",
+      "source": "arXiv",
+      "date": "2026-10-21",
+      "summary": "针对工业场景中学习策略/调度器指令在传输与确认后工厂状态已变的「执行缺口」，提出 Action Intent Schema 契约与 XAIR 运行时校验：每条动作意图携带有效期与状态假设，释放前重查。",
+      "tags": [
+        "工业CPS",
+        "机器人安全",
+        "运行时验证"
+      ]
+    },
+    {
+      "id": 359,
+      "title": "Bridging Digital Deception and Physical Fidelity: A Spatio-Temporal Attack on Cognitive Radars",
+      "url": "https://arxiv.org/abs/2610.27585",
+      "source": "arXiv",
+      "date": "2026-10-21",
+      "summary": "提出面向认知雷达的物理先验驱动分段时空攻击（SSTA），通过全局-局部特征解耦解决现有对抗攻击跨架构迁移性差、易被物理信道畸变破坏的问题，提升电子战场景下的实战可靠性。",
+      "tags": [
+        "物理世界攻击",
+        "对抗攻击",
+        "认知雷达"
+      ]
+    },
+    {
+      "id": 360,
+      "title": "After the Attacker Leaves: Benchmarking Carryover Attacks on LLM Agents",
+      "url": "https://arxiv.org/abs/2610.28425",
+      "source": "arXiv",
+      "date": "2026-10-21",
+      "summary": "提出 CarryoverBench 基准，衡量经长期记忆文件与定时任务两个通道植入的一次性间接 prompt injection 如何在攻击者离场后跨会话反复触发，填补现有基准只测注入当次会话的空白。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "持久化攻击"
+      ]
+    },
     {
       "id": 319,
       "title": "PhantomTac: Hijacking Robotic Tactile Systems with Deploy-and-forget Tags",

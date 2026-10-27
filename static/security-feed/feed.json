@@ -1,6 +1,208 @@
 {
-  "updatedAt": "2026-10-24T09:10:42+08:00",
+  "updatedAt": "2026-10-27T09:42:03+08:00",
   "items": [
+    {
+      "id": 361,
+      "title": "CVE-2026-115995: Unitree Go2 set_volume 函数 OS 命令注入（CVSS 9.6 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115995",
+      "source": "NVD",
+      "date": "2026-10-24",
+      "summary": "影响产品：Unitree Go2 固件 1.1.11.4 及之前版本。chat_go 组件 gpt_thread.py 的 set_volume 函数对 Value 参数处理不当导致 OS 命令注入，可远程发起攻击。",
+      "tags": [
+        "CVE",
+        "Unitree",
+        "机器人",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 362,
+      "title": "CVE-2026-115533: LeRobot from_pretrained() 任意代码执行",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115533",
+      "source": "NVD",
+      "date": "2026-10-26",
+      "summary": "影响产品：Hugging Face LeRobot 库。加载策略处理器配置时，from_pretrained() 及相关路径利用 JSON 配置中的 class 字段进行不安全的动态类实例化，构造恶意仓库配置即可实现任意代码执行。",
+      "tags": [
+        "CVE",
+        "LeRobot",
+        "具身智能",
+        "代码执行"
+      ]
+    },
+    {
+      "id": 363,
+      "title": "CVE-2026-116109: Continue MCP Server 传输配置 OS 命令注入（CVSS 6.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116109",
+      "source": "NVD",
+      "date": "2026-10-26",
+      "summary": "影响产品：continuedev Continue 2.0.0。MCPManagerSingleton.setConnections（core/config/ConfigHandler.ts）对 MCP Server Transport 配置处理不当导致 OS 命令注入，可远程利用。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入",
+        "AI编程助手"
+      ]
+    },
+    {
+      "id": 364,
+      "title": "CVE-2026-116575: Mem0 会话作用域注入（CVSS 6.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116575",
+      "source": "NVD",
+      "date": "2026-10-26",
+      "summary": "影响产品：Mem0（AI agent 持久记忆基础设施）Python SDK 2.0.18 / TypeScript SDK 3.1.6 之前版本。_build_session_scope() 以不安全方式拼接调用方控制的 user_id/agent_id/run_id，可越权读写他人记忆。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "记忆安全",
+        "Mem0"
+      ]
+    },
+    {
+      "id": 365,
+      "title": "CVE-2026-115996: Unitree Go2 WebSocket 证书校验不当（CVSS 3.7 Low）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115996",
+      "source": "NVD",
+      "date": "2026-10-24",
+      "summary": "影响产品：Unitree Go2 固件 1.1.13/1.1.14.1/1.1.15.1 及之前版本。chat_go 组件 websocket.py 的 WebSocketClient.connect 存在不当证书校验，可被远程中间人攻击利用。",
+      "tags": [
+        "CVE",
+        "Unitree",
+        "机器人",
+        "中间人攻击"
+      ]
+    },
+    {
+      "id": 366,
+      "title": "AI 挖漏洞项目 ARTEX：密码重置漏洞与命令执行漏洞分析复现",
+      "url": "https://zone.ci/secarticles/wx/635573.html",
+      "source": "zone.ci",
+      "date": "2026-10-24",
+      "summary": "对 AI 挖洞工具 ARTEX v0.3.14 的完整攻击链复盘：从被丢弃的 error 导致未认证密码重置覆盖，到利用 MCP stdio 传输「客户端拉起服务端进程」的协议行为实现命令执行，并给出三层修复方案与自查建议。",
+      "tags": [
+        "漏洞分析",
+        "MCP",
+        "RCE",
+        "AI安全工具"
+      ]
+    },
+    {
+      "id": 367,
+      "title": "Not an Accident: Exploiting Safety Filter Inadequacy in Humanoid Robots",
+      "url": "https://arxiv.org/abs/2610.31923",
+      "source": "arXiv",
+      "date": "2026-10-26",
+      "summary": "指出人形机器人安全过滤器的防碰撞数学保证仅在安全参数配置正确时成立，而正确配置在实际部署中难以保证，攻击者可利用参数失配让安全过滤器失效，直接威胁人机共处场景。",
+      "tags": [
+        "人形机器人",
+        "安全过滤器",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 368,
+      "title": "Do VLAs Know They Will Fail? Interpretable Success and Failure Patterns in Physical AI Systems",
+      "url": "https://arxiv.org/abs/2610.32208",
+      "source": "arXiv",
+      "date": "2026-10-26",
+      "summary": "用稀疏自编码器分析 OpenVLA 激活，发现其中包含可预测任务成败的信息，能在机器人进入不可恢复状态之前预测失败，并定位与失败行为相关的可解释特征。",
+      "tags": [
+        "VLA",
+        "失败预测",
+        "可解释性"
+      ]
+    },
+    {
+      "id": 369,
+      "title": "When Human Corrections Travel: Safety in Federated VLA Adaptation",
+      "url": "https://arxiv.org/abs/2610.32888",
+      "source": "arXiv",
+      "date": "2026-10-26",
+      "summary": "研究联邦学习场景下跨任务/环境/机器人共享人类纠正信号的安全风险：提升平均成功率的共享更新可能抑制罕见的安全干预行为或产生不安全动作，涉及纠正语义与隐私敏感性。",
+      "tags": [
+        "VLA",
+        "联邦学习",
+        "具身智能安全"
+      ]
+    },
+    {
+      "id": 370,
+      "title": "Detecting Insecure Compositions of Clean Agent Skills via Capability-Flow Graph Analysis",
+      "url": "https://arxiv.org/abs/2610.32155",
+      "source": "arXiv",
+      "date": "2026-10-26",
+      "summary": "揭示 AI agent 第三方技能的组合安全风险：多个各自无害的技能可经运行时编排把上游输出传给下游输入，组合成违反安全策略的调用链；提出能力流图分析方法检测此类组合。",
+      "tags": [
+        "LLM Agent",
+        "技能组合",
+        "供应链安全"
+      ]
+    },
+    {
+      "id": 371,
+      "title": "Agentic AI Defense: Decode-Time Provenance Binding for MCP",
+      "url": "https://arxiv.org/abs/2610.31974",
+      "source": "arXiv",
+      "date": "2026-10-26",
+      "summary": "演示跨模态信任洗白攻击：藏在邮件签名图片 LSB/DCT/元数据中的指令可绕过文本扫描器进入 MCP 多智能体工作流；提出基于 HMAC 信任标签的解码时溯源绑定防御。",
+      "tags": [
+        "MCP",
+        "Prompt Injection",
+        "隐写术",
+        "多智能体"
+      ]
+    },
+    {
+      "id": 372,
+      "title": "On Task, Off Track: Benchmarking LLM and Agent Robustness to Near-Target Prompt Injection",
+      "url": "https://arxiv.org/abs/2610.32531",
+      "source": "arXiv",
+      "date": "2026-10-26",
+      "summary": "指出现有 prompt injection 基准的盲区：系统能通过拒绝明显偏离任务的攻击获得高分，却仍接受「看似合法但引入错误」的近目标注入；提出针对该类攻击的评测基准。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "基准测试"
+      ]
+    },
+    {
+      "id": 373,
+      "title": "Fooling LLM Safety Guards into Judging the Wrong Text",
+      "url": "https://arxiv.org/abs/2610.31695",
+      "source": "arXiv",
+      "date": "2026-10-26",
+      "summary": "提出 target rebinding 攻击：在送审内容后追加伪造的无害诱饵任务，让安全护栏误判评分对象而放行真实恶意请求；预注册实验中 75 条 AdvBench 请求全部绕过 Shieldstral-1.0-3B。",
+      "tags": [
+        "护栏绕过",
+        "LLM安全",
+        "对抗攻击"
+      ]
+    },
+    {
+      "id": 374,
+      "title": "If at First You Don't Succeed, Backtrack: Lightweight Recovery for Frozen VLAs",
+      "url": "https://arxiv.org/abs/2610.32941",
+      "source": "arXiv",
+      "date": "2026-10-26",
+      "summary": "提出 Backtrack：为冻结 VLA 加一个小型失败预测头，仅用带结果标签的策略回放训练，读取 VLA 既有表征实现轻量失败检测与回退恢复，无需恢复演示或重训策略。",
+      "tags": [
+        "VLA",
+        "失败恢复",
+        "机器人可靠性"
+      ]
+    },
+    {
+      "id": 375,
+      "title": "Do AI-for-Science Agents Preserve Model Safety?",
+      "url": "https://arxiv.org/abs/2610.32045",
+      "source": "arXiv",
+      "date": "2026-10-26",
+      "summary": "评测 LLM 集成进 AI-for-Science agent 框架后安全对齐是否保留：在 5 个 agent 框架上用 50 条有害化学请求测试，检验科学工具编排能力是否削弱模型原有的拒答能力。",
+      "tags": [
+        "LLM Agent",
+        "安全对齐",
+        "AI4Science"
+      ]
+    },
     {
       "id": 339,
       "title": "CVE-2026-114612: LiteLLM 代理静态密钥与会话令牌复用同一加密上下文（CVSS 9.9 Critical）",

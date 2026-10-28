@@ -1,6 +1,341 @@
 {
-  "updatedAt": "2026-10-27T09:42:03+08:00",
+  "updatedAt": "2026-10-28T11:22:57+08:00",
   "items": [
+    {
+      "id": 376,
+      "title": "Program-Level Adversarial Co-Adaptive Self-Play for Robotic Security",
+      "url": "https://arxiv.org/abs/2610.36143",
+      "source": "arXiv",
+      "date": "2026-10-28",
+      "summary": "提出程序级对抗共演化自博弈框架：coding agent 不经微调，直接基于对手代码与任务反馈迭代生成机器人软件的攻击与防御程序，并在自动驾驶与人形机器人步态 SDK 防御上做了八代演化案例研究。",
+      "tags": [
+        "机器人安全",
+        "对抗演化",
+        "Coding Agent"
+      ]
+    },
+    {
+      "id": 377,
+      "title": "Log-To-Leak: Prompt Injection Attacks on Tool-Using LLM Agents via the Model Context Protocol",
+      "url": "https://arxiv.org/abs/2610.36108",
+      "source": "arXiv",
+      "date": "2026-10-28",
+      "summary": "研究 MCP 工具元数据自然语言描述构成的投毒面，提出 Log-To-Leak 附加式事后日志攻击：在最后一次合法调用后诱导 agent 发起一次攻击者控制的调用，窃取用户查询、服务器响应等敏感上下文。",
+      "tags": [
+        "MCP",
+        "Prompt Injection",
+        "数据窃取"
+      ]
+    },
+    {
+      "id": 378,
+      "title": "VLA-Stem: A Lightweight Safety Mechanism for Vision-Language-Action Models via Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2610.37378",
+      "source": "arXiv",
+      "date": "2026-10-28",
+      "summary": "针对 VLA 模型忽视空间约束与动态障碍物的问题，提出轻量安全机制 VLA-Stem，用强化学习获得避障安全能力，避免在昂贵避障数据上微调导致原有任务能力退化。",
+      "tags": [
+        "VLA",
+        "机器人安全",
+        "强化学习"
+      ]
+    },
+    {
+      "id": 379,
+      "title": "When Black-Box Robot Policies Fail: Online Sensor Diagnosis and Repair with a Transparent Surrogate",
+      "url": "https://arxiv.org/abs/2610.36852",
+      "source": "arXiv",
+      "date": "2026-10-28",
+      "summary": "在策略冻结且不可访问内部的情况下，用分离周期步态与传感器修正项的透明替代模型在线诊断并修复损坏的传感器输入；Go2 仿真上行走成功率从 259/640 提升至 429/640。",
+      "tags": [
+        "机器人可靠性",
+        "传感器故障",
+        "黑盒诊断"
+      ]
+    },
+    {
+      "id": 380,
+      "title": "EAST: Embodied AI Safety Testing via Systematic Fault Injection in Digital Twins",
+      "url": "https://arxiv.org/abs/2610.34358",
+      "source": "arXiv",
+      "date": "2026-10-27",
+      "summary": "指出任务成功率不足以衡量具身 AI 安全，提出 EAST 数字孪生框架：把文献中的安全隐患证据转化为可执行、可验证的故障注入测试，覆盖感知、指令、环境等环节。",
+      "tags": [
+        "具身智能",
+        "安全测试",
+        "故障注入"
+      ]
+    },
+    {
+      "id": 381,
+      "title": "Beyond Behaviour: A Stimulus-Response Safety Evaluation of Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2610.34837",
+      "source": "arXiv",
+      "date": "2026-10-27",
+      "summary": "借鉴人类对安全关键刺激的防御性反应，检查三个 VLA 模型在可见危险与有害后果下的内部表征与动作倾向：即使内部已「感知」到危险，任务执行仍是默认反应。",
+      "tags": [
+        "VLA",
+        "安全评估",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 382,
+      "title": "Benchmarking Obstacle-Conditioned Safety in Household Robot Navigation",
+      "url": "https://arxiv.org/abs/2610.34674",
+      "source": "arXiv",
+      "date": "2026-10-27",
+      "summary": "提出 OSMA-Bench 与语义敏感度指数 SSI，测试家用机器人导航是否根据障碍物语义类别（而非仅距离）调节间距与速度，填补现有评测不考察语义安全区分的空白。",
+      "tags": [
+        "家用机器人",
+        "安全导航",
+        "基准测试"
+      ]
+    },
+    {
+      "id": 383,
+      "title": "CoSA: The Conflict of Skills Attack in Real-World LLM Agent Ecosystems",
+      "url": "https://arxiv.org/abs/2610.35082",
+      "source": "arXiv",
+      "date": "2026-10-27",
+      "summary": "提出技能冲突攻击（CoS）：单独检查每个 Skill 无法排除组合后的策略违规——为一种目的产生的工件或授权信号在下游被无约束复用；基于真实公开 Skill 的受控执行归纳出四类机制。",
+      "tags": [
+        "LLM Agent",
+        "技能供应链",
+        "组合攻击"
+      ]
+    },
+    {
+      "id": 384,
+      "title": "From Instructions to Exploits: Applying Program Analysis to Malicious Agent Skills Across Natural Language and Code",
+      "url": "https://arxiv.org/abs/2610.33489",
+      "source": "arXiv",
+      "date": "2026-10-27",
+      "summary": "提出 agent 技能供应链扫描器 SCS：将自然语言指令与可执行代码统一编译做静态安全分析，解决现有扫描器难以追踪跨「指令-代码」域行为的问题。",
+      "tags": [
+        "LLM Agent",
+        "供应链安全",
+        "静态分析"
+      ]
+    },
+    {
+      "id": 385,
+      "title": "Then there is prompt injection, a malicious email, ...: The Wild Wide West of OpenClaw Agentic System Security",
+      "url": "https://arxiv.org/abs/2610.35451",
+      "source": "arXiv",
+      "date": "2026-10-27",
+      "summary": "对 OpenClaw 个人助理框架的实证安全研究：结合 Reddit 讨论与安全事件数据，分析 LLM 推理、持久记忆、工具调用与本地执行在缺乏显式信任边界时的风险组合。",
+      "tags": [
+        "LLM Agent",
+        "OpenClaw",
+        "实证研究"
+      ]
+    },
+    {
+      "id": 386,
+      "title": "Scope-Gap Injection: Exploiting Evaluator Channel Blind Spots in the OpenClaw Agent Security Competition",
+      "url": "https://arxiv.org/abs/2610.34777",
+      "source": "arXiv",
+      "date": "2026-10-27",
+      "summary": "在 IJCAI 2026 OpenClaw agent 安全攻防赛中提出 Scope-Gap Injection：利用多阶段评审流水线中 LLM 裁判只看任务与技能定义、不检查附件内容的作用域缺口实施间接注入。",
+      "tags": [
+        "Prompt Injection",
+        "LLM Agent",
+        "攻防竞赛"
+      ]
+    },
+    {
+      "id": 387,
+      "title": "Steering for Safety, Hijacking for Profit: Trojan Threats in the LLM Activation Steering Supply Chain",
+      "url": "https://arxiv.org/abs/2610.35043",
+      "source": "arXiv",
+      "date": "2026-10-27",
+      "summary": "揭示激活引导向量（steering vector）插件生态的供应链风险：恶意插件可伪装合法功能，通过干预模型内部表征隐秘操纵输出，而调用方难以察觉。",
+      "tags": [
+        "供应链安全",
+        "LLM",
+        "特洛伊"
+      ]
+    },
+    {
+      "id": 388,
+      "title": "CVE-2026-116692: MLflow 第三方 scorer 反序列化可选取任意许可模块子类（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116692",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：MLflow 3.12.0rc0 至 3.17.0。mlflow/genai/scorers/base.py 的第三方 scorer 反序列化接受请求方指定的 THIRD_PARTY_SCORER_ALLOWED_MODULES 后代类，可致远程代码执行。",
+      "tags": [
+        "CVE",
+        "MLflow",
+        "AI平台",
+        "反序列化"
+      ]
+    },
+    {
+      "id": 389,
+      "title": "CVE-2026-115413: AWS API MCP Server OAuth 令牌受众校验缺失（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115413",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：AWS API MCP Server 1.6.0 之前版本。OAuth 认证模式缺少令牌 audience 校验，本地用户可用同一身份提供商签发给其他应用的令牌冒用服务器配置的 AWS 凭证执行操作。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "AWS",
+        "认证绕过"
+      ]
+    },
+    {
+      "id": 390,
+      "title": "CVE-2026-117558: ai-sdlc 插件 MCP Server OS 命令注入（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117558",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：ai-sdlc 插件 MCP server 0.31.2 及之前。repo 参数未经校验直接插入 gh issue view / gh pr view 命令，攻击者可借 shell 元字符执行任意命令。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 391,
+      "title": "CVE-2026-117559: DroidMind shell 白名单绕过命令注入（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117559",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：DroidMind 0.4.0 及之前（MCP 控制 Android 设备）。MCP 客户端可用 $(...) 或反引号替换绕过 shell 命令白名单；被 prompt injection 操纵的 agent 同样可触发设备侧命令注入。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入",
+        "移动设备"
+      ]
+    },
+    {
+      "id": 392,
+      "title": "CVE-2026-117561: sf-mcp OS 命令注入（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117561",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：Codefriar sf-mcp 1.3.2 及之前。escapeValue() 未能中和反引号与 $() 替换，攻击者通过构造 Salesforce CLI 工具参数执行 shell 命令。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 393,
+      "title": "CVE-2026-117567: esp-mcp OS 命令注入（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117567",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：esp-mcp（ESP32 单片机 MCP 服务）commit 28afddf 之前。MCP 工具参数中的 shell 元字符可注入任意命令，prompt-injected agent 亦可触发，直接波及硬件烧录/控制链路。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入",
+        "嵌入式"
+      ]
+    },
+    {
+      "id": 394,
+      "title": "CVE-2026-117568: mcp-ffmpeg OS 命令注入（CVSS 7.0 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117568",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：mcp-ffmpeg 1.0.5 及之前。resize-video、extract-audio、get-video-info 工具的 videoPath/outputDir 参数可嵌入 $()、反引号等执行 shell 命令。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 395,
+      "title": "CVE-2026-117569: Kali-GPT MCP Server 扫描器参数命令注入（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117569",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：Kali-GPT commit a608c74 之前。execute_tool() 对扫描器参数未消毒，MCP 客户端或被注入的 agent 可嵌入 shell 元字符执行任意命令。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入",
+        "安全工具"
+      ]
+    },
+    {
+      "id": 396,
+      "title": "CVE-2026-117573: hagent Arduino/ESP32 工具参数命令注入（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-117573",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：hagent commit 761eec6 之前。hagent_arduino 与 hagent_esp32 工具的 args 参数可注入 shell 元字符执行任意命令，波及硬件开发工具链。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入",
+        "嵌入式"
+      ]
+    },
+    {
+      "id": 397,
+      "title": "CVE-2026-116690: MLflow prompt 分支路径校验缺陷（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116690",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：MLflow 3.10.0 至 3.17.0。_create_model_version() 的 prompt 分支接受无 scheme 的相对路径源，路径校验仅在源带 URL scheme 时执行，可致路径遍历类风险。",
+      "tags": [
+        "CVE",
+        "MLflow",
+        "AI平台",
+        "路径校验"
+      ]
+    },
+    {
+      "id": 398,
+      "title": "CVE-2026-59158: Nuxt Ollama 模块云端 api_key 泄入公开运行时配置（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59158",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：Nuxt Ollama 1.3.1 之前。src/module.ts 无条件将全部模块配置（含云端 api_key）合并进 runtimeConfig.public.ollama，随页面序列化泄露给客户端。",
+      "tags": [
+        "CVE",
+        "Ollama",
+        "密钥泄露",
+        "LLM"
+      ]
+    },
+    {
+      "id": 399,
+      "title": "CVE-2026-116684: MCP 官方 Python SDK  bearer 认证受众混淆（CVSS 6.8 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116684",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：Model Context Protocol 官方 Python SDK 1.10.0 至 1.30.0 及 2.2.0。AuthSettings 配置的 token_verifier 接受签发给其他服务的有效令牌，可越权访问 MCP 服务。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "认证混淆",
+        "SDK"
+      ]
+    },
+    {
+      "id": 400,
+      "title": "CVE-2026-116691: MLflow CrewAI autolog 记录未消毒凭证（CVSS 6.5 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116691",
+      "source": "NVD",
+      "date": "2026-10-27",
+      "summary": "影响产品：MLflow 2.19.0 至 3.17.0。mlflow.crewai.autolog() 记录 CrewAI Agent 对象时未一致消毒嵌套的凭证字段，敏感信息可写入追踪日志。",
+      "tags": [
+        "CVE",
+        "MLflow",
+        "凭证泄露",
+        "LLM Agent"
+      ]
+    },
     {
       "id": 361,
       "title": "CVE-2026-115995: Unitree Go2 set_volume 函数 OS 命令注入（CVSS 9.6 Critical）",

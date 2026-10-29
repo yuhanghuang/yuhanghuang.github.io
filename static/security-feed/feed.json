@@ -1,6 +1,87 @@
 {
-  "updatedAt": "2026-10-28T11:22:57+08:00",
+  "updatedAt": "2026-10-29T11:47:04+08:00",
   "items": [
+    {
+      "id": 401,
+      "title": "Towards Human-Centered Safety in Vision-Language-Action Robot Control: A Survey and Outlook",
+      "url": "https://doi.org/10.20944/preprints202610.2762.v1",
+      "source": "Preprints.org",
+      "date": "2026-10-28",
+      "summary": "VLA 机器人控制的「以人为中心安全」综述：系统梳理语义动作安全（动作可执行≠动作可允许）、任务级护栏（Safety-as-Policy、Gemini Robotics 的 agentic 安全编排）、运行时 OOD 不确定性估计与控制级对抗攻击（含 RedVLA 物理红队）四条防线，并指出语义验证提升覆盖但削弱形式化保证的核心矛盾。",
+      "tags": [
+        "VLA",
+        "机器人安全",
+        "综述",
+        "安全对齐"
+      ]
+    },
+    {
+      "id": 402,
+      "title": "CVE-2026-61542: Gearboy 模拟器内嵌 MCP Server 未认证网络访问（CVSS 8.6 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61542",
+      "source": "NVD",
+      "date": "2026-10-28",
+      "summary": "影响产品：Gearboy / Gearsystem 模拟器。可选的 --mcp-http 模式实际接受任意可达网络对端的未认证 MCP 请求，与文档宣称的 localhost-only 不符，可远程驱动模拟器调试接口。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "认证缺失",
+        "模拟器"
+      ]
+    },
+    {
+      "id": 403,
+      "title": "CVE-2026-59176: functype-mcp-server 版本参数命令注入（CVSS 7.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-59176",
+      "source": "NVD",
+      "date": "2026-10-28",
+      "summary": "影响产品：functype-mcp-server 1.4.4 之前。set_functype_version 工具的 version 参数仅经 z.string() 校验即被插入命令执行，可注入任意 shell 命令。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 404,
+      "title": "CVE-2026-118038: Telerik Document Processing AI agent 工具路径遍历（CVSS 7.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-118038",
+      "source": "NVD",
+      "date": "2026-10-28",
+      "summary": "影响产品：Progress Telerik Document Processing Libraries 2026.3.1027 之前。Convert 与 Merge AI agent 工具存在路径遍历，低权限认证用户提供工具参数即可读取配置输出目录之外的文件。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "路径遍历"
+      ]
+    },
+    {
+      "id": 405,
+      "title": "CVE-2026-115415: Strands Agents 环境工具 prompt 注入泄露环境变量（CVSS 6.5 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115415",
+      "source": "NVD",
+      "date": "2026-10-28",
+      "summary": "影响产品：AWS Strands Agents Tools 0.8.6 之前。environment 工具对 LLM prompt 输入中和不当，远程攻击者可借构造提示词禁用防护，明文获取 agent 宿主环境变量（含云凭证与 API key）。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "Prompt Injection",
+        "凭证泄露"
+      ]
+    },
+    {
+      "id": 406,
+      "title": "CVE-2026-61546: AnkiMCP 全局禁用 DNS 重绑定防护",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61546",
+      "source": "NVD",
+      "date": "2026-10-28",
+      "summary": "影响产品：AnkiMCP 0.21.0 之前（Anki 闪卡的 MCP 服务插件）。mcp_server.py 通过 TransportSecuritySettings 全局关闭 FastMCP 的 DNS 重绑定防护，恶意网页可经浏览器访问本机 MCP 服务操作牌组数据。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "DNS重绑定"
+      ]
+    },
     {
       "id": 376,
       "title": "Program-Level Adversarial Co-Adaptive Self-Play for Robotic Security",

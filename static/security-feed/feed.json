@@ -1,6 +1,184 @@
 {
-  "updatedAt": "2026-10-29T11:47:04+08:00",
+  "updatedAt": "2026-10-30T10:32:48+08:00",
   "items": [
+    {
+      "id": 407,
+      "title": "NDSS 2027 与 IEEE S&P 2027 录用通知发出，arXiv 上出现多篇标注录用的论文",
+      "url": "https://www.ndss-symposium.org/",
+      "source": "NDSS / IEEE S&P",
+      "date": "2026-10-30",
+      "summary": "本周 arXiv cs.CR 榜单中陆续出现标注「accepted at NDSS 2027」与「To appear in IEEE S&P, May 2027」的论文（如 SecDMP、Penny for Your Prompts 等），表明两大安全顶会的录用通知已于近期发出，可关注后续正式论文列表。",
+      "tags": [
+        "会议动态",
+        "NDSS",
+        "IEEE S&P"
+      ]
+    },
+    {
+      "id": 408,
+      "title": "Penny for Your Prompts: A Measurement Study of Contextual Leakage in AI Chat Platforms（IEEE S&P 2027 录用）",
+      "url": "https://arxiv.org/abs/2610.37467",
+      "source": "IEEE S&P 2027 / arXiv",
+      "date": "2026-10-28",
+      "summary": "首个系统性测量 AI 聊天平台第三方脚本（分析、广告、会话回放）导致的对话数据泄露：用户在聊天中分享的私密信息可经嵌入的第三方脚本静默流向外部，是被忽视的隐私泄露通道。",
+      "tags": [
+        "AI隐私",
+        "数据泄露",
+        "IEEE S&P"
+      ]
+    },
+    {
+      "id": 409,
+      "title": "CVE-2026-93680: IBM Langflow 认证绕过（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-93680",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：IBM Langflow OSS 1.0.0 至 1.12.8。认证机制不当，远程未认证攻击者可绕过安全限制。Langflow 本次集中披露 30+ 个漏洞中的最严重者之一。",
+      "tags": [
+        "CVE",
+        "Langflow",
+        "LLM框架",
+        "认证绕过"
+      ]
+    },
+    {
+      "id": 410,
+      "title": "CVE-2026-110186: IBM Langflow 未认证远程代码执行（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110186",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：IBM Langflow OSS 1.0.0 至 1.12.8。代码生成控制不当，远程未认证攻击者可执行任意代码。",
+      "tags": [
+        "CVE",
+        "Langflow",
+        "LLM框架",
+        "RCE"
+      ]
+    },
+    {
+      "id": 411,
+      "title": "CVE-2026-104339: IBM Langflow OS 命令注入（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104339",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：IBM Langflow OSS 1.0.0 至 1.12.3。OS 命令特殊元素中和不当，远程未认证攻击者可执行任意代码。",
+      "tags": [
+        "CVE",
+        "Langflow",
+        "LLM框架",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 412,
+      "title": "CVE-2026-107327: IBM Langflow 缺失授权导致 RCE（CVSS 9.9 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107327",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：IBM Langflow OSS 1.0.0 至 1.12.4。授权检查缺失，远程认证攻击者可执行任意代码。",
+      "tags": [
+        "CVE",
+        "Langflow",
+        "LLM框架",
+        "授权缺失"
+      ]
+    },
+    {
+      "id": 413,
+      "title": "CVE-2026-107328: IBM Langflow eval/exec 代码注入（CVSS 9.9 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107328",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：IBM Langflow OSS 1.0.0 至 1.12.4。eval/exec 中的代码中和不当，远程认证攻击者可执行任意代码。",
+      "tags": [
+        "CVE",
+        "Langflow",
+        "LLM框架",
+        "代码注入"
+      ]
+    },
+    {
+      "id": 414,
+      "title": "CVE-2026-107329: IBM Langflow 代码生成控制不当（CVSS 9.9 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-107329",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：IBM Langflow OSS 1.0.0 至 1.12.4。代码生成控制不当，远程认证攻击者可执行任意代码。",
+      "tags": [
+        "CVE",
+        "Langflow",
+        "LLM框架",
+        "RCE"
+      ]
+    },
+    {
+      "id": 415,
+      "title": "CVE-2026-104324: IBM Langflow 不可信数据反序列化 RCE（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104324",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：IBM Langflow OSS 1.0.0 至 1.12.3。不可信数据反序列化，远程认证攻击者可执行任意代码。",
+      "tags": [
+        "CVE",
+        "Langflow",
+        "LLM框架",
+        "反序列化"
+      ]
+    },
+    {
+      "id": 416,
+      "title": "CVE-2026-110193: IBM Langflow Agentic Assistant 组件代码生成逃逸（CVSS 8.8 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110193",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：IBM Langflow OSS 1.0.0 至 1.12.8。低权限账户可诱导 Agentic Assistant 用未封堵的模式生成/提交组件代码，在服务器上执行任意 OS 命令。",
+      "tags": [
+        "CVE",
+        "Langflow",
+        "LLM Agent",
+        "命令执行"
+      ]
+    },
+    {
+      "id": 417,
+      "title": "CVE-2026-104314: IBM Langflow 明文泄露流程所有者第三方凭证（CVSS 6.5 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-104314",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：IBM Langflow OSS 1.0.0 至 1.12.3。对目标流程仅有读/分享权限的认证攻击者可从 API 响应中明文获取流程所有者存储的第三方凭证。",
+      "tags": [
+        "CVE",
+        "Langflow",
+        "凭证泄露"
+      ]
+    },
+    {
+      "id": 418,
+      "title": "CVE-2026-119050: Agno PandasTools 不安全反射致 pickle 反序列化 RCE（CVSS 8.1 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119050",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：Agno 3.1.11 及之前（LLM agent 框架）。PandasTools 将模型控制的函数名直接传给 getattr()，攻击者可经 prompt injection 让 agent 调用 pandas.read_pickle 加载攻击者控制的载荷，实现远程代码执行。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "Prompt Injection",
+        "反序列化"
+      ]
+    },
+    {
+      "id": 419,
+      "title": "CVE-2026-119025: open 包 URL 注入 PowerShell 命令（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-119025",
+      "source": "NVD",
+      "date": "2026-10-29",
+      "summary": "影响产品：open（npm）7.2.0 至 11.0.0 之前。Windows/WSL 下攻击者可在 URL 中嵌入 $(...) 子表达式执行 PowerShell 代码；恶意 MCP server 可借 OAuth authorization_endpoint 等 URL 字段触发。",
+      "tags": [
+        "CVE",
+        "MCP Server",
+        "命令注入"
+      ]
+    },
     {
       "id": 401,
       "title": "Towards Human-Centered Safety in Vision-Language-Action Robot Control: A Survey and Outlook",

@@ -1,6 +1,203 @@
 {
-  "updatedAt": "2026-10-30T10:32:48+08:00",
+  "updatedAt": "2026-10-31T09:10:53+08:00",
   "items": [
+    {
+      "id": 420,
+      "title": "Securing the Robotics Supply Chain",
+      "url": "https://arxiv.org/abs/2610.40385",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "政策研究议程论文：系统论证美国机器人供应链安全的能力缺口，聚焦来源不明组件的验证与认证方法、长期投入不足的硬件基础研究、规模化测试基础设施与人才队伍，主张机器人安全不应只是通用 AI 投资的附属议题。",
+      "tags": [
+        "机器人供应链",
+        "研究议程",
+        "硬件安全"
+      ]
+    },
+    {
+      "id": 421,
+      "title": "PASA-KV: Attacking Action-Facing Visual Routes in World Action Models",
+      "url": "https://arxiv.org/abs/2610.39816",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "针对世界动作模型（WAM）“世界表征→动作”通路的对抗攻击研究，发现表征可扰动性与闭环失控之间存在显著错配：不同视觉 K/V 路由的攻击效果差异巨大，更大的表征偏移并不必然导致更强的控制失效，错配根源在动作条件读出机制。",
+      "tags": [
+        "VLA",
+        "对抗攻击",
+        "世界模型"
+      ]
+    },
+    {
+      "id": 422,
+      "title": "From Reasoning to Action: Consequence-Grounded Alignment for Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2610.39543",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "提出 CoRAct 框架，把 VLA 的具身思维链（ECoT）拆解为可验证的物理信号（运动意图与路径点），在动作噪声空间做奖励引导优化，使推理与动作显式对齐，减少“想得对但做得错”的失控风险。",
+      "tags": [
+        "VLA",
+        "对齐",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 423,
+      "title": "When \"No Worries\" Went Wrong: HRI Lessons for Foundation-Model Robots",
+      "url": "https://arxiv.org/abs/2610.38400",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "来自一个三年期 ROS 2 人机交互联盟的复盘：基础模型让机器人言行看似合理，但动作与语言的时序错位会彻底改变安全含义（如说“没关系”后才驶离）。提醒能力增长不等于情境变化能正确塑形行为。",
+      "tags": [
+        "HRI",
+        "机器人安全",
+        "LLM"
+      ]
+    },
+    {
+      "id": 424,
+      "title": "LiDAR-SHIELD: A Fully Dockerized Adversarial Robustness Assessment Framework for LiDAR-Based 3D Perception Models",
+      "url": "https://arxiv.org/abs/2610.39848",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "统一的 Docker 化 LiDAR 3D 感知对抗鲁棒性评估框架：目标模型只需暴露 /info、/forward、/gradient 三个 HTTP 端点即可接入，反转了以往逐模型手工复现攻击代码的流程，面向自动驾驶与机器人部署前安全压力测试。",
+      "tags": [
+        "对抗攻击",
+        "LiDAR",
+        "自动驾驶"
+      ]
+    },
+    {
+      "id": 425,
+      "title": "How Much Should a VLA Trust Its Reasoning? Step-Level Guidance as a Measured Action-Value Function",
+      "url": "https://arxiv.org/abs/2610.40002",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "不问 VLA 的推理轨迹“对不对”，而问它“该多强地操纵动作”：CoC-CFG 在有无推理跨度的上下文之间做 classifier-free guidance，每个 Euler 步一个权重，并把权重选择建模为动作价值可实测的 MDP，缓解错误推理带偏动作的问题。",
+      "tags": [
+        "VLA",
+        "安全",
+        "推理对齐"
+      ]
+    },
+    {
+      "id": 426,
+      "title": "A Minimally Informed Black-Box Fake-Report Attack on DRL Traffic-Signal Control",
+      "url": "https://arxiv.org/abs/2610.38557",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "研究对 DRL 交通信号灯控制器的黑盒假数据注入攻击：攻击者无法访问模型、只能观测本路口，先训练模仿代理再伪造受限的 V2I 车流量报告，成功迁移到真实控制器，展示了网络物理系统感知层的现实脆弱性。",
+      "tags": [
+        "网络物理攻击",
+        "DRL",
+        "假数据注入"
+      ]
+    },
+    {
+      "id": 427,
+      "title": "SEAL: Sealed Queries for Local Sanitization against Indirect Prompt Injection",
+      "url": "https://arxiv.org/abs/2610.39758",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "面向本地 LLM agent 的间接提示注入防御：离线学习软提示与打分读出，用可信初始上下文构造与待检工具文本相互独立的“密封查询”来逐 token 打分清洗，在有限推理预算下兼顾攻击抑制与任务证据保留。",
+      "tags": [
+        "提示注入",
+        "LLM Agent",
+        "防御"
+      ]
+    },
+    {
+      "id": 428,
+      "title": "Appreciation Teaches Unauthorized Execution: Self-Evolution Degrades the Robustness of Personal Agents to Indirect Prompt Injection",
+      "url": "https://arxiv.org/abs/2610.39122",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "两阶段受控实验证明：自我进化型个人 agent 在从用户反馈（哪怕是夸奖）中学习后，对间接提示注入的鲁棒性会显著退化，第三方隐藏在内容中的指令更容易取得 agent 控制权。",
+      "tags": [
+        "提示注入",
+        "LLM Agent",
+        "自我进化"
+      ]
+    },
+    {
+      "id": 429,
+      "title": "Agentic Backdoors via Pretraining Poisoning",
+      "url": "https://arxiv.org/abs/2610.37741",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "首次端到端证明预训练数据投毒可在 agent 中植入远程代码执行后门：从零预训练 Qwen3 0.6B/1.7B/4B 并干净后训练为 CLI agent，仅投毒 0.1% 语料即可让 agent 在用户机器上执行攻击者指定命令。",
+      "tags": [
+        "后门",
+        "供应链投毒",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 430,
+      "title": "Poisoned Skills: Propagating Jailbreaks Through Agent Markdown Files",
+      "url": "https://arxiv.org/abs/2610.37738",
+      "source": "arXiv",
+      "date": "2026-10-30",
+      "summary": "验证 agent 框架的 Markdown 技能文件（系统提示、工具描述、技能定义）可作为注入通道：内嵌的越狱载荷经 LangChain 问答 agent 初始化进入上下文后传播并诱发违禁行为，揭示配置机制本身即是攻击面。",
+      "tags": [
+        "提示注入",
+        "Agent Skills",
+        "越狱"
+      ]
+    },
+    {
+      "id": 431,
+      "title": "CVE-2026-62863: MoLing MCP Server SSE 端点未认证致远程工具调用（CVSS 9.6 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62863",
+      "source": "NVD",
+      "date": "2026-10-30",
+      "summary": "computer-use/browser-use 型 MCP server MoLing 0.5.0 之前，SSE 模式下 /sse 与 /message 端点无鉴权且 CORS 为 *，恶意网页可跨域读取 sessionId 并发送未授权 MCP 工具调用，进而读写本地文件或执行命令；仅绑定 loopback 也无法阻止该浏览器中继攻击。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "LLM Agent",
+        "未授权访问"
+      ]
+    },
+    {
+      "id": 432,
+      "title": "CVE-2026-63377: TAKO AI Agent for Okta 未授权创建首个管理员账户（CVSS 9.8 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63377",
+      "source": "NVD",
+      "date": "2026-10-30",
+      "summary": "Okta 管理用本地 AI agent TAKO 3.0.1-beta 之前，POST /api/auth/setup 无任何认证或引导令牌，攻击者可抢在合法所有者之前创建唯一管理员账户，读取 Okta 同步的用户数据、API 令牌与配置并锁定管理员。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "权限绕过"
+      ]
+    },
+    {
+      "id": 433,
+      "title": "CVE-2026-62264: PDF Reader MCP 宣称启用 API Key 却未校验（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-62264",
+      "source": "NVD",
+      "date": "2026-10-30",
+      "summary": "PDF Reader MCP 2.2.0–3.0.0 在 MCP_TRANSPORT=http 模式下读取了 MCP_API_KEY 并在日志中宣称启用认证，但实际从不校验 X-API-Key 头；默认绑定 0.0.0.0 时任何可达客户端均可调用全部 PDF 工具读取宿主机文件，URL 来源还存在受限 SSRF。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "认证缺失"
+      ]
+    },
+    {
+      "id": 434,
+      "title": "CVE-2026-61789: DBHub MCP 只读 SQL 校验可经注释解析差异绕过（CVSS 6.1 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-61789",
+      "source": "NVD",
+      "date": "2026-10-30",
+      "summary": "数据库 MCP server DBHub 的只读校验器把所有双连字符当注释，而 MySQL/MariaDB 要求后跟空白；攻击者（含通过提示注入影响 agent 生成 SQL 的场景）可用 `--x` 形式隐藏写操作或破坏性 DDL，绕过只读模式篡改或删除数据。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "提示注入",
+        "SQL注入"
+      ]
+    },
     {
       "id": 407,
       "title": "NDSS 2027 与 IEEE S&P 2027 录用通知发出，arXiv 上出现多篇标注录用的论文",

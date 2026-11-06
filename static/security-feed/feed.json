@@ -1,6 +1,305 @@
 {
-  "updatedAt": "2026-10-31T09:10:53+08:00",
+  "updatedAt": "2026-11-06T13:36:25+08:00",
   "items": [
+    {
+      "id": 435,
+      "title": "Failure Prediction and Classification in Vision-Language-Action Models Via Calibrated Latent Probing",
+      "url": "https://arxiv.org/abs/2611.08425",
+      "source": "arXiv",
+      "date": "2026-11-06",
+      "summary": "提出 VLA-Tug：轻量潜层探针实时预测 VLA 在分布偏移下何时会失败并分类失败类型，面向边缘部署的 runtime 监控，针对 VLA 失效可能损坏设备或伤人的部署安全问题。",
+      "tags": [
+        "VLA",
+        "运行时监控",
+        "失效预测"
+      ]
+    },
+    {
+      "id": 436,
+      "title": "Dynamic Watermarking and Action-Conditioned Latent Dynamics for Secure Vision-Based Controllers",
+      "url": "https://arxiv.org/abs/2611.07403",
+      "source": "arXiv",
+      "date": "2026-11-06",
+      "summary": "针对视觉控制器的重放攻击检测难题，提出自适应动态水印框架：向名义控制输入注入私有高斯水印，用控制条件潜在动力学网络预测紧凑潜在空间中对应的演化以验证观测真实性。",
+      "tags": [
+        "重放攻击",
+        "视觉控制",
+        "动态水印"
+      ]
+    },
+    {
+      "id": 437,
+      "title": "SPILLWAY: Separating Target Admission from Sanitization to Defend Tool-Using Agents against Prompt Injection",
+      "url": "https://arxiv.org/abs/2611.07222",
+      "source": "arXiv",
+      "date": "2026-11-06",
+      "summary": "指出多数运行时防御让 LLM 来做放行决策、 provenance 防御仍需模型路由任务；SPILLWAY 把「动作去向」与「内容净化」分离，让模型完全不参与最终放行检查，防御隐藏指令驱动的数据/资金窃取。",
+      "tags": [
+        "提示注入",
+        "LLM Agent",
+        "运行时防御"
+      ]
+    },
+    {
+      "id": 438,
+      "title": "Beyond Instruction Override: Benchmarking Indirect Prompt Injection with Task-Tampering Attacks",
+      "url": "https://arxiv.org/abs/2611.07640",
+      "source": "arXiv",
+      "date": "2026-11-06",
+      "summary": "按「权限」而非指令措辞重新定义间接提示注入：攻击者内容不必改变任务，只需篡改进行中的任务结果（如伪造退款政策抬高退款额），为 IPI 评测补上任务篡改这一长期被忽视的维度。",
+      "tags": [
+        "提示注入",
+        "基准评测",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 439,
+      "title": "SenTrojan: Revealing Analog Hardware Trojan Attacks on Sensors",
+      "url": "https://arxiv.org/abs/2611.06103",
+      "source": "arXiv",
+      "date": "2026-11-05",
+      "summary": "提出传感器模拟硬件木马框架：在传感器部署前植入隐藏攻击面，区别于利用传感器物理副作用的传统攻击，为 cyber-physical 系统的感知层供应链安全提供了新的威胁模型。",
+      "tags": [
+        "硬件木马",
+        "传感器",
+        "供应链"
+      ]
+    },
+    {
+      "id": 440,
+      "title": "Extracting System Prompt of LLM Services in Complex (Agentic) Settings: Hierarchical Optimization and Reliable Evaluation Metrics",
+      "url": "https://arxiv.org/abs/2611.04803",
+      "source": "arXiv",
+      "date": "2026-11-04",
+      "summary": "验证现有提示抽取攻击在带工具 schema、执行逻辑与安全护栏的复杂 agentic 服务上大幅退化，提出分层优化攻击与更可靠的泄露评估指标，量化了新一代 LLM 服务的提示词 IP 泄露风险。",
+      "tags": [
+        "提示词抽取",
+        "LLM 服务",
+        "安全评估"
+      ]
+    },
+    {
+      "id": 441,
+      "title": "Right Tool, Wrong Parameters: Defending LLM Agents Against Parameter Poisoning",
+      "url": "https://arxiv.org/abs/2611.04673",
+      "source": "arXiv",
+      "date": "2026-11-04",
+      "summary": "研究参数投毒攻击面：攻击者不引入新动作，只篡改工具参数（如收款人）即可达成目的且更难检测，并给出对应防御，补充了 IPI 防御只关注「是否调用工具」的盲区。",
+      "tags": [
+        "提示注入",
+        "参数投毒",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 442,
+      "title": "Trusting Imagined Futures: Auditing Imagined Rewards for VLA Post-Training",
+      "url": "https://arxiv.org/abs/2611.04873",
+      "source": "arXiv",
+      "date": "2026-11-04",
+      "summary": "视频世界模型用想象结果评估候选动作，但高预测奖励可能偏爱执行质量差的轨迹；TIF 用执行反馈审计预测奖励，识别高估的监督信号，提升 VLA 后训练数据选择的可靠性。",
+      "tags": [
+        "VLA",
+        "世界模型",
+        "后训练"
+      ]
+    },
+    {
+      "id": 443,
+      "title": "RAFT: Reasoning-Aligned Fine-Tuning Improves Robustness of VLA Post-Training",
+      "url": "https://arxiv.org/abs/2611.04368",
+      "source": "arXiv",
+      "date": "2026-11-04",
+      "summary": "VLA 少量样本适配常提升名义成功率却牺牲对外观、物体、指令变化的鲁棒性；RAFT 先训任务推理 LoRA 再冻结训动作，真机 DROID 上 OOD 成功率 75%（基线个位数），显著改善后训练鲁棒性。",
+      "tags": [
+        "VLA",
+        "鲁棒性",
+        "后训练"
+      ]
+    },
+    {
+      "id": 444,
+      "title": "When Delay Meets Drift: Physical Safety of Robot Foundation Models Is a Cross-Layer Problem",
+      "url": "https://arxiv.org/abs/2611.02101",
+      "source": "arXiv",
+      "date": "2026-11-03",
+      "summary": "主张机器人基础模型的物理安全不是模型单层的性质，而是物理环境变化、模型、计算平台与执行在闭环中交互涌现的结果，将其形式化为跨层变化传播问题，指出现有鲁棒性基准假设瞬时推理的缺陷。",
+      "tags": [
+        "机器人基础模型",
+        "物理安全",
+        "系统安全"
+      ]
+    },
+    {
+      "id": 445,
+      "title": "Route-Guided CBF-QP Repair for Safe Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2611.01713",
+      "source": "arXiv",
+      "date": "2026-11-03",
+      "summary": "CBF-QP 安全滤波会把 VLA 的不安全动作投影回安全集，但修正可能把机器人推离任务轨迹；该修复模块利用 VLA 自身的短程动作块检测被阻断的轨迹并生成绕过障碍的恢复路线。",
+      "tags": [
+        "VLA",
+        "安全滤波",
+        "CBF"
+      ]
+    },
+    {
+      "id": 446,
+      "title": "Scaling Trusted Autonomy: Towards Generally Capable Verifiable Robots",
+      "url": "https://arxiv.org/abs/2611.00158",
+      "source": "arXiv",
+      "date": "2026-11-03",
+      "summary": "探讨可验证机器人：基础模型能力不等于理解请求或动作后果，论文将经典符号规划的可组合可验证性与学习策略结合，为可信自主的规模化提供一条路径。",
+      "tags": [
+        "可信自主",
+        "可验证性",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 447,
+      "title": "VLA Policies Do Not Know When Not to Act: Unintended Task Execution and Start Suppression",
+      "url": "https://arxiv.org/abs/2610.41609",
+      "source": "arXiv",
+      "date": "2026-11-02",
+      "summary": "对六个 VLA 检查点做配对实验：即使指令为空，机器人每个回合都会启动，且多数模型会完成指令并未指定的任务；三种启动抑制方法中提示词前缀完全无效、相似度门控部分有效、微调仍无法抑制不可行指令下的启动，直指 VLA 部署「何时不该行动」的安全缺口。",
+      "tags": [
+        "VLA",
+        "机器人安全",
+        "非预期行为"
+      ]
+    },
+    {
+      "id": 448,
+      "title": "TRACE: Target-State Risk-Aligned Conditional Execution for Embodied Tracking",
+      "url": "https://arxiv.org/abs/2610.41275",
+      "source": "arXiv",
+      "date": "2026-11-02",
+      "summary": "发现用 PPO 提升 VLA 跟踪器持续性会同时推高碰撞率（目标丢失的回合变成了接触回合），提出执行期目标状态风险门控 TRACE：98% 以上步骤与原策略动作一致，干扰跟踪碰撞率降约 4 个百分点。",
+      "tags": [
+        "VLA",
+        "安全执行",
+        "具身跟踪"
+      ]
+    },
+    {
+      "id": 449,
+      "title": "ERASE: Multimodal Prompt-Injection Defense with On-Policy Self-Distillation",
+      "url": "https://arxiv.org/abs/2610.41307",
+      "source": "arXiv",
+      "date": "2026-11-02",
+      "summary": "多模态间接提示注入防御：以「原位擦除注入区域」构造参考视图，冻结基础模型读擦除版视图，学生通过全分布 token 级反馈在带攻击输入上蒸馏，图像/音频/视频上攻击成功率近零且任务效用接近无防御水平。",
+      "tags": [
+        "提示注入",
+        "多模态",
+        "防御"
+      ]
+    },
+    {
+      "id": 450,
+      "title": "SecPO: Principled Adversarial Training for Prompt Injection Security",
+      "url": "https://arxiv.org/abs/2610.41998",
+      "source": "arXiv",
+      "date": "2026-11-02",
+      "summary": "指出 DPO 防御把模型锚定在不安全的参考分布上，提出逼近「注入不变」理想参考的 SecPO 损失，配合自适应对抗训练，在 AgentDojo 上将 Qwen3.6-27B 的 ASR@800 从 78.8% 压到 8.8% 且良性能力无损。",
+      "tags": [
+        "提示注入",
+        "LLM Agent",
+        "对抗训练"
+      ]
+    },
+    {
+      "id": 451,
+      "title": "CVE-2026-88968: Claude Code Edit 工具符号链接竞争致工作区外文件覆写（CVSS 7.7 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-88968",
+      "source": "NVD",
+      "date": "2026-11-03",
+      "summary": "Claude Code 2.1.251 之前，Edit 工具的路径校验未绑定目录 inode；恶意仓库或依赖脚本在 Bash 沙箱内运行后，可在校验后把工作区父目录原子替换为符号链接，使沙箱外的 Edit 覆写工作区外用户可写文件。",
+      "tags": [
+        "CVE",
+        "Claude Code",
+        "沙箱逃逸"
+      ]
+    },
+    {
+      "id": 452,
+      "title": "CVE-2026-54140: OpenHuman Agent 框架未净化 MCP 服务器工具描述（CVSS 8.3 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-54140",
+      "source": "NVD",
+      "date": "2026-11-05",
+      "summary": "OpenHuman 0.57.13 之前把外部 MCP 服务器返回的工具名、描述与参数定义原样放入 agent 上下文，提示注入检测器只查用户消息不查 MCP 定义；恶意 MCP 服务器的投毒描述每个回合都会被求值，可诱导模型调用其他工具或泄露数据。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "提示注入"
+      ]
+    },
+    {
+      "id": 453,
+      "title": "CVE-2026-111770: MCP TypeScript SDK 跨客户端响应串线（CVSS 7.7 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-111770",
+      "source": "NVD",
+      "date": "2026-11-05",
+      "summary": "@modelcontextprotocol/server 2.0.0–2.3.0 中多个客户端共享同一无状态 transport 或 Server 实例时，消息仅靠 JSON-RPC 请求 ID 关联，而客户端从 0 起计数，正常操作即可发生 ID 冲突，把 A 客户端的响应和通知投递给 B 客户端。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "信息泄露"
+      ]
+    },
+    {
+      "id": 454,
+      "title": "CVE-2026-77604: Code Graph RAG MCP read_file 分页分支路径遍历任意文件读（CVSS 7.5 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77604",
+      "source": "NVD",
+      "date": "2026-11-05",
+      "summary": "Code Graph RAG 0.0.345 之前，MCPToolsRegistry.read_file 在分页分支把攻击者控制的 file_path 拼接 project_root 却不做包含性校验，绝对路径直接丢弃根目录；网络暴露的 HTTP MCP 服务器未认证调用者可读取进程可及的任意文件，包括私钥与凭据。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "路径遍历"
+      ]
+    },
+    {
+      "id": 455,
+      "title": "CVE-2026-120338: prefab-ui 沙箱逃逸可经 FastMCP 工具触达宿主机 RCE（CVSS 10.0 Critical）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120338",
+      "source": "NVD",
+      "date": "2026-11-01",
+      "summary": "prefab-ui 0.14.0–0.20.2 的 Generative UI 沙箱以无限制 --allow-read/write/net 启动 Deno，Pyodide 经 js 代理可直调 Deno API 读写宿主机文件、写 .pth 持久化代码执行；典型远程路径是 FastMCP 的 generate_prefab_ui 工具在无认证服务器上被任意客户端调用。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "沙箱逃逸"
+      ]
+    },
+    {
+      "id": 456,
+      "title": "CVE-2026-116635: AWS Serverless MCP Server 部署状态组件路径遍历（CVSS 6.9 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-116635",
+      "source": "NVD",
+      "date": "2026-11-02",
+      "summary": "aws-serverless-mcp-server v0.2.1 之前，能影响 MCP agent 项目名输入的攻击者可借目录穿越或绝对路径读取部署状态目录之外的 JSON 文件，开启写权限时还可越界创建或覆盖文件。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "路径遍历"
+      ]
+    },
+    {
+      "id": 457,
+      "title": "CVE-2026-120492: Chainlit MCP allowed_urls 校验被分号路径段绕过致 SSRF（CVSS 6.3 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120492",
+      "source": "NVD",
+      "date": "2026-11-02",
+      "summary": "Chainlit 2.12.0 的 validate_mcp_url 不拒绝分号字符，未认证攻击者可向 /mcp 提交含 '..;' 段的 URL，在剥离分号路径参数的源站上请求授权范围之外的路径，实现服务端请求伪造。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "SSRF"
+      ]
+    },
     {
       "id": 420,
       "title": "Securing the Robotics Supply Chain",

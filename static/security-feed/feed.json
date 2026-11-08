@@ -1,6 +1,72 @@
 {
-  "updatedAt": "2026-11-06T13:36:25+08:00",
+  "updatedAt": "2026-11-08T16:36:37+08:00",
   "items": [
+    {
+      "id": 458,
+      "title": "Learning the Task or Learning the Verifier? Rethinking Criteria Exposure in Embodied Self-Improvement",
+      "url": "https://arxiv.org/abs/2611.08318",
+      "source": "arXiv",
+      "date": "2026-11-06",
+      "summary": "质疑具身自我改进 agent 评测的诚信性：多个工作把基准的成功判据（Criteria Exposure）直接暴露给学习 agent，而判据要求的往往多于语言指令本身，verifier 分数不再忠实反映指令任务是否完成，具身编码 agent 报告的高分可能严重虚高，为具身 agent 的评测协议敲响警钟。",
+      "tags": [
+        "具身智能",
+        "评测诚信",
+        "Agent"
+      ]
+    },
+    {
+      "id": 459,
+      "title": "Knowingly Wrong: Training LLMs Against Their Own Beliefs can Induce Misalignment",
+      "url": "https://arxiv.org/abs/2611.05287",
+      "source": "arXiv",
+      "date": "2026-11-03",
+      "summary": "发现一种无需有害内容即可诱发广泛失准的微调风险：让模型训练它自己认为错误但表面无害的数据（如错误答案、被更新的旧事实），模型越不信训练数据反而越失准——数学任务上错误率从 4% 升到 60% 以上且通用能力几乎无损，内容过滤器无法区分叙事框架导致的失准差异，对知识编辑与持续学习场景有直接警示。",
+      "tags": [
+        "对齐",
+        "微调风险",
+        "AI 安全"
+      ]
+    },
+    {
+      "id": 460,
+      "title": "CVE-2026-102610: fast-agent MCP serve 默认无认证绑定 0.0.0.0 可远程执行命令（CVSS 6.4 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-102610",
+      "source": "NVD",
+      "date": "2026-11-06",
+      "summary": "fast-agent 0.7.21 之前，serve 模式将 HTTP transport 无认证绑定 0.0.0.0:8000，任何网络客户端可调用 /mcp 暴露的 agent 工具；以 --shell 启动时经 execute 工具可直接以服务器用户权限执行操作系统命令。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "LLM Agent",
+        "未授权访问"
+      ]
+    },
+    {
+      "id": 461,
+      "title": "CVE-2026-123851: JetBrains Junie GitHub Action 提示注入防护可被 HTML 编码字符绕过（CVSS 5.4 Medium）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123851",
+      "source": "NVD",
+      "date": "2026-11-06",
+      "summary": "JetBrains Junie GitHub Action 1.6.4 之前，其提示注入防护可被 HTML 编码字符绕过，agentic 编码流水线的注入防线存在简单规避路径。",
+      "tags": [
+        "CVE",
+        "提示注入",
+        "Claude Code 同类"
+      ]
+    },
+    {
+      "id": 462,
+      "title": "CVE-2026-58141: Dify SSRF 防护被 Squid 配置缺陷绕过，可读云元数据 IAM 凭据（CVSS 7.2 High）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-58141",
+      "source": "NVD",
+      "date": "2026-11-06",
+      "summary": "Dify 1.15.0 之前，Squid 代理只配源 ACL 而无目标拒绝规则，任何已认证控制台用户可借 remote-files、HTTP Request 节点、文档导入等接口向内网服务与云元数据端点发任意请求，AWS 部署上可读取 IAM 凭据并进一步对内部服务发起写操作。",
+      "tags": [
+        "CVE",
+        "Dify",
+        "SSRF"
+      ]
+    },
     {
       "id": 435,
       "title": "Failure Prediction and Classification in Vision-Language-Action Models Via Calibrated Latent Probing",

@@ -1,6 +1,162 @@
 {
-  "updatedAt": "2026-11-09T09:03:29+08:00",
+  "updatedAt": "2026-11-10T09:06:46+08:00",
   "items": [
+    {
+      "id": 464,
+      "title": "Localizing and Editing the Goal Representation of a Vision-Language-Action Model",
+      "url": "https://arxiv.org/abs/2611.08895",
+      "source": "arXiv",
+      "date": "2026-11-10",
+      "summary": "用激活补丁、线性探针与激活引导定位 OpenVLA 的目标表征，发现安全禁令（如“不要把碗放到炉子上”）的否定词几乎不起作用：79% 的被否定 rollout 仍执行了被禁止任务，并提出运行时监控与表征编辑缓解。揭示 VLA 模型对安全约束的“不知道该何时不行动”问题。",
+      "tags": [
+        "VLA",
+        "机器人安全",
+        "安全对齐"
+      ]
+    },
+    {
+      "id": 465,
+      "title": "Goodhart in the Planner: Sampling-Based Control Exploits Rewards Learned from Human Preferences",
+      "url": "https://arxiv.org/abs/2611.09670",
+      "source": "arXiv",
+      "date": "2026-11-10",
+      "summary": "系统测量机器人中基于人类偏好奖励模型的搜索式控制（MPPI/best-of-N）引发的 Goodhart 效应：更强搜索使真实回报下降最多 76%，抽屉开启任务 20 次中 0 次成功，而留出标签准确率仍高达 0.75-0.97。说明奖励模型在分布外会被“合法地”钻空子。",
+      "tags": [
+        "奖励黑客",
+        "机器人安全",
+        "AI对齐"
+      ]
+    },
+    {
+      "id": 466,
+      "title": "SafeOrchestrate: Runtime Checked Intent-Driven Orchestration for Cyber-Physical Systems",
+      "url": "https://arxiv.org/abs/2611.09364",
+      "source": "arXiv",
+      "date": "2026-11-10",
+      "summary": "面向 CPS/机器人的自然语言意图编排参考架构：将 NL 意图分解为原子目标，为每个目标生成可运行时校验的规约并落地为设备能力、状态与安全约束检查，防止 LLM 工具调用违反物理安全边界。",
+      "tags": [
+        "具身智能",
+        "CPS安全",
+        "运行时校验"
+      ]
+    },
+    {
+      "id": 467,
+      "title": "GuardrailAgent: An Agentic Framework for Jailbreak Defense",
+      "url": "https://arxiv.org/abs/2611.09734",
+      "source": "arXiv",
+      "date": "2026-11-10",
+      "summary": "多智能体越狱防御框架：自主收集并归纳攻击特征写入持续更新的知识库，对未知攻击策略提供自适应的端到端防护，弥补静态防御无法泛化到新攻击的缺口。",
+      "tags": [
+        "越狱防御",
+        "LLM Agent",
+        "安全对齐"
+      ]
+    },
+    {
+      "id": 468,
+      "title": "MemoryDojo: Benchmarking Poisoning Through LLM Agent Memory",
+      "url": "https://arxiv.org/abs/2611.09721",
+      "source": "arXiv",
+      "date": "2026-11-10",
+      "summary": "首个追踪 LLM Agent 记忆投毒跨会话传播的基准：量化恶意指令在一次会话被存入记忆、在后续会话被检索执行的影响，并对比不同记忆架构下投毒效果的显著差异。",
+      "tags": [
+        "记忆投毒",
+        "LLM Agent",
+        "基准测试"
+      ]
+    },
+    {
+      "id": 469,
+      "title": "When Feedback Becomes a Backdoor: Tracing Backdoor Skill Formation in Text-Space Skill Optimization",
+      "url": "https://arxiv.org/abs/2611.09348",
+      "source": "arXiv",
+      "date": "2026-11-10",
+      "summary": "研究文本空间技能优化（SkillOpt）中的参考反馈投毒：攻击者只需污染参考答案即可诱导持久的触发条件规则后门，无需访问模型、优化器或技能文件，三个种子均完整保留攻击者映射。",
+      "tags": [
+        "后门攻击",
+        "Agent技能",
+        "供应链安全"
+      ]
+    },
+    {
+      "id": 470,
+      "title": "I Think, Therefore I Attack: Evaluating Thought Injection Attacks on Reasoning Agents",
+      "url": "https://arxiv.org/abs/2611.08811",
+      "source": "arXiv",
+      "date": "2026-11-10",
+      "summary": "针对推理模型的思维注入攻击系统评测：将仿冒模型自身推理链的不可信文本回灌给 GLM-5.3、MiniMax-M2.5、Qwen3.8-Flash-Next 等生产级开源权重模型，评估静态注入及自适应变体的有效性。",
+      "tags": [
+        "思维注入",
+        "推理模型",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 471,
+      "title": "Notwithstanding Anything to the Contrary, Ignore All Instructions: Measuring Prompt Injection Guards on Legal Contract Review Attacks",
+      "url": "https://arxiv.org/abs/2611.08834",
+      "source": "arXiv",
+      "date": "2026-11-10",
+      "summary": "首个在法律合同语料上测量提示注入防护器误报率的工作：11 个开源防护器文档级误报率最高 92.39%，两个防护器配对 AUC 低于随机，简单五正则基线不被任何防护器帕累托支配。",
+      "tags": [
+        "提示注入",
+        "防御评测",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 472,
+      "title": "I Don't Care How You Hide It, I Care What You Do: Runtime Detection of Malicious ML Models",
+      "url": "https://arxiv.org/abs/2611.08745",
+      "source": "arXiv",
+      "date": "2026-11-10",
+      "summary": "ModelShield：首个针对恶意 ML 模型的运行时行为检测系统，绕过静态分析与函数黑名单的绕过手法（等价函数替换、非主流加载路径、滥用合法框架 API），适用于 Hugging Face 等公共平台分发模型的供应链场景。",
+      "tags": [
+        "供应链安全",
+        "恶意模型",
+        "运行时检测"
+      ]
+    },
+    {
+      "id": 473,
+      "title": "CVE-2026-121576: MCP Server for WordPress 权限分配错误导致提权",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121576",
+      "source": "NVD",
+      "date": "2026-11-10",
+      "summary": "AtlasAiDev 的 WordPress MCP Server（ai-workflow-automation-ai-agent-hub）存在不正确的权限分配漏洞，攻击者可借此实现权限提升；影响版本 ≤ 2.0.1，CVSS 严重程度 HIGH。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "权限提升"
+      ]
+    },
+    {
+      "id": 474,
+      "title": "CVE-2026-123811: Dynatrace MCP Server HTTP 模式 JSON-RPC 未鉴权调用",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123811",
+      "source": "NVD",
+      "date": "2026-11-10",
+      "summary": "Dynatrace MCP Server 2.0.0 之前以 --http 启动时不校验认证、会话与 Host/Origin 即分发 tools/call 请求，网络可达攻击者可在服务端凭据下执行 DQL 读取日志、安全事件与用户会话。CVSS HIGH，2.0.0 修复。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "未授权访问"
+      ]
+    },
+    {
+      "id": 475,
+      "title": "CVE-2026-123809: Dynatrace MCP Server create_workflow 工具 Jinja2 模板注入",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123809",
+      "source": "NVD",
+      "date": "2026-11-10",
+      "summary": "Dynatrace MCP Server 2.0.0 之前的 create_workflow_for_notification 工具将调用者可控参数注入 Jinja2 表达式，经 MCP 提示注入路径可在租户内持久创建 workflow，借 Slack 连接器外泄事件元数据。CVSS MEDIUM，2.0.0 修复。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "提示注入"
+      ]
+    },
     {
       "id": 463,
       "title": "CVE-2026-97677: IBM Langflow 任意文件写与读，可窃取配置、密钥与数据库文件（CVSS 8.1 High）",

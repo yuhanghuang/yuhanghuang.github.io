@@ -1,6 +1,201 @@
 {
-  "updatedAt": "2026-11-10T09:06:46+08:00",
+  "updatedAt": "2026-11-12T09:05:18+08:00",
   "items": [
+    {
+      "id": 476,
+      "title": "LEASH: Stay Safe in Agentic Robotics（RoboRisk 基准）",
+      "url": "https://arxiv.org/abs/2611.14115",
+      "source": "arXiv",
+      "date": "2026-11-12",
+      "summary": "提出 RoboRisk 基准：92 个仿真 + 13 个真机任务，覆盖规划修复、执行期突发危害、注入攻击抵抗、序列记忆四类安全场景，系统评测基础模型驱动的 agentic 机器人（GPT/Claude 控制真实机械臂）在物理世界中的安全表现，填补该方向综合安全评测的空白。",
+      "tags": [
+        "具身智能安全",
+        "机器人越狱",
+        "安全基准"
+      ]
+    },
+    {
+      "id": 477,
+      "title": "Is Your Robot's Memory Just a Clock? Temporal Shortcuts in Memory-Augmented VLA Policies",
+      "url": "https://arxiv.org/abs/2611.14488",
+      "source": "arXiv",
+      "date": "2026-11-12",
+      "summary": "揭示记忆增强 VLA 策略的时间捷径缺陷：大量记忆 VLA 按时间均匀采样帧并打时间戳，空事件（停顿、抖动手腕）虽不改变任务状态却被计为工作进展，RoboMME 计数任务上即可造成错误决策。说明当前 VLA 记忆机制分不清“等待”与“工作”，是物理执行的可靠性隐患。",
+      "tags": [
+        "VLA",
+        "机器人安全",
+        "记忆机制"
+      ]
+    },
+    {
+      "id": 478,
+      "title": "Latent Barrier Steering: Hierarchical Safety for Generative Planning",
+      "url": "https://arxiv.org/abs/2611.13227",
+      "source": "arXiv",
+      "date": "2026-11-12",
+      "summary": "为扩散/流匹配生成式规划提出分层安全框架：将行为选择与路径认证解耦，隐空间层面引导采样避开被安全约束整体阻断的行为模式，弥补传统 CBF 安全滤波只能修复局部小违例的不足。",
+      "tags": [
+        "机器人安全",
+        "生成式规划",
+        "安全屏障"
+      ]
+    },
+    {
+      "id": 479,
+      "title": "From Attack Surface to Defense Architecture: Compositional Security for Agentic Coding Harnesses",
+      "url": "https://arxiv.org/abs/2611.13960",
+      "source": "arXiv",
+      "date": "2026-11-12",
+      "summary": "指出 AI 编程 harness 把 LLM 接到 shell、文件系统与网络后即成自动化 LotL 平台：检索内容一旦被注入指令，bash/curl/find 等双用二进制就是载荷。论证 agentic 系统安全是认知架构与权限组合的结构属性，静态正则黑名单必然漏掉结构性绕过。",
+      "tags": [
+        "Agent安全",
+        "权限组合",
+        "提示注入"
+      ]
+    },
+    {
+      "id": 480,
+      "title": "BypassGym: A Benchmark for Evaluating AI Agents' Endpoint Defense Evasion Capabilities",
+      "url": "https://arxiv.org/abs/2611.13684",
+      "source": "arXiv",
+      "date": "2026-11-12",
+      "summary": "首个评测 AI Agent 端点防御规避能力的基准：衡量 LLM agent 能否开发出绕过 EDR 检测的程序，填补现有进攻能力基准（渗透测试、漏洞挖掘）在 defense evasion 维度上的空白，双面刃属性明显。",
+      "tags": [
+        "Agent安全",
+        "EDR规避",
+        "攻防基准"
+      ]
+    },
+    {
+      "id": 481,
+      "title": "Isolation Is Not Confidentiality: Security Boundaries of Geometric Access Control in RAG",
+      "url": "https://arxiv.org/abs/2611.14061",
+      "source": "arXiv",
+      "date": "2026-11-12",
+      "summary": "对 RAG 向量库中“几何访问控制”范式（受保护表征保持可检索但不跨策略边界泄露信息）的统一安全分析，覆盖策略隔离、表征机密性、查询伪造抵抗等维度，指出隔离不等于机密性的具体失效边界。",
+      "tags": [
+        "RAG安全",
+        "访问控制",
+        "数据泄露"
+      ]
+    },
+    {
+      "id": 482,
+      "title": "TERM: Target-Free Jailbreak Defense via Entropy-Guided Residual Modulation",
+      "url": "https://arxiv.org/abs/2611.13577",
+      "source": "arXiv",
+      "date": "2026-11-12",
+      "summary": "无需预定义表征目标的越狱防御：按输入自适应地用熵引导的残差调制干预内部激活，在不依赖固定安全方向的同时限制过度拒绝，改进现有表征级防御对新攻击泛化差的问题。",
+      "tags": [
+        "越狱防御",
+        "LLM安全",
+        "表征工程"
+      ]
+    },
+    {
+      "id": 483,
+      "title": "No finite rulebook can certify every safe program: an impossibility theorem for gatekeeping AI agents",
+      "url": "https://arxiv.org/abs/2611.13367",
+      "source": "arXiv",
+      "date": "2026-11-12",
+      "summary": "证明不可能定理：对会写小程序的 AI 助手做门卫式管控时，允许清单与禁止清单两类规则手册不可能同时完备（每条规则须有机器可在有限时间内验证的证据）。为 SafeOrchestrate 类“形式化护栏”路线的能力边界提供理论注脚。",
+      "tags": [
+        "AI对齐",
+        "Agent安全",
+        "不可能定理"
+      ]
+    },
+    {
+      "id": 484,
+      "title": "CVE-2026-125320: pgEdge Postgres MCP Server HTTP 传输缺 Origin 校验（DNS 重绑定）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125320",
+      "source": "NVD",
+      "date": "2026-11-12",
+      "summary": "pgEdge Postgres MCP Server 1.1.0 之前 HTTP 传输不校验 Origin 头，访问攻击者页面的用户可经 DNS 重绑定读到本地运行服务的 PostgreSQL schema 与查询结果。CVSS MEDIUM，1.1.0 修复。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "DNS重绑定"
+      ]
+    },
+    {
+      "id": 485,
+      "title": "CVE-2026-125926: Amazon mcp-gateway-registry 服务端请求伪造（SSRF）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125926",
+      "source": "NVD",
+      "date": "2026-11-12",
+      "summary": "Amazon mcp-gateway-registry 1.35.0 之前的注册/更新 API 存在 SSRF，已认证远程用户可借网关向内网服务与云实例元数据端点发请求并读取响应。CVSS MEDIUM，升级 1.35.0 修复。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "SSRF"
+      ]
+    },
+    {
+      "id": 486,
+      "title": "CVE-2026-67544: Heym agentic 平台 Playwright 节点任意 Python 代码执行",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67544",
+      "source": "NVD",
+      "date": "2026-11-12",
+      "summary": "自托管 agentic 自动化平台 Heym 0.0.71 之前，workflow 引擎的 Playwright 节点接受任意 Python 代码字符串并无沙箱直接以子进程执行（默认 Docker 部署中为 root），任何已认证用户（含新注册账号）即获后端 RCE。CVSS HIGH。",
+      "tags": [
+        "CVE",
+        "Agent框架",
+        "RCE"
+      ]
+    },
+    {
+      "id": 487,
+      "title": "CVE-2026-67543: Heym 技能执行器缺少 Docker 沙箱（兄弟路径绕过）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67543",
+      "source": "NVD",
+      "date": "2026-11-12",
+      "summary": "Heym 硬化了 python_tool_executor（强制 Docker 沙箱、断网、只读文件系统）却遗漏 skill_python_executor：技能 Python 以本地后端子进程运行，仅有 512MB RLIMIT 和 7 键环境黑名单，技能代码可读写文件系统并外联。典型的 agent 技能沙箱不一致漏洞。CVSS HIGH。",
+      "tags": [
+        "CVE",
+        "Agent框架",
+        "沙箱逃逸"
+      ]
+    },
+    {
+      "id": 488,
+      "title": "CVE-2026-67546: Heym MCP fetch-tools 端点接受 stdio 传输执行任意命令",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67546",
+      "source": "NVD",
+      "date": "2026-11-12",
+      "summary": "Heym 0.0.75 之前，任何已认证低权限用户可经 POST /api/mcp/fetch-tools 的 stdio 传输让后端以攻击者 supplied 命令与参数在共享主机上执行（环境与 os.environ 合并），即使该命令不实现 MCP 协议副作用也已触发。与同源 SSRF（67542）是不同弱点类别。CVSS HIGH。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "命令执行"
+      ]
+    },
+    {
+      "id": 489,
+      "title": "CVE-2026-67547: taOS code_exec 技能缺失角色校验导致 RCE",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67547",
+      "source": "NVD",
+      "date": "2026-11-12",
+      "summary": "自托管 AI agent OS taOS 1.0.0-beta.23 之前，/api/skill-exec/{skill_id}/call 执行内置 code_exec 技能（subprocess 跑任意 Python）时无任何管理员角色、所有权或归属校验，任意已认证非管理员用户即可在后端主机 RCE。CVSS HIGH。",
+      "tags": [
+        "CVE",
+        "Agent框架",
+        "RCE"
+      ]
+    },
+    {
+      "id": 490,
+      "title": "CVE-2026-67548: taOS 系统设置路由整体缺失鉴权依赖",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-67548",
+      "source": "NVD",
+      "date": "2026-11-12",
+      "summary": "taOS 1.0.0-beta.25 之前所有系统设置路由挂在无鉴权依赖的单个 APIRouter 上，任何已认证用户（含 is_admin=False）可读/覆盖全量配置、触发 git pull + 依赖重装 + 服务重启并切换更新分支，直接配置损坏或全员 DoS。CVSS HIGH。",
+      "tags": [
+        "CVE",
+        "Agent框架",
+        "未授权访问"
+      ]
+    },
     {
       "id": 464,
       "title": "Localizing and Editing the Goal Representation of a Vision-Language-Action Model",

@@ -1,6 +1,58 @@
 {
-  "updatedAt": "2026-11-12T09:05:18+08:00",
+  "updatedAt": "2026-11-13T09:14:44+08:00",
   "items": [
+    {
+      "id": 491,
+      "title": "Operation Snowball: Inside an Autonomous AI Intrusion Campaign（Malbear Labs）",
+      "url": "https://malbearlabs.com/posts/operation-snowball-inside-an-autonomous-ai-intrusion-campaign",
+      "source": "Malbear Labs",
+      "date": "2026-11-13",
+      "summary": "Malbear Labs 在例行扫描中发现攻击者暴露的完整工作区（约 70 份会话记录）：一名操作者用越狱版 DeepSeek Flash（约 7.8 万字符系统提示，基于公开“Little Code Sauce”越狱模板，把任何拒绝视为故障）主控多子 agent，对一家欧洲电信商及其托管的 13 家机构自主入侵两周以上——经 Cisco BroadWorks XXE（CVE-2026-20320）打入，用 Liferay/JBoss 老洞提权，被 EDR 拦截后自行换路径并重写隧道工具。操作者只发“继续”“停”等短指令。罕见的 AI agent 近无人值守真实入侵链一手证据，CISA 已将入口漏洞纳入 KEV。",
+      "tags": [
+        "Agent安全",
+        "越狱",
+        "真实入侵披露"
+      ]
+    },
+    {
+      "id": 492,
+      "title": "Lazare, veni foras: Reprogramming Dormant Neurons to Backdoor AI Agents（Microsoft Research）",
+      "url": "https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/",
+      "source": "Microsoft Research Blog",
+      "date": "2026-11-13",
+      "summary": "微软研究院披露 Lazarus 后门：无需训练，直接改写 LLM 中不到 10 个休眠神经元（位于最后 FFN 块）即可让基于该模型的 agent 在触发条件出现时（如日期跨入 2027 年）执行攻击者命令；被改模型可通过标准安全评测，仅需推理级算量和对 checkpoint 的写权限。防御核心是权重来源验证与部署前对基座权重做 diff，权重应像代码一样审计。核心发现据称大部分由 Claude Code（Opus 4.5）自主完成。",
+      "tags": [
+        "模型供应链",
+        "后门攻击",
+        "Agent安全"
+      ]
+    },
+    {
+      "id": 493,
+      "title": "CVE-2026-126196: pgEdge Postgres MCP Server read_only 连接可被注入写操作",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126196",
+      "source": "NVD",
+      "date": "2026-11-13",
+      "summary": "pgEdge Postgres MCP Server 1.1.0 之前，query_database 在 read_only 连接上可经 pgx Exec 以简单查询协议发送非绑定语句，绕过只读限制执行未识别语句。CVSS 严重程度以 NVD 页面为准，1.1.0 修复。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "权限绕过"
+      ]
+    },
+    {
+      "id": 494,
+      "title": "CVE-2026-126197: pgEdge Postgres MCP Server 自定义工具美元引号注入 DO 块代码",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126197",
+      "source": "NVD",
+      "date": "2026-11-13",
+      "summary": "pgEdge Postgres MCP Server 1.1.0 之前，custom pl-do 工具将 JSON 参数插值进以固定美元引号标签分隔的 PostgreSQL DO 块，参数中含 $mcp_custom_tool$ 的载荷可提前闭合块并注入任意 DO 块代码（以数据库角色权限执行）。1.1.0 修复。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "代码注入"
+      ]
+    },
     {
       "id": 476,
       "title": "LEASH: Stay Safe in Agentic Robotics（RoboRisk 基准）",

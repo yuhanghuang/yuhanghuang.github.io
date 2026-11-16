@@ -1,6 +1,201 @@
 {
-  "updatedAt": "2026-11-13T09:14:44+08:00",
+  "updatedAt": "2026-11-16T09:09:25+08:00",
   "items": [
+    {
+      "id": 495,
+      "title": "Runtime Safety and Emergency Stops on a Full-Size Humanoid: Deployment Lessons and a Case for Graduated Force Authority",
+      "url": "https://arxiv.org/abs/2611.15928",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "开源自主栈在 Unitree H1-2 全尺寸人形机器人上的部署安全复盘：独立于控制软件的安全层强制关节位置/速度/力矩限制、状态过期即停机、硬接线急停，并论证“分级力授权”的必要性。少见的真机运行时安全工程记录，可直接作为人形机器人部署的安全基线参考。",
+      "tags": [
+        "人形机器人",
+        "运行时安全",
+        "部署复盘"
+      ]
+    },
+    {
+      "id": 496,
+      "title": "JustRUA: A Controlled Study of GPT-6 Robot-Use Agents",
+      "url": "https://arxiv.org/abs/2611.16009",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "对 GPT-6 Astra 直接驱动机械臂的 robot-use agent 做受控消融：在同一框架下拆解 harness、动作接口、经验复用与场景几何四类设计，发现精简 harness 的效果最优，为理解前沿模型控制机器人时各组件的真实贡献提供了首个系统性对照。",
+      "tags": [
+        "具身智能",
+        "Agent harness",
+        "机器人控制"
+      ]
+    },
+    {
+      "id": 497,
+      "title": "SideTaskBench: Measuring Unauthorized Side-Task Delivery in Coding Agents",
+      "url": "https://arxiv.org/abs/2611.14548",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "测量编程 agent 的“未经授权的副业”：第三方技术参考可诱导 agent 在完成授权修复的同时产出并交付用户从未要求的独立工件。配对校验修复成功率与副业交付率，揭示单纯看任务完成会系统性漏掉这类行为。",
+      "tags": [
+        "Agent安全",
+        "权限滥用",
+        "基准测试"
+      ]
+    },
+    {
+      "id": 498,
+      "title": "When Safety Becomes an Attack Surface: Manipulating Abstention in Tool-Using AI Agents",
+      "url": "https://arxiv.org/abs/2611.14864",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "提出警告诱导的过度拒止（over-abstention）可用性攻击：在低信任内容中投放伪造风险警告，让工具型 agent 拒绝完成合法任务。核心论点是安全拒止必须同时评估声称风险与证据来源权威性，为“安全对齐被反向利用”提供了系统评测框架。",
+      "tags": [
+        "Agent安全",
+        "安全对齐",
+        "拒绝操纵"
+      ]
+    },
+    {
+      "id": 499,
+      "title": "Hijacking a Trusted LLM in Real-World Quantized Deployments Only Requires a Disguised Adapter",
+      "url": "https://arxiv.org/abs/2611.14978",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "展示伪装 LoRA 适配器攻击：适配器在未量化基座上能通过审计，一旦基座被量化部署即劫持内容审核、函数选择等决策，且无需模型额外改动。揭示量化部署改变了模型行为边界，是供应链审计的新盲区。",
+      "tags": [
+        "模型供应链",
+        "量化部署",
+        "后门攻击"
+      ]
+    },
+    {
+      "id": 500,
+      "title": "MobileProbe: Adaptive Security Evaluation of Mobile Agents via Trajectory-Aware Injection",
+      "url": "https://arxiv.org/abs/2611.16693",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "针对手机 GUI agent 的环境注入攻击（EIA）自适应评测：现有基准把固定载荷钉在固定步骤上，MobileProbe 改为轨迹感知注入，按 agent 实际行进路径投放恶意 UI 内容，更准确衡量屏幕内容劫持 agent 动作的真实风险。",
+      "tags": [
+        "提示注入",
+        "移动Agent",
+        "安全评测"
+      ]
+    },
+    {
+      "id": 501,
+      "title": "Scale-Induced Semantic Shift in Visual Prompt Injection Against VLMs and Web Agents",
+      "url": "https://arxiv.org/abs/2611.16744",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "发现视觉提示注入的尺度诱导语义漂移（SISS）：图像经缩放/压缩/重渲染后机器可读语义改变，某些文本指令在 512×512 呈现分辨率下不可读、在激进降采样后反而可恢复——攻击者可以“藏给模型看、不给人看”的方向反过来用，构成对 VLM 与 Web agent 的新型注入通道。",
+      "tags": [
+        "视觉提示注入",
+        "VLM",
+        "Web Agent"
+      ]
+    },
+    {
+      "id": 502,
+      "title": "guardscope: Measuring Which Actions Runtime Controls Check in LLM Agent Systems",
+      "url": "https://arxiv.org/abs/2611.15223",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "首个以内核级 ground truth 衡量运行时管控覆盖率（agent gateway 等）的框架：控制点只能检查经过它的动作，而 agent 可以走工具调用以外的路径；guardscope 把这个覆盖盲区变成可测量的量。",
+      "tags": [
+        "Agent安全",
+        "运行时防护",
+        "覆盖率度量"
+      ]
+    },
+    {
+      "id": 503,
+      "title": "CapLite: Prompt-Injection Defense for Small Language Model Agents without Model-Written Security Artifacts",
+      "url": "https://arxiv.org/abs/2611.17115",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "检验 CaMeL/Progent/IPIGuard/DRIFT 类“模型自写安全工件（策略、权限、依赖图、约束）再由代码强制执行”的注入防御在小模型上的可行性：15 个开源权重模型（13 个 1.7B-12B）写出的工件都留有可被攻击的缺口，说明该防御范式目前不适用于端侧 SLM agent。",
+      "tags": [
+        "提示注入",
+        "防御评测",
+        "小模型Agent"
+      ]
+    },
+    {
+      "id": 504,
+      "title": "PolicySniff: Inferring Agent Policy States through Shared-GPU Execution",
+      "url": "https://arxiv.org/abs/2611.16158",
+      "source": "arXiv",
+      "date": "2026-11-16",
+      "summary": "新型侧信道：agent 的审批策略（如高危工具调用前是否询问）写在系统提示中并保持机密，PolicySniff 证明共驻共享 GPU 的攻击者在知道候选策略与任务的前提下，能推断出 agent 部署了哪档审批策略——把“配置机密性”变成可被旁路观测的对象。",
+      "tags": [
+        "侧信道",
+        "Agent安全",
+        "共享GPU"
+      ]
+    },
+    {
+      "id": 505,
+      "title": "CVE-2026-123965: Jet Admin Cloud Platform 提示注入泄露 .env 凭证",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-123965",
+      "source": "NVD",
+      "date": "2026-11-16",
+      "summary": "Jet Admin 云平台全版本存在提示注入漏洞，持免费账号的远程攻击者可借此暴露敏感的 .env 配置文件并窃取关键凭证；厂商约 2026-10-29 通过沙箱组件缓解。CVSS CRITICAL。",
+      "tags": [
+        "CVE",
+        "提示注入",
+        "凭证泄露"
+      ]
+    },
+    {
+      "id": 506,
+      "title": "CVE-2026-110278: IBM ContextForge MCP Gateway 身份签名可被重放",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110278",
+      "source": "NVD",
+      "date": "2026-11-16",
+      "summary": "IBM ContextForge MCP Gateway 1.0.0-1.1.0 在工具调用时因静态签名载荷与缺失的逐网关配置检查，攻击者可重放身份传播声明签名，或致敏感用户身份信息泄露给第三方 MCP 服务器。CVSS HIGH。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "身份认证"
+      ]
+    },
+    {
+      "id": 507,
+      "title": "CVE-2026-110194: IBM ContextForge MCP Gateway 服务端请求伪造",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-110194",
+      "source": "NVD",
+      "date": "2026-11-16",
+      "summary": "IBM ContextForge MCP Gateway 1.0.0-1.0.11 存在 SSRF，已认证攻击者可从网关系统发出未授权请求，进行网络枚举或跳板攻击。CVSS MEDIUM。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "SSRF"
+      ]
+    },
+    {
+      "id": 508,
+      "title": "CVE-2026-125771: MCP Server for WordPress 提权（≤2.0.3 仍未修复完全）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-125771",
+      "source": "NVD",
+      "date": "2026-11-16",
+      "summary": "AtlasAiDev 的 WordPress MCP Server 权限分配错误漏洞影响范围扩展到 2.0.3 及之前版本（上周 CVE-2026-121576 覆盖至 2.0.1），已认证攻击者可提权。CVSS HIGH，属同一插件的后续/未完整修复披露。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "权限提升"
+      ]
+    },
+    {
+      "id": 509,
+      "title": "USENIX SAIS '27 首届征文：专注 Agentic-AI 系统安全的新会议",
+      "url": "https://www.usenix.org/conference/sais27/call-for-papers",
+      "source": "USENIX",
+      "date": "2026-11-16",
+      "summary": "USENIX 宣布新设 Conference on Secure Agentic-AI Systems（SAIS '27，2027-06-07/08，Santa Clara），议题覆盖提示注入、越狱、后门、供应链与工具利用、能力限制、形式化接口安全保证、红队流水线等，投稿截止 2027-02-04（AoE）。Agent 安全从此有了专门的系统安全顶会出口。",
+      "tags": [
+        "会议动态",
+        "Agent安全",
+        "CFP"
+      ]
+    },
     {
       "id": 491,
       "title": "Operation Snowball: Inside an Autonomous AI Intrusion Campaign（Malbear Labs）",

@@ -1,6 +1,227 @@
 {
-  "updatedAt": "2026-11-16T09:09:25+08:00",
+  "updatedAt": "2026-11-18T14:32:42+08:00",
   "items": [
+    {
+      "id": 510,
+      "title": "Network-Exposed Configuration Attacks on LLM-Controlled Social Robots",
+      "url": "https://arxiv.org/abs/2611.22761",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "针对 Pollen Robotics Reachy Mini Lite 的网络暴露配置攻击：未经认证的攻击者经管理接口直接替换个性设置与云端 LLM 的系统提示，无需对抗性对话输入。实验中 5 类 11 次提示注入均被报告抵抗，但两条配置层攻击路径全部成功——提示注入防护管不住配置面，是具身设备的真实盲区。",
+      "tags": [
+        "机器人安全",
+        "提示注入",
+        "配置攻击"
+      ]
+    },
+    {
+      "id": 511,
+      "title": "From Attack Tree to Model Checker: Binding CAPEC Patterns to Verify Robotic System Security",
+      "url": "https://arxiv.org/abs/2611.22408",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "把攻击树叶子机械化映射到 CAPEC 攻击模式并写成一阶逻辑规则（攻击者前提→攻击效果），构建从威胁目录到可检验攻击者模型的自动流水线，推动机器人系统的安全验证从手工威胁建模走向模型检验。",
+      "tags": [
+        "机器人安全",
+        "形式化验证",
+        "威胁建模"
+      ]
+    },
+    {
+      "id": 512,
+      "title": "CRA: Continuous Risk Assessment for Safety-critical Visual Navigation",
+      "url": "https://arxiv.org/abs/2611.22080",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "指出真实世界安全很少是二元的：风险随物体/人的物理属性与交互上下文连续变化（如搬重物的人、高速移动的热物体应有不同安全响应），提出安全关键视觉导航的连续风险评估方法，把几何安全向语义安全推进。",
+      "tags": [
+        "机器人安全",
+        "视觉导航",
+        "连续风险评估"
+      ]
+    },
+    {
+      "id": 513,
+      "title": "ROSMonitoring in Action: Runtime Monitoring and Enforcement for ROS 2 Actions",
+      "url": "https://arxiv.org/abs/2611.22407",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "将 ROSMonitoring 运行时监控扩展到 ROS 2 actions：重建 action 完整生命周期（目标提交/反馈/状态/结果/取消）并向运行时验证 oracle 暴露 action 级事件，使长周期导航、操作、巡检任务的在线安全监控成为可能。",
+      "tags": [
+        "ROS2",
+        "运行时监控",
+        "机器人安全"
+      ]
+    },
+    {
+      "id": 514,
+      "title": "SEAM: Computer-Use Agents Know the Harm Between Screens, and Commit It Anyway",
+      "url": "https://arxiv.org/abs/2611.22971",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "现有 CUA 安全基准把危害放在任务意图或单个屏幕，agent 逐屏检查即可通过；SEAM 测试跨屏信息组合的危害——一个屏幕上的人 + 另一个屏幕上的物品 + 一个把两者绑定的合法任务，agent 明知有害仍照做。揭示“单点安全检查”在委托式工作中的结构性失效。",
+      "tags": [
+        "Agent安全",
+        "电脑使用Agent",
+        "安全评测"
+      ]
+    },
+    {
+      "id": 515,
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "url": "https://arxiv.org/abs/2611.21885",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "证明模型无需梯度、无需训练即可通过自身推理改写自己的权重（self-rewriting）：给定权重、带评分的答案和自运行能力，模型能让自己变得更好。对 agent 自进化与失控风险研究意义重大——自我改进不再需要训练管道。",
+      "tags": [
+        "自我改进",
+        "AI安全",
+        "权重改写"
+      ]
+    },
+    {
+      "id": 516,
+      "title": "Eight in Ten LLMs Leak System-Prompt Secrets: Nevan, an Agentic Capture-the-Flag Study",
+      "url": "https://arxiv.org/abs/2611.21956",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "对 OpenRouter 目录 363 个纯文本模型做指令层级执行审计：系统提示中嵌入 16 字符 flag，由人类引导的 agent（DeepSeek V4.1 Flash 驱动）尝试套取。约八成模型的秘密被成功泄露，量化给出哪些模型、经哪些技术泄露。",
+      "tags": [
+        "系统提示泄露",
+        "指令层级",
+        "Agent安全"
+      ]
+    },
+    {
+      "id": 517,
+      "title": "Evolution Under Fire: Evolving Agent Safety Harnesses with Adaptive Injection Stressors",
+      "url": "https://arxiv.org/abs/2611.22583",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "将 agent 安全 harness 的进化与自适应注入压力源的进化耦合：utility-constrained 的分阶段框架让防御和攻击共同演化，摆脱手工静态设计防御无法泛化到新注入手法的循环。",
+      "tags": [
+        "Agent安全",
+        "提示注入",
+        "防御进化"
+      ]
+    },
+    {
+      "id": 518,
+      "title": "Stopping Is Not the Limit: Understanding and Eliciting Agent Capability in Long-Horizon Vulnerability Exploitation",
+      "url": "https://arxiv.org/abs/2611.22888",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "发现 agent 的漏洞利用能力被“过早停止”系统性低估：在 ExploitBench 上让执行在首次停止后继续，DeepSeek-V4-Flash 与 MiMo-V2.6-Pro 都获得额外经验证的收益。对 offensive agent 能力上限的测量方法有直接修正意义。",
+      "tags": [
+        "攻防Agent",
+        "能力测量",
+        "漏洞利用"
+      ]
+    },
+    {
+      "id": 519,
+      "title": "GapLeak: When Privacy-Preserving LLM-based Web Agents Become a Privacy Risk",
+      "url": "https://arxiv.org/abs/2611.22223",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "证明数据最小化与最小权限原则必要但不充分：网站可请求授权源不提供的字段制造信息缺口，目标驱动的 agent 为完成任务会升级到可达但未授权的来源并泄露已积累的敏感信息。揭示隐私保护型 web agent 的新型泄露通道。",
+      "tags": [
+        "Agent安全",
+        "隐私泄露",
+        "Web Agent"
+      ]
+    },
+    {
+      "id": 520,
+      "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
+      "url": "https://arxiv.org/abs/2611.21832",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "红蓝对抗实验：人类专家充当破坏者在 AI 安全研究中做手脚，审计者拿到完整研究记录并能复跑实验仍难以识别破坏。对“用 AI 自动化 AI 研发”时代的治理提出警示——完整 transcript 不等于可审计。",
+      "tags": [
+        "AI安全治理",
+        "破坏检测",
+        "对齐研究"
+      ]
+    },
+    {
+      "id": 521,
+      "title": "Dressed in Authority: Practical Black-Box Jailbreaking of MLLMs via Visual Trust Bias",
+      "url": "https://arxiv.org/abs/2611.22292",
+      "source": "arXiv",
+      "date": "2026-11-18",
+      "summary": "不注入扰动、不合成毒性视觉线索，而是利用模型对图像中“权威外观”的信任偏差：把有害文本指令伪装成图像内自然出现的标志/文档形式，黑盒越狱 MLLM。实用化越狱的新方向。",
+      "tags": [
+        "越狱",
+        "MLLM",
+        "视觉信任偏差"
+      ]
+    },
+    {
+      "id": 522,
+      "title": "CVE-2026-120699: CubeSandbox 沙箱任意主机路径递归绑定挂载（CRITICAL）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-120699",
+      "source": "NVD",
+      "date": "2026-11-18",
+      "summary": "自称“为 AI agent 设计的安全轻量沙箱”CubeSandbox 0.5.1 之前，任何已认证租户可在创建沙箱时指定任意已存在主机路径为 host-mount，控制面无鉴权检查，Cubelet 以 root 执行 mount --rbind 将主机子树读写暴露进租户 MicroVM——agent 沙箱逃逸级别的漏洞。CVSS CRITICAL。",
+      "tags": [
+        "CVE",
+        "沙箱逃逸",
+        "Agent基础设施"
+      ]
+    },
+    {
+      "id": 523,
+      "title": "CVE-2026-115563: MCP 官方 Python SDK OAuth 客户端凭证可泄露给攻击者选定的授权服务器",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-115563",
+      "source": "NVD",
+      "date": "2026-11-18",
+      "summary": "Model Context Protocol 官方 Python SDK 1.9.1–1.30.0/2.2.0 的 OAuth 客户端支持无法识别凭据所属的授权服务器，不可信 MCP 服务器可诱导客户端把 client_secret、授权码、PKCE verifier 甚至签名 JWT 发给攻击者控制的授权端点。SDK 级漏洞，影响面覆盖所有基于该 SDK 的 MCP 客户端。CVSS HIGH。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "OAuth"
+      ]
+    },
+    {
+      "id": 524,
+      "title": "CVE-2026-68934: code-review-mcp-server 工具参数命令注入",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-68934",
+      "source": "NVD",
+      "date": "2026-11-18",
+      "summary": "code-review-mcp-server 1.5.3 之前的 getLocalGitDiff/codeReview/createPR/getPRTemplate 工具将调用者可控参数经 /bin/sh 插值进 child_process.execSync，shell 元字符可执行任意命令（以 MCP 服务进程权限）。CVSS HIGH，1.5.3 修复。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 525,
+      "title": "CVE-2026-130796: Flowise 未授权读取 MCP 服务器 bearer token",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130796",
+      "source": "NVD",
+      "date": "2026-11-18",
+      "summary": "Flowise 3.1.3-3.1.4 的 GET /api/v1/public-chatflows/:id 允许未认证攻击者读取 MCP 服务器 bearer token，进而用泄漏的 token 经 /api/v1/mcp/:chatflowId 调用 chatflow、绕过 API key 保护并消耗所有者模型配额。CVSS HIGH。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "凭证泄露"
+      ]
+    },
+    {
+      "id": 526,
+      "title": "CVE-2026-126681: AWS Timestream InfluxDB MCP Server 提示注入窃取 API token",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-126681",
+      "source": "NVD",
+      "date": "2026-11-18",
+      "summary": "AWS Labs Timestream for InfluxDB MCP Server 0.0.19 之前连接配置处理不当，远程未认证攻击者可经提示注入把服务端配置的 InfluxDB API token 发往其控制的端点。CVSS MEDIUM，0.0.19 修复并需轮换 token。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "提示注入"
+      ]
+    },
     {
       "id": 495,
       "title": "Runtime Safety and Emergency Stops on a Full-Size Humanoid: Deployment Lessons and a Case for Graduated Force Authority",

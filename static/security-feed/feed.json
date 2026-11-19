@@ -1,6 +1,176 @@
 {
-  "updatedAt": "2026-11-18T14:32:42+08:00",
+  "updatedAt": "2026-11-19T09:14:39+08:00",
   "items": [
+    {
+      "id": 527,
+      "title": "Guarded Swarms in the Loop: A ROS 2/PX4 Digital Twin for Hybrid Digital-Analog Coordination of UAV/UGV Swarms",
+      "url": "https://arxiv.org/abs/2611.22773",
+      "source": "arXiv",
+      "date": "2026-11-19",
+      "summary": "首个可执行的 Guarded Swarms 实例：在 ROS 2 + PX4 软件在环 + Gazebo 数字孪生中，将基于 Petri 网的数字协同层与可否决不安全驱动指令的独立模拟安全层配对，在沿海反无人机场景用 2 架无人机 + 1 台无人车验证——承认软件栈及其网络本身是攻击面。",
+      "tags": [
+        "机器人",
+        "ROS2",
+        "运行时安全",
+        "无人系统"
+      ]
+    },
+    {
+      "id": 528,
+      "title": "VoxelSBFL: Voxel-Level Spectrum-Based Failure Prediction for Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2611.22453",
+      "source": "arXiv",
+      "date": "2026-11-19",
+      "summary": "把谱系故障定位（SBFL）黑盒化迁移到 VLA 模型测试：用工具中心点轨迹的体素覆盖与执行结果构建可疑度地图，定位与失败相关的空间区域，为 VLA 策略修复提供依据。",
+      "tags": [
+        "VLA",
+        "故障定位",
+        "机器人"
+      ]
+    },
+    {
+      "id": 529,
+      "title": "ReactBench-AD: Benchmarking How Driving VLA/WAM Models React to Sudden Obstacles",
+      "url": "https://arxiv.org/abs/2611.20011",
+      "source": "arXiv",
+      "date": "2026-11-19",
+      "summary": "针对自动驾驶 VLA/世界-动作模型在安全关键长尾能力上的空白，构建 ReactBench-AD：在真实 NAVSIM 与 PhysicalAI 场景中像素级插入横穿行人、静止行人或静止车辆，形成精确反事实对以隔离被插入物体的因果效应，评测 4 个 VLA 与 2 个 WAM 并暴露其反应缺陷。",
+      "tags": [
+        "VLA",
+        "自动驾驶",
+        "安全基准"
+      ]
+    },
+    {
+      "id": 530,
+      "title": "Safe Physical Interaction of All-Electric Heavy-Duty Manipulators via VIC and CBF",
+      "url": "https://arxiv.org/abs/2611.21309",
+      "source": "arXiv",
+      "date": "2026-11-19",
+      "summary": "面向电动重载机械臂在隧道壁、设备等近距结构旁作业的安全物理交互架构：变阻抗控制按预测接近/接触风险连续调节任务空间刚度阻尼，关节速度 CBF 滤波器强制工作空间边界与闭链机构行程限位，并针对内环动态非理想实现收紧 CBF 不等式。",
+      "tags": [
+        "机器人",
+        "控制屏障函数",
+        "物理安全"
+      ]
+    },
+    {
+      "id": 531,
+      "title": "When Tool Names Are Not Identities: Tool-Provider Misbinding in MCP Ecosystems",
+      "url": "https://arxiv.org/abs/2611.21577",
+      "source": "arXiv",
+      "date": "2026-11-19",
+      "summary": "揭示 MCP 生态的工具-提供者错绑缺陷：工具发现与选择所用的元数据并未绑定经验证的提供者身份，攻击者只需运营一个广告特定元数据的 MCP 服务器，即可把本应发往合法服务器的请求解析到攻击者工具上，在 5 个 LLM 客户端上验证了同名校验、任务别名等最强错绑路径。",
+      "tags": [
+        "MCP",
+        "LLM Agent",
+        "供应链安全"
+      ]
+    },
+    {
+      "id": 532,
+      "title": "On-Policy Distillation as a Backdoor Propagation Channel",
+      "url": "https://arxiv.org/abs/2611.19207",
+      "source": "arXiv",
+      "date": "2026-11-19",
+      "summary": "发现新型模型供应链风险：攻击者先通过 SFT 向教师模型植入条件后门，on-policy 蒸馏（OPD）可在极少触发提示暴露下把后门传给学生模型，且传播强度显著高于传统蒸馏，机制分析表明后门信号主要经条件概率分布的异常差异传递。",
+      "tags": [
+        "后门",
+        "蒸馏",
+        "模型供应链"
+      ]
+    },
+    {
+      "id": 533,
+      "title": "Agents' Beliefs Manipulated via Truthful Evidence: Narrative Overfitting and Generative Montage",
+      "url": "https://arxiv.org/abs/2611.21235",
+      "source": "arXiv",
+      "date": "2026-11-19",
+      "summary": "证明 LLM Agent 可经由社交媒体等开放信道被操纵——即使收到的信息全部真实：用 Generative Montage 把真实片段编排成误导性叙事，14 个模型中 12 个对谣言的总体接受率超 65%，多数投票或复核同一证据后接受率仍高于 50%，错误可直接流入下游决策。",
+      "tags": [
+        "LLM Agent",
+        "信息操纵",
+        "智能体安全"
+      ]
+    },
+    {
+      "id": 534,
+      "title": "CVE-2026-76807: Todoist MCP 服务器未校验 Host/Origin 头，DNS 重定向可接管本地服务（CRITICAL）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-76807",
+      "source": "NVD",
+      "date": "2026-11-19",
+      "summary": "Todoist MCP 本地 HTTP 服务缺少 Host/Origin 校验，攻击者可借 DNS rebinding 从浏览器跨域访问 localhost 上的 MCP 服务，间接驱动 LLM 工具调用。受影响产品：Todoist MCP server。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "DNS重绑定"
+      ]
+    },
+    {
+      "id": 535,
+      "title": "CVE-2026-132121: Supergateway stdio 到 WebSocket 桥接可被跨站劫持（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-132121",
+      "source": "NVD",
+      "date": "2026-11-19",
+      "summary": "Supergateway 将 stdio MCP 服务器桥接为 WebSocket 服务时缺乏跨站 WebSocket 劫持防护，恶意网页可连接受害者本地桥接并调用其暴露的工具。受影响产品：Supergateway。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "WebSocket"
+      ]
+    },
+    {
+      "id": 536,
+      "title": "CVE-2026-63129: mssql-mcp-core 多工具存在 T-SQL 注入（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-63129",
+      "source": "NVD",
+      "date": "2026-11-19",
+      "summary": "mssql-mcp-core 的多个 MCP 工具未充分过滤输入，攻击者可注入 T-SQL 语句读写底层 SQL Server 数据，经提示注入可放大为数据泄露与篡改。受影响产品：mssql-mcp-core。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "SQL注入"
+      ]
+    },
+    {
+      "id": 537,
+      "title": "CVE-2026-75612: yt-mcp 任意文件读取并经 issue 外传（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-75612",
+      "source": "NVD",
+      "date": "2026-11-19",
+      "summary": "yt-mcp 存在路径校验缺陷，攻击者可读取服务器任意文件并通过 issue 内容外传；在 agent 场景中可被间接提示注入驱动，造成敏感文件泄露。受影响产品：yt-mcp。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "任意文件读取"
+      ]
+    },
+    {
+      "id": 538,
+      "title": "CVE-2026-130764: Obot 恶意 OAuth Token 端点致 SSRF（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130764",
+      "source": "NVD",
+      "date": "2026-11-19",
+      "summary": "Obot AI 框架未充分校验 OAuth token 端点，攻击者可诱导其向内部地址发起请求（SSRF），进而窃取令牌或探测内网。受影响产品：Obot。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "SSRF"
+      ]
+    },
+    {
+      "id": 539,
+      "title": "CVE-2026-130766: Obot 资源元数据未校验致 OAuth Token 被盗（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130766",
+      "source": "NVD",
+      "date": "2026-11-19",
+      "summary": "Obot 未校验资源元数据完整性，攻击者可篡改元数据把授权流程重定向到攻击者端点，窃取用户 OAuth token。受影响产品：Obot。与 CVE-2026-130764 同批披露。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "OAuth"
+      ]
+    },
     {
       "id": 510,
       "title": "Network-Exposed Configuration Attacks on LLM-Controlled Social Robots",

@@ -1,6 +1,175 @@
 {
-  "updatedAt": "2026-11-19T09:14:39+08:00",
+  "updatedAt": "2026-11-20T09:04:18+08:00",
   "items": [
+    {
+      "id": 540,
+      "title": "ExecGap: Exploiting Command-Execution Gap for Patch Attacks on Vision-Language-Action Models",
+      "url": "https://arxiv.org/abs/2611.23714",
+      "source": "arXiv",
+      "date": "2026-11-20",
+      "summary": "指出 VLA 预测的指令并不被直接执行、需经下游控制与机器人本体实现——ExecGap 利用这条「指令-执行间隙」实施对抗 Patch 攻击，使 VLA 偏向预测在特定本体上执行后果严重的动作，暴露与本体强相关的执行漏洞。",
+      "tags": [
+        "VLA",
+        "对抗攻击",
+        "物理安全"
+      ]
+    },
+    {
+      "id": 541,
+      "title": "RECLAIM: Robot-Vision-Informed Adversarial Patch Defense via Embodied Attention Feedback",
+      "url": "https://arxiv.org/abs/2611.24494",
+      "source": "arXiv",
+      "date": "2026-11-20",
+      "summary": "免训练、推理时的 VLA 对抗 Patch 防御：利用冻结 VLA 自身对局部视觉干预的注意力响应作为反馈，在闭环具身操作中选择净化的位置与方式，不依赖额外模型或微调。",
+      "tags": [
+        "VLA",
+        "对抗防御",
+        "机器人"
+      ]
+    },
+    {
+      "id": 542,
+      "title": "Recoverability, Not Invariance: Certified Safety for Robots at the Limits of Performance",
+      "url": "https://arxiv.org/abs/2611.23589",
+      "source": "arXiv",
+      "date": "2026-11-20",
+      "summary": "用「可恢复性」替代前向不变性做安全认证：不认证部署行为本身，而认证机器人随时切换回可信恢复模式的能力，基于收缩理论证明在认证管内任意点切换可保证指数收敛，使极限性能行为（学习策略、极限牵引力机动）首次可认证。",
+      "tags": [
+        "机器人",
+        "安全认证",
+        "控制"
+      ]
+    },
+    {
+      "id": 543,
+      "title": "Measuring the Conservatism of Latent Safety Filters for World Models",
+      "url": "https://arxiv.org/abs/2611.23685",
+      "source": "arXiv",
+      "date": "2026-11-20",
+      "summary": "为世界模型的隐式安全滤波器提出「重叠度（overlap）」理论：按潜在状态与动作分格，证明重叠度是该滤波器为拒绝危险转移而必须误拒安全转移的最小比例，从而量化共形校准滤波器固有的保守性下限。",
+      "tags": [
+        "安全滤波",
+        "世界模型",
+        "共形校准"
+      ]
+    },
+    {
+      "id": 544,
+      "title": "Assessing Vision-Language Models for Early Prediction of Unsafe Situations in Robotics",
+      "url": "https://arxiv.org/abs/2611.24146",
+      "source": "arXiv",
+      "date": "2026-11-20",
+      "summary": "实证评估 VLM 对机器人不安全情境的早期预测能力：在 HuRoN、Pal Robotics、CrowdBot 三个案例上用视频与里程计数据，测试 Qwen/InternVL/LLaVA-OneVision 对「安全/潜在不安全/不安全」的分类与不确定性量化表现。",
+      "tags": [
+        "VLM",
+        "机器人安全",
+        "早期预警"
+      ]
+    },
+    {
+      "id": 545,
+      "title": "The Limit Is in the Input, Not the Model: State-Dependent Command Safety in Natural-Language Interfaces to Industrial Controllers",
+      "url": "https://arxiv.org/abs/2611.24682",
+      "source": "arXiv",
+      "date": "2026-11-20",
+      "summary": "针对 LLM 判定送往工业控制器的指令，提出「可答性审计」：同一指令在两种需相反安全决策的设备状态下配对测试，4 个模型在不提供机器状态时均无法可靠区分配对情形——问题在输入缺少状态而非模型推理。",
+      "tags": [
+        "LLM Agent",
+        "工业控制",
+        "指令安全"
+      ]
+    },
+    {
+      "id": 546,
+      "title": "Securing and Auditing Long-Horizon LLM Agents: State-Transfer Auditing and Controls in the Agent Harness",
+      "url": "https://arxiv.org/abs/2611.23346",
+      "source": "arXiv",
+      "date": "2026-11-20",
+      "summary": "指出长时程 LLM Agent 的关键失败发生在状态转移边界（间接提示注入经转移进入、上下文压缩丢失用户约束、记忆合并剥离来源权威、工作区回滚留下残余 KV 状态），而常规执行追踪不记录跨边界内容，提出 harness 层的状态转移审计与控制。",
+      "tags": [
+        "LLM Agent",
+        "审计",
+        "提示注入"
+      ]
+    },
+    {
+      "id": 547,
+      "title": "Guarding the Kingdom of Skill-Based Agents: Control-Flow Integrity for Agent Skills",
+      "url": "https://arxiv.org/abs/2611.24185",
+      "source": "arXiv",
+      "date": "2026-11-20",
+      "summary": "把控制流完整性（CFI）引入技能型 Agent：SkillCFI 编译器将技能过程的控制骨架固化为可执行检查，约束 LLM 推理、工具调用、脚本执行的运行时路径，权限白名单拦不住的「同权限控制流违背」（如验证前覆写文件）与提示注入诱导的「regime migration」逃逸可被约束。",
+      "tags": [
+        "LLM Agent",
+        "控制流完整性",
+        "提示注入"
+      ]
+    },
+    {
+      "id": 548,
+      "title": "AutoPI: Taxonomy-Guided Adaptive Red Teaming for Prompt Injection in LLM Agents",
+      "url": "https://arxiv.org/abs/2611.24313",
+      "source": "arXiv",
+      "date": "2026-11-20",
+      "summary": "指出现有自适应红队只最大化攻击成功率（ASR）、导致技术覆盖单一，AutoPI 用提示注入技术分类法 PIAtlas 引导搜索并衡量多样性，目标是「用尽可能多的不同方式打穿目标」，而非反复使用同一招。",
+      "tags": [
+        "提示注入",
+        "红队",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 549,
+      "title": "CVE-2026-77359: Jupyter MCP 服务器管理路由未校验浏览器来源（CRITICAL）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77359",
+      "source": "NVD",
+      "date": "2026-11-20",
+      "summary": "Jupyter MCP Server 1.0.3 前的独立 streamable-http 模式对 /mcp 校验 Host/Origin，但状态变更型管理路由 /api/connect、/api/stop 未做同等浏览器来源控制，恶意网站可跨源触发管理操作。受影响产品：Jupyter MCP Server < 1.0.3。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "跨源攻击"
+      ]
+    },
+    {
+      "id": 550,
+      "title": "CVE-2026-77318: Jupyter MCP 服务器管理路由未认证可远程重连（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77318",
+      "source": "NVD",
+      "date": "2026-11-20",
+      "summary": "同版本 Jupyter MCP Server 可对 /mcp 强制 MCP_TOKEN，却将 /api/connect、/api/stop 管理路由暴露为未认证，未认证网络调用者可经 /api/connect 重连并接管会话。与 CVE-2026-77359 同批。受影响产品：Jupyter MCP Server < 1.0.3。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "认证缺失"
+      ]
+    },
+    {
+      "id": 551,
+      "title": "CVE-2026-133161: Pydantic AI Harness 工具输出 ANSI 过滤 ReDoS（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133161",
+      "source": "NVD",
+      "date": "2026-11-20",
+      "summary": "ToolOutputLimits 在 strip_ansi=True 时用随行长二次时间增长的正则去除工具输出中的 ANSI 转义序列，几百 KB 含大量未终止转义序列的工具结果即可造成拒绝服务；可被提示注入驱动的工具输出触发。受影响产品：Pydantic AI Harness。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "ReDoS"
+      ]
+    },
+    {
+      "id": 552,
+      "title": "CVE-2026-18883: ServiceNow Now Assist 邮件响应 AI Agent 间接提示注入（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-18883",
+      "source": "NVD",
+      "date": "2026-11-20",
+      "summary": "ServiceNow Now Assist for CSM 的 Email Response AI Agent 存在间接提示注入问题，攻击者可在邮件内容中嵌入恶意指令操纵 Agent 行为；官方已集中部署修复。受影响产品：ServiceNow Now Assist for CSM。",
+      "tags": [
+        "CVE",
+        "提示注入",
+        "企业AI"
+      ]
+    },
     {
       "id": 527,
       "title": "Guarded Swarms in the Loop: A ROS 2/PX4 Digital Twin for Hybrid Digital-Analog Coordination of UAV/UGV Swarms",

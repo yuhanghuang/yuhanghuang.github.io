@@ -1,6 +1,227 @@
 {
-  "updatedAt": "2026-11-20T09:04:18+08:00",
+  "updatedAt": "2026-11-21T09:04:48+08:00",
   "items": [
+    {
+      "id": 553,
+      "title": "DMT-Attack: Diffusion-Prior Texture Search for Closed-Loop Vision-Language-Action Policies",
+      "url": "https://arxiv.org/abs/2611.25695",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "针对闭环 VLA 的隐蔽纹理攻击：冻结文本条件扩散模型定义自然外观纹理的搜索空间，用八专家隐空间预测 + 闭环执行反馈筛选破坏任务的纹理，生成桌布等日常物体上的自然迷彩对抗纹理，比显眼优化 Patch 更难被发现与清除。",
+      "tags": [
+        "VLA",
+        "对抗攻击",
+        "物理世界攻击"
+      ]
+    },
+    {
+      "id": 554,
+      "title": "SteerTrace: Tracing How Target Attacks Steer World Action Models",
+      "url": "https://arxiv.org/abs/2611.25719",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "对世界-动作模型（WAM）的目标型通用攻击：每个模型一个 4/255 的 L∞ 扰动即可跨帧、跨任务、跨相机视角把执行动作推向攻击者选定目标，在 LIBERO/RoboTwin 上 8 个 WAM 任务成功率趋近零，并用带符号目标效应量追踪攻击在模型内部的作用路径。",
+      "tags": [
+        "WAM",
+        "对抗攻击",
+        "VLA"
+      ]
+    },
+    {
+      "id": 555,
+      "title": "A Synthetic Multi-Modal Testbed for Security Stress Testing of Agentic Counter-UAS Systems",
+      "url": "https://arxiv.org/abs/2611.25249",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "在 NVIDIA Isaac Sim 中构建反无人机（C-UAS）合成测试台：虚拟传感器生成同步 RGB/RTX LiDAR/红外观测，通过变化目标距离、运动、杂波、遮挡与传感器可用性，对支撑 agentic 决策的感知与跟踪算法做可重复的安全压力测试。",
+      "tags": [
+        "无人系统",
+        "安全测试",
+        "具身智能"
+      ]
+    },
+    {
+      "id": 556,
+      "title": "Teaching Vision-Language-Action Models to Stop Safely",
+      "url": "https://arxiv.org/abs/2611.26239",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "指出 VLA 任务抑制评估的盲区：能从初始状态拒绝任务的策略仍可能在执行中途接管完成任务，且未完成时机器人可能掉落所持物体。提出状态感知回退模仿（SAFI），在检测到违规时对适合「保持」的任务学习安全的持握回退响应。",
+      "tags": [
+        "VLA",
+        "安全回退",
+        "机器人"
+      ]
+    },
+    {
+      "id": 557,
+      "title": "Detecting Formation-Preserving GNSS Spoofing of UAV Swarms through Transmitter Parallax in Pseudorange and Doppler",
+      "url": "https://arxiv.org/abs/2611.26023",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "针对保持编队、可骗过编队一致性检查的 GNSS-WASP 欺骗攻击：近距离发射器使各无人机视差角不同，在 90 米编队上弯曲伪距/多普勒达 20-40cm，据此提出似然比检验从伪距与多普勒中读出该痕迹。",
+      "tags": [
+        "无人机",
+        "GNSS欺骗",
+        "检测"
+      ]
+    },
+    {
+      "id": 558,
+      "title": "AgentRoboCritic: Understanding the Capability of Frontier Agents on Direct Robot Control",
+      "url": "https://arxiv.org/abs/2611.26613",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "对 GPT-6 Astra 等前沿多模态 Agent 直接机器人控制能力的动作级解剖：策略 Agent 每步声明局部意图、批评模型对照意图评估动作结果与失败模式，在 12 个操作基准上揭示其如何成功、在哪里失败——episode 级成功率无法回答的问题。",
+      "tags": [
+        "LLM Agent",
+        "机器人控制",
+        "能力评估"
+      ]
+    },
+    {
+      "id": 559,
+      "title": "Attacks and Defenses in Decentralized Multi-Agent Systems with Hop-by-Hop Task Decomposition and Delegation",
+      "url": "https://arxiv.org/abs/2611.25056",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "系统化去中心化多 Agent 系统（各 Agent 独立运营、自主分解与委派任务）中恶意 Agent 的威胁：无任何单一实体拥有任务执行全貌或跨 Agent 强制权，论文设计并评估针对完整性与保密性的攻击及缓解措施。",
+      "tags": [
+        "多Agent",
+        "LLM Agent",
+        "智能体安全"
+      ]
+    },
+    {
+      "id": 560,
+      "title": "ToolPulse: Side-Channel Eavesdropping on Tool-Using LLM Agents",
+      "url": "https://arxiv.org/abs/2611.25470",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "针对商用远程 LLM + 本地工具执行的 Agent 场景：推理在厂商基础设施上，但工具在用户机器上执行且共享系统库，Flush+Reload 与 Prime+Probe 等缓存侧信道不再依赖与受害者推理进程共享资源，开辟了更现实的窃听攻击面。",
+      "tags": [
+        "LLM Agent",
+        "侧信道",
+        "工具执行"
+      ]
+    },
+    {
+      "id": 561,
+      "title": "Pandora's Toolbox Or Why Agent Safety Cannot Be Verified",
+      "url": "https://arxiv.org/abs/2611.25325",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "证明固定语言模型与通用计算设备耦合而成的 Agent 使安全判定不可判定：不存在算法能预测 Agent 是否会运行语义等价的危险程序，护栏/黑白名单/认证只能得到不完备安全；有限约束下安全可判定但 PSPACE-complete，且安全不具备组合性。",
+      "tags": [
+        "LLM Agent",
+        "安全验证",
+        "理论"
+      ]
+    },
+    {
+      "id": 562,
+      "title": "Living off the Local Model: Abusing Browser-Embedded Language Models for Post-Exploitation",
+      "url": "https://arxiv.org/abs/2611.25086",
+      "source": "arXiv",
+      "date": "2026-11-21",
+      "summary": "浏览器内置本地 LLM（Chrome 的 Gemini Nano）成为新的「就地取材」攻击面：厂商签名、对网络监控不可见、多模态可处理文件与截图，攻击者仅用操作系统自带解释器即可驱动，一次性用户激活检查易被满足。",
+      "tags": [
+        "LLM",
+        "浏览器安全",
+        "后渗透"
+      ]
+    },
+    {
+      "id": 563,
+      "title": "CVE-2026-134044: ROS 2 sros2 load_policy XML 外部实体处理致信息泄露",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134044",
+      "source": "NVD",
+      "date": "2026-11-21",
+      "summary": "Open Robotics ROS 2 的 sros2 load_policy 存在 XML 外部实体（XXE）处理缺陷，远程攻击者可利用披露受影响安装上的敏感信息（需用户交互）。NVD 尚未分配 CVSS。受影响产品：ROS 2 sros2。同批披露 9 个 ROS 相关 CVE。",
+      "tags": [
+        "CVE",
+        "ROS2",
+        "XXE"
+      ]
+    },
+    {
+      "id": 564,
+      "title": "CVE-2026-134045: RViz PointCloud2Display PointField 越界读取致拒绝服务（含同批 6 个同类漏洞）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134045",
+      "source": "NVD",
+      "date": "2026-11-21",
+      "summary": "Open Robotics RViz 的 PointCloud2Display 对 PointField 越界读取，网络相邻攻击者无需认证即可造成拒绝服务；同批还有 CVE-2026-134046/134047/134048/134049/134050/134051 共 7 个 RViz 越界读取 DoS。NVD 尚未分配 CVSS。受影响产品：RViz。",
+      "tags": [
+        "CVE",
+        "ROS",
+        "拒绝服务"
+      ]
+    },
+    {
+      "id": 565,
+      "title": "CVE-2026-134052: RViz fillIndexBuffer 堆缓冲区溢出致远程代码执行",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134052",
+      "source": "NVD",
+      "date": "2026-11-21",
+      "summary": "Open Robotics RViz fillIndexBuffer 堆缓冲区溢出，网络相邻攻击者无需认证即可执行任意代码——本批 ROS CVE 中最严重者，直接影响机器人操作站的现场安全。NVD 尚未分配 CVSS。受影响产品：RViz。",
+      "tags": [
+        "CVE",
+        "ROS",
+        "RCE"
+      ]
+    },
+    {
+      "id": 566,
+      "title": "CVE-2026-77329: tapo-mcp 关闭 allowed hosts 后无替代校验（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77329",
+      "source": "NVD",
+      "date": "2026-11-21",
+      "summary": "TP-Link Tapo 设备控制 MCP 服务器 0.3.1–0.5.0 直接调用 disable_allowed_hosts() 且未替代校验 Host/Origin，API key 校验形同虚设，恶意网页可跨源调用其控制智能家居设备的工具。受影响产品：tapo-mcp 0.3.1–0.5.0。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "智能家居"
+      ]
+    },
+    {
+      "id": 567,
+      "title": "CVE-2026-129995: mcp-ssh-manager 备份工具远程命令注入（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-129995",
+      "source": "NVD",
+      "date": "2026-11-21",
+      "summary": "该 SSH 管理 MCP 服务器 3.8.5 前的 ssh_backup_create/restore/schedule/list 用调用方可控值拼接远程 shell 命令，经提示注入可在审批环节之外获得远程命令执行。受影响产品：mcp-ssh-manager < 3.8.5。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 568,
+      "title": "CVE-2026-77383: mcp-ssh-manager 数据库工具命令注入（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-77383",
+      "source": "NVD",
+      "date": "2026-11-21",
+      "summary": "3.6.7 前的 ssh_db_list/dump/import/restore 对数据库名、表名等参数插值进 shell 命令，同样可被提示注入驱动执行任意命令。与 CVE-2026-129995 同产品不同工具集。受影响产品：mcp-ssh-manager < 3.6.7。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "命令注入"
+      ]
+    },
+    {
+      "id": 569,
+      "title": "CVE-2026-114495: codebase-memory-mcp 解压缓冲区按攻击者 64 位原始大小分配（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-114495",
+      "source": "NVD",
+      "date": "2026-11-21",
+      "summary": "自动导入仓库 .codebase-memory/ 构件时按攻击者可控的 64 位原始大小分配解压缓冲区，可导致内存破坏；同批还有 Cypher 解析器无界投影（CVE-2026-114494）等多个高危。受影响产品：codebase-memory-mcp < 0.9.0。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "内存破坏"
+      ]
+    },
     {
       "id": 540,
       "title": "ExecGap: Exploiting Command-Execution Gap for Patch Attacks on Vision-Language-Action Models",

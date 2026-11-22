@@ -1,6 +1,45 @@
 {
-  "updatedAt": "2026-11-21T09:04:48+08:00",
+  "updatedAt": "2026-11-22T09:02:32+08:00",
   "items": [
+    {
+      "id": 570,
+      "title": "Kaer: Security-Aware Replanning for Multi-Agent Systems",
+      "url": "https://arxiv.org/abs/2611.24839",
+      "source": "arXiv",
+      "date": "2026-11-22",
+      "summary": "揭示多 Agent 编排架构的动态重规划漏洞：恶意 Agent 可在反馈载荷中嵌入提示注入劫持重规划过程，而已有防御只覆盖单工具访问控制或执行前静态策略。Kaer 让规划器只通过抽象模板接收诊断信息，将不受信反馈与重规划隔离。",
+      "tags": [
+        "多Agent",
+        "提示注入",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 571,
+      "title": "CVE-2026-134293: SurrealDB MCP 服务器标识符校验缺陷致 SQL 注入（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134293",
+      "source": "NVD",
+      "date": "2026-11-22",
+      "summary": "SurrealDB 3.1.0–4.0.0 的 MCP 服务器中标识符校验器把首个反引号当作结束定界符、忽略转义字符，攻击者可经 MCP 查询工具注入任意 SQL 语句读写数据。受影响产品：SurrealDB 3.1.0 < 4.0.0。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "SQL注入"
+      ]
+    },
+    {
+      "id": 572,
+      "title": "CVE-2026-134337: ArcadeDB native-image 构建在只读查询路径存在授权绕过（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134337",
+      "source": "NVD",
+      "date": "2026-11-22",
+      "summary": "ArcadeDB 26.8.1–26.11.1 的 native-image 服务端构建缺少反射元数据，SqlAstInspector 失效，已认证客户端可经 SELECT 中嵌套语句在只读查询路径上执行写入；同批 CVE-2026-134324（MEDIUM）可用 Groovy 回退 Gremlin 脚本达成同类绕过。受影响产品：ArcadeDB 26.8.1 < 26.11.1。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "授权绕过"
+      ]
+    },
     {
       "id": 553,
       "title": "DMT-Attack: Diffusion-Prior Texture Search for Closed-Loop Vision-Language-Action Policies",
@@ -137,7 +176,7 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134044",
       "source": "NVD",
       "date": "2026-11-21",
-      "summary": "Open Robotics ROS 2 的 sros2 load_policy 存在 XML 外部实体（XXE）处理缺陷，远程攻击者可利用披露受影响安装上的敏感信息（需用户交互）。NVD 尚未分配 CVSS。受影响产品：ROS 2 sros2。同批披露 9 个 ROS 相关 CVE。",
+      "summary": "Open Robotics ROS 2 的 sros2 load_policy 存在 XML 外部实体（XXE）处理缺陷，远程攻击者可利用披露受影响安装上的敏感信息（需用户交互）。ZDI 评分 5.5（Medium，ZDI-CAN-32121）。受影响产品：ROS 2 sros2。同批披露 9 个 ROS 相关 CVE。",
       "tags": [
         "CVE",
         "ROS2",
@@ -150,7 +189,7 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134045",
       "source": "NVD",
       "date": "2026-11-21",
-      "summary": "Open Robotics RViz 的 PointCloud2Display 对 PointField 越界读取，网络相邻攻击者无需认证即可造成拒绝服务；同批还有 CVE-2026-134046/134047/134048/134049/134050/134051 共 7 个 RViz 越界读取 DoS。NVD 尚未分配 CVSS。受影响产品：RViz。",
+      "summary": "Open Robotics RViz 的 PointCloud2Display 对 PointField 越界读取，网络相邻攻击者无需认证即可造成拒绝服务；同批还有 CVE-2026-134046/134047/134048/134049/134050/134051 共 7 个 RViz 越界读取 DoS。ZDI 评分 6.5（Medium，同批 7 个 DoS 均为此分）。受影响产品：RViz。",
       "tags": [
         "CVE",
         "ROS",
@@ -163,7 +202,7 @@
       "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134052",
       "source": "NVD",
       "date": "2026-11-21",
-      "summary": "Open Robotics RViz fillIndexBuffer 堆缓冲区溢出，网络相邻攻击者无需认证即可执行任意代码——本批 ROS CVE 中最严重者，直接影响机器人操作站的现场安全。NVD 尚未分配 CVSS。受影响产品：RViz。",
+      "summary": "Open Robotics RViz fillIndexBuffer 堆缓冲区溢出，网络相邻攻击者无需认证即可执行任意代码——本批 ROS CVE 中最严重者，直接影响机器人操作站的现场安全。ZDI 评分 8.8（High，ZDI-CAN-32652）。受影响产品：RViz。",
       "tags": [
         "CVE",
         "ROS",

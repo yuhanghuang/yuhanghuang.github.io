@@ -1,6 +1,19 @@
 {
-  "updatedAt": "2026-11-22T09:02:32+08:00",
+  "updatedAt": "2026-11-23T09:05:56+08:00",
   "items": [
+    {
+      "id": 573,
+      "title": "CVE-2026-134817: mcp-server-kubernetes 参数注入可执行任意 kubectl 命令（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134817",
+      "source": "NVD",
+      "date": "2026-11-23",
+      "summary": "mcp-server-kubernetes 4.2.0 前的 exec_in_pod、kubectl_patch、kubectl_logs 等工具把短横线开头的调用方值当作位置操作数，远程 MCP 客户端可注入 kubectl 标志位（如 --as 提权、--token 指定凭据），在 AI Agent 基础设施上获得远超预期的集群操作能力。受影响产品：mcp-server-kubernetes < 4.2.0。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "Kubernetes"
+      ]
+    },
     {
       "id": 570,
       "title": "Kaer: Security-Aware Replanning for Multi-Agent Systems",

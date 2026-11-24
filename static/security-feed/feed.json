@@ -1,6 +1,188 @@
 {
-  "updatedAt": "2026-11-23T09:05:56+08:00",
+  "updatedAt": "2026-11-24T09:02:40+08:00",
   "items": [
+    {
+      "id": 574,
+      "title": "Subverting Tool Arguments: Defense-Evading Metadata Poisoning in LLM Agents",
+      "url": "https://arxiv.org/abs/2611.27041",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "把间接提示注入从检索内容转移到 MCP 工具描述元数据：攻击者篡改第三方 MCP 服务器提供的工具描述，诱导 LLM 在工具调用时生成恶意参数，挑战在于篡改后的描述仍需对模型与用户都显得 benign——论文同时追求高攻击成功率与低可检测性。",
+      "tags": [
+        "MCP",
+        "提示注入",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 575,
+      "title": "TrojanMaxxing: One-shotting VLM Backdoors with Weight-Space Programming",
+      "url": "https://arxiv.org/abs/2611.27425",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "把 VLM 后门植入重构为权重空间编程任务：仅用自然语言目标，Claude Opus 5.5 / Mythos 5.2 Agent 直接检查并编辑另一个模型的权重，无需梯度优化即可一次性植入后门——为「LLM 给模型写后门」提供了可操作路径。",
+      "tags": [
+        "VLM",
+        "后门",
+        "权重空间编程"
+      ]
+    },
+    {
+      "id": 576,
+      "title": "Cleave: Severing Guardrails and Auditing Spectral Coupling in Open-Weight LLMs",
+      "url": "https://arxiv.org/abs/2611.27426",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "发现开放权重 LLM 的安全护栏依赖 residual writing weights 触发拒绝，Cleave 免训练直接编辑这些权重即可移除安全限制且保持通用能力，可选择性解除特定类别护栏——对开源模型发行方是实质性的滥用面。",
+      "tags": [
+        "对齐",
+        "护栏移除",
+        "开源模型"
+      ]
+    },
+    {
+      "id": 577,
+      "title": "Autonomous Parameter Surgery: How LLMs Implant Selective Backdoors into Language Models",
+      "url": "https://arxiv.org/abs/2611.27920",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "仅用低推理档的 DeepSeek Flash、在禁止本地 CPU 模拟的受限工作区内，让通用 LLM 把自然语言后门规格自主转化为持久、选择性的权重编辑——无梯度训练、无层提示、无外部语料，展示模型供应链中「自主手术式后门」的现实性。",
+      "tags": [
+        "后门",
+        "权重编辑",
+        "模型供应链"
+      ]
+    },
+    {
+      "id": 578,
+      "title": "Epistemic Guard: Out-of-Process MCP Receipt Proxying, Post-Turn Prose Supervision, and Provenance-Gated Memory",
+      "url": "https://arxiv.org/abs/2611.27095",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "归纳 MCP Agent 三个运行时验证缺口：动作捏造（事后散文声称副作用已执行）、来源坍塌（未验证的模型散文或网页文本进入持久记忆）、联合回声放大（镜像网页冒充多源佐证），并提出进程外回执代理与来源门控记忆方案。",
+      "tags": [
+        "MCP",
+        "LLM Agent",
+        "运行时验证"
+      ]
+    },
+    {
+      "id": 579,
+      "title": "Correct Precedents Induce Policy Violations in On-Device LLM Agents",
+      "url": "https://arxiv.org/abs/2611.27216",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "发现端侧 Agent 的新失效模式「正确先例泛化」：Agent 正确放行了限制已解除的物品后，更可能放行下一个仍受限的物品——触发点是正确决策本身，因此无错误步骤的历史仍可终结于违规，云-端架构中最后一道检查可被自身正确行为逐步腐蚀。",
+      "tags": [
+        "LLM Agent",
+        "策略违规",
+        "端侧智能"
+      ]
+    },
+    {
+      "id": 580,
+      "title": "Tripwire: Robot Agents that Program Their Own Interrupts under Human Disturbance",
+      "url": "https://arxiv.org/abs/2611.27182",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "Agent 调用 VLA/WAM 等预训练机器人策略时是回合制的，策略运行期间人若闯入机器人路径或移走目标物体，Agent 无法 revisit 决策。TRIP 免训练地让 Agent 用自然语言为自己的动作调用编程事件触发中断，收窄「决策盲区」。",
+      "tags": [
+        "机器人",
+        "安全中断",
+        "VLA"
+      ]
+    },
+    {
+      "id": 581,
+      "title": "Humanoid Robots for Safety-Critical Electrical Switching: A Perception-Informed Runtime Constraint Filter",
+      "url": "https://arxiv.org/abs/2611.27845",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "人形机器人执行高危电气倒闸操作场景：VR 遥操作中操作员一个不精确的命令可能误触相邻开关，方案用头部相机估计的场景模型 + 目标条件控制屏障函数 QP，在运行时拦截危险命令、放行安全命令。",
+      "tags": [
+        "人形机器人",
+        "运行时安全",
+        "控制屏障函数"
+      ]
+    },
+    {
+      "id": 582,
+      "title": "What Must a Model Tell a Planner? Outcome Interfaces for Risk-Aware Planning After Robot Damage",
+      "url": "https://arxiv.org/abs/2611.27939",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "机器人受损后（电机弱化、加装负载、足端摩擦降低，模拟 Unitree Go2/H1）如何与规划器交互：比较决策策略 vs 结果模型等四种接口，论证把「每条路线的后果预测」交给规划器比直接告诉它该做什么更利于风险感知决策。",
+      "tags": [
+        "机器人",
+        "风险感知规划",
+        "世界模型"
+      ]
+    },
+    {
+      "id": 583,
+      "title": "RoboPRO: A Perturbation-Resilient and Obstacle-Aware Benchmark for Robotic Manipulation",
+      "url": "https://arxiv.org/abs/2611.26971",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "现有操作基准多为干净桌面+单一成功率指标，无法回答真实部署的两个问题：策略在扰动下是否安全操作、失败因何发生。RoboPRO 统一扰动轴与障碍感知规划，补这个空白。",
+      "tags": [
+        "机器人",
+        "基准",
+        "鲁棒性"
+      ]
+    },
+    {
+      "id": 584,
+      "title": "Actions Speak Louder than Words: Stateful Privacy Sniffing of LLM Agents via Behavioral Covert Channels in Web Interaction",
+      "url": "https://arxiv.org/abs/2611.27046",
+      "source": "arXiv",
+      "date": "2026-11-24",
+      "summary": "针对网页交互型 LLM Agent 的隐私嗅探：既不分析网络流量也不注入提示，而是主动重构 Agent 的交互状态机，通过其行为性隐蔽信道推断其私有上下文（用户提示、对话历史、记忆），绕过内容级防御。",
+      "tags": [
+        "LLM Agent",
+        "隐私攻击",
+        "行为分析"
+      ]
+    },
+    {
+      "id": 585,
+      "title": "CVE-2026-133632: astro-airflow-mcp 从当前目录导入模块致远程代码执行（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133632",
+      "source": "NVD",
+      "date": "2026-11-24",
+      "summary": "astro-airflow-mcp 0.5.0–0.9.1 的 af CLI 与 MCP 服务器从 Python 子进程发送遥测，该子进程可从当前工作目录导入模块；用户在含攻击者 .py 文件的项目目录内调用 MCP 工具即触发代码执行——典型「在恶意仓库里调用 Agent 工具」场景。受影响产品：astro-airflow-mcp 0.5.0–0.9.1。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "代码执行"
+      ]
+    },
+    {
+      "id": 586,
+      "title": "CVE-2026-130164: Hermes Agent 桌面后端文件读取漏洞（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130164",
+      "source": "NVD",
+      "date": "2026-11-24",
+      "summary": "Nous Research 开源自治 Agent Hermes 0.21.6–0.23.1 在 Bot Desktop 托管于非本地终端后端时，Agent 进程会读取后端可写的文件——提示注入可诱导 Agent 读取并外传这些文件。受影响产品：Hermes Agent 0.21.6–0.23.1。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "文件读取"
+      ]
+    },
+    {
+      "id": 587,
+      "title": "CVE-2026-134465: mcp-server-git 的 --repository 限制可经嵌套 .git 文件绕过（MEDIUM）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-134465",
+      "source": "NVD",
+      "date": "2026-11-24",
+      "summary": "mcp-server-git 2026.10.28 前版本允许调用方在允许目录树内放置含 gitdir 指针的 .git 文件，指向允许路径之外的仓库，从而绕过 --repository 限制——官方 MCP 服务器仓库的沙箱逃逸。受影响产品：mcp-server-git < 2026.10.28。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "沙箱逃逸"
+      ]
+    },
     {
       "id": 573,
       "title": "CVE-2026-134817: mcp-server-kubernetes 参数注入可执行任意 kubectl 命令（HIGH）",

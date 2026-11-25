@@ -1,6 +1,227 @@
 {
-  "updatedAt": "2026-11-24T09:02:40+08:00",
+  "updatedAt": "2026-11-25T09:03:29+08:00",
   "items": [
+    {
+      "id": 588,
+      "title": "Defending Vision-Language-Action Models against Transferable Attacks via Visual-Proprioceptive Consistency",
+      "url": "https://arxiv.org/abs/2611.28346",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "发现针对 VLA 的可迁移攻击的共同后果是破坏模型对机器人自身的感知，据此提出以本体感觉为锚的防御：利用可信的本体感知流校验视觉预测，打断跨任务迁移的攻击链。",
+      "tags": [
+        "VLA",
+        "对抗防御",
+        "机器人"
+      ]
+    },
+    {
+      "id": 589,
+      "title": "EnvTrap: Revealing the Environment-Only Attack Surface in Embodied AI via Consequence-Blind Action Execution",
+      "url": "https://arxiv.org/abs/2611.30004",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "不碰模型、不改指令，纯靠重排环境中现有物体即可制造危险后果：揭示安全关键空间关系上的「仅环境」攻击面——攻击者只需挪动物体，就能让具身 AI 在照常执行时触发危害。",
+      "tags": [
+        "具身智能",
+        "物理世界攻击",
+        "安全"
+      ]
+    },
+    {
+      "id": 590,
+      "title": "SayDo: Benchmarking the Safety of Frontier Models from Chat to Closed-Loop Robot Control",
+      "url": "https://arxiv.org/abs/2611.30957",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "前沿 VLM 越来越多直接当机器人高层控制器，但其安全几乎只在文本层面评估。SayDo 用 11 个实验室/家庭任务（善意指令+场景潜伏危害）沿具身梯度从纯聊天到闭环机械臂控制六级设置，测量前沿模型的危害倾向。",
+      "tags": [
+        "VLM",
+        "机器人安全",
+        "基准"
+      ]
+    },
+    {
+      "id": 591,
+      "title": "Detecting Is Not Choosing: What a World Model Needs to Keep a VLA Policy Safe",
+      "url": "https://arxiv.org/abs/2611.29553",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "回答「世界模型怎样才能让 VLA 策略更安全」：用精确前瞻安全滤波在 LIBERO/RoboCasa 上把 3 个 VLA 策略和 pi0.5 的安全率提升 11.5–25.7 个百分点，并分析学到的 critic 在跨策略/跨分布场景下何时失效——检测不安全不等于选对安全动作。",
+      "tags": [
+        "VLA",
+        "安全滤波",
+        "世界模型"
+      ]
+    },
+    {
+      "id": 592,
+      "title": "MirrorGuard: Defending LiDAR Perception against Passive Mirror Attacks",
+      "url": "https://arxiv.org/abs/2611.30292",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "镜子被动反射激光雷达光束制造幻影物体，每个幻影回波都是真实飞行时间测量，现有欺骗防御无法区分。MirrorGuard 用物理先验在进入下游感知前识别并剔除镜面幻影回波。",
+      "tags": [
+        "激光雷达",
+        "物理攻击",
+        "自动驾驶"
+      ]
+    },
+    {
+      "id": 593,
+      "title": "Oops!... I Parsed It Again: Tool-Call Smuggling Against LLM Agents",
+      "url": "https://arxiv.org/abs/2611.30624",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "工具调用在 provider、网关、SDK、框架、守卫与执行器间被多次解析，JSON 留给各解析器的自由度（如重复键取哪个）可被利用：守卫批准一个调用、执行器运行另一个、审计日志记录的却是被批准的那个——「工具调用走私」。",
+      "tags": [
+        "LLM Agent",
+        "解析器差异",
+        "工具安全"
+      ]
+    },
+    {
+      "id": 594,
+      "title": "Conartist: Adaptive Agentic Red-Teaming of Computer-Using Agents against Multi-Step Prompt Injection",
+      "url": "https://arxiv.org/abs/2611.29977",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "针对 Computer-Using Agent harness 的两大核心机制各打一枪：一致性检查可被「看起来逻辑自洽」的嵌入恶意动作绕过，风险审计过程本身会引入可被注入利用的额外上下文——自适应多步注入的红队框架。",
+      "tags": [
+        "提示注入",
+        "红队",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 595,
+      "title": "ArguShield: Enforcing Minimum-Necessary Disclosure in Tool-Calling LLM Agents",
+      "url": "https://arxiv.org/abs/2611.30360",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "即使无恶意，Agent 也可能把隐私填进对目标工具而言不必要的宽约束字段——满足 schema、完成任务，却违反最小必要披露。ArguShield 在执行前拦截工具调用，用值来源、任务相关性等三信号裁决每个参数值。",
+      "tags": [
+        "LLM Agent",
+        "隐私",
+        "工具调用"
+      ]
+    },
+    {
+      "id": 596,
+      "title": "Carried-Over and Agent-Native Threats in the Supply Chain of LLM Agent Skills",
+      "url": "https://arxiv.org/abs/2611.30932",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "首个注册表规模的 Agent 技能供应链实证：技能包的参数由用户请求与不受信外部内容共同构建，善意作者留下的缺陷即可把提示注入升级为代码执行——覆盖脚本、第三方依赖与说明文本全链路。",
+      "tags": [
+        "LLM Agent",
+        "供应链",
+        "技能包"
+      ]
+    },
+    {
+      "id": 597,
+      "title": "Ads for Agents: Measuring Ad-Serving MCP Servers",
+      "url": "https://arxiv.org/abs/2611.28911",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "首次测量 MCP 生态中的广告注入：部分 MCP 服务器把付费广告写进模型上下文，由模型决定广告及披露是否到达用户。研究通过广告网络、证书日志、MCP 目录等公开痕迹溯源广告服务服务器并实际查询验证。",
+      "tags": [
+        "MCP",
+        "生态测量",
+        "LLM Agent"
+      ]
+    },
+    {
+      "id": 598,
+      "title": "Weight-Space Backdoors in Open-Weight LLMs: Cross-Architecture Attacks and Blind Model Forensics (Neural Sentinel)",
+      "url": "https://arxiv.org/abs/2611.28543",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "跨架构研究梯度引导的权重空间后门：14 个架构家族 18 个检查点（124M–31.3B，含状态空间与循环模型），在 Phi-2 上仅改约 0.0002% 参数即可在 300 步后诱导精确短标记输出，并研究无先验的模型取证方法。",
+      "tags": [
+        "后门",
+        "开源模型",
+        "模型取证"
+      ]
+    },
+    {
+      "id": 599,
+      "title": "FATCAT: Fault Injection Attacks Targeting Chip-level Alignment",
+      "url": "https://arxiv.org/abs/2611.31129",
+      "source": "arXiv",
+      "date": "2026-11-25",
+      "summary": "现有对抗评估隐含假设硬件可信，FATCAT 打破它：非侵入式电磁故障注入 targeting GPU 加速 SoC，无需软件漏洞即可物理消除现代 LLM/VLM 的拒绝能力——对齐机制第一次被证明在芯片层可被剥夺。",
+      "tags": [
+        "故障注入",
+        "对齐",
+        "硬件安全"
+      ]
+    },
+    {
+      "id": 600,
+      "title": "CVE-2026-130178: AutoGPT 出站 SSRF 防护 IPv6 封锁不全（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-130178",
+      "source": "NVD",
+      "date": "2026-11-25",
+      "summary": "AutoGPT 0.7.1–0.8.4 的出站 SSRF 防护 IPv6 封锁清单不完整，已认证用户可借此到达本地或私有网络地址，把 Agent 工作流变成内网探测/打击跳板。受影响产品：AutoGPT 0.7.1–0.8.4。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "SSRF"
+      ]
+    },
+    {
+      "id": 601,
+      "title": "CVE-2026-133462: AutoGPT 共享 Agent 作者可冒用运行者 MCP 凭据（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-133462",
+      "source": "NVD",
+      "date": "2026-11-25",
+      "summary": "AutoGPT 0.6.49–0.11.0 的 MCPToolBlock 自动查找机制让共享 Agent 的作者使用「运行该 Agent 的用户」的 MCP 凭据——经典的混淆代理人问题，Agent 共享即凭据共享。受影响产品：AutoGPT < 0.11.0。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "凭据混淆"
+      ]
+    },
+    {
+      "id": 602,
+      "title": "CVE-2026-136185: Prismor 本地 HTTP API 通配 CORS + 无认证可覆盖安全策略（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136185",
+      "source": "NVD",
+      "date": "2026-11-25",
+      "summary": "Prismor 1.57.0 前的本地 HTTP API 存在通配 CORS 配置且缺失认证，远程攻击者可诱使开发者访问恶意页面，跨源发送 PUT 请求覆盖 /api 下的安全策略。受影响产品：Prismor < 1.57.0。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "CORS"
+      ]
+    },
+    {
+      "id": 603,
+      "title": "CVE-2026-136452: browser-use URL 解析器差异绕过域名与 IP 封锁（MEDIUM）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136452",
+      "source": "NVD",
+      "date": "2026-11-25",
+      "summary": "browser-use 1.0.0 前的 SecurityWatchdog 存在 URL 解析器差异：在允许域名前加反斜杠即可绕过 allowed_domains/prohibited_domains/block_ip_addresses 检查——与 AutoGPT CVE-2026-133449 同批出现的反斜杠绕过族。受影响产品：browser-use < 1.0.0。",
+      "tags": [
+        "CVE",
+        "LLM Agent",
+        "解析器差异"
+      ]
+    },
+    {
+      "id": 604,
+      "title": "CVE-2026-136441: Bytebase DBHub MCP 认证绕过（CVSS 未分配）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-136441",
+      "source": "NVD",
+      "date": "2026-11-25",
+      "summary": "Bytebase DBHub MCP 服务器存在不正确授权/认证绕过，远程攻击者无需认证即可影响受影响安装。ZDI 批次披露，NVD 评分待挂出。受影响产品：Bytebase DBHub。",
+      "tags": [
+        "CVE",
+        "MCP",
+        "认证绕过"
+      ]
+    },
     {
       "id": 574,
       "title": "Subverting Tool Arguments: Defense-Evading Metadata Poisoning in LLM Agents",

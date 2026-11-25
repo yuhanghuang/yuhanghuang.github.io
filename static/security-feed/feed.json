@@ -1,6 +1,45 @@
 {
-  "updatedAt": "2026-11-25T09:03:29+08:00",
+  "updatedAt": "2026-11-25T10:49:26+08:00",
   "items": [
+    {
+      "id": 605,
+      "title": "CVE-2026-78251: DJI 无人机跨机型共享 FTP 凭据，可耗尽存储阻断飞行数据记录（CRITICAL）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-78251",
+      "source": "NVD",
+      "date": "2026-08-27",
+      "summary": "DJI Neo/Mavic/Air/Avata/Mini 系列（Mini 5 Pro ≤ 01.00.0600）FTP 服务使用跨机型硬编码共享凭据，认证用户可经机内网络或 USB 接口向 /blackbox/upgrade/ 无限制上传文件，耗尽机载存储、阻断飞行数据（黑匣子）记录并可能阻止固件更新。由 exploitlabs 红队速报线索补录（其 NVD 关键词天然打不中此类条目）。受影响产品：DJI 多系列无人机。",
+      "tags": [
+        "CVE",
+        "无人机",
+        "硬编码凭据"
+      ]
+    },
+    {
+      "id": 606,
+      "title": "CVE-2026-121685: FrodoBots EarthRover Mini+ 固件内置机队 AWS/MQTT/Slack 密钥（CRITICAL）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-121685",
+      "source": "NVD",
+      "date": "2026-11-09",
+      "summary": "CERT/CC VU#188754 协同披露：EarthRover Mini+ 固件 6.2.4_6.2.5_0.614.0 公开可下载且内置全机队 AWS/MQTT/Slack 密钥（CVE-2026-121685，CVSS 9.8），泄露的 MQTT 凭据触达无逐设备校验、以 root 执行命令的机队指令通道（CVE-2026-121686，CVSS 9.8）——一把钥匙覆盖整个联网小车机队，可驱动轮组、访问摄像头与麦克风；另有本地无登录 web API/ADB/SSH 等 4 个 CVE。厂商称已吊销密钥、固件修复在测。由 exploitlabs 红队速报线索补录。受影响产品：FrodoBots EarthRover Mini+。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "供应链"
+      ]
+    },
+    {
+      "id": 607,
+      "title": "CVE-2026-96455: Pollen Robotics Reachy Mini 无认证应用安装端点链到 root 与舵机/摄像头/麦克风接管（HIGH）",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2026-96455",
+      "source": "NVD",
+      "date": "2026-09-23",
+      "summary": "JFrog 披露：Reachy Mini Wireless 控制守护进程无认证绑定 0.0.0.0:8000，一条 POST /api/apps/install 即以 pollen 用户执行攻击者 tarball 的 setup.py（CVE-2026-96455），免密码 sudo 经 systemd 单元植入 root SSH 密钥（CVE-2026-53605，HIGH），root 后可驱动舵机、摄像头与麦克风；恶意网页借 all-origins CORS 用操作者 HF token 安装攻击者 Hugging Face Space。同批还有蓝牙路径遍历/PIN 竞态等 CVE，v1.11.0 修复，全链 PoC 视频公开。由 exploitlabs 红队速报线索补录。受影响产品：Reachy Mini Wireless < v1.11.0。",
+      "tags": [
+        "CVE",
+        "机器人",
+        "RCE"
+      ]
+    },
     {
       "id": 588,
       "title": "Defending Vision-Language-Action Models against Transferable Attacks via Visual-Proprioceptive Consistency",
